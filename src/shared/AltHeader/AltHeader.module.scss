@@ -1,0 +1,103 @@
+.header{
+display: flex;
+height: 900px;
+flex-direction: column;
+align-items: center;
+gap: 80px;
+align-self: stretch;
+background: var(--Color-Scheme-1-Background, #FFF);
+
+
+.cta6{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1312px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta6 img {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 100%;
+}
+
+.frame{
+  flex: 1;
+  display: flex;
+  padding: 0 var(--Page-Padding-padding-global, 64px) 0 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+}
+
+.secondFrame{
+display: flex;
+min-width: var(--Max-Width-max-width-medium, 560px);
+flex-direction: column;
+align-items: flex-start;
+gap: 32px;
+align-self: stretch;
+}
+
+.text{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.secondColumn{
+display: flex;
+padding: 8px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
+filter: blur(5px);
+
+&:hover{
+    filter: none;
+}
+}
+
+.secondText{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Display/Small (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-4xl, 40px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 48px */
+letter-spacing: 0.5px;
+}
+
+.smallText{
+    color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+}

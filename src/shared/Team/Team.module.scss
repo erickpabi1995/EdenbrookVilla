@@ -1,0 +1,151 @@
+.team{
+display: flex;
+padding: var(--8xl, 96px) var(--6xl, 64px);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 80px;
+align-self: stretch;
+background: var(--Deep-Green, #172B22);
+
+.cta6 {
+  display: flex;
+  max-width: 1312px;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frame{
+color: var(--White, #FFF);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Display/Large (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-6xl, 56px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 67.2px */
+text-transform: uppercase;
+max-width: 500px;
+align-self: stretch;
+}
+
+.secondFrame{
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+
+}
+
+.text{
+display: flex;
+padding-top: var(--9xl, 128px);
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 24px;
+}
+
+.secondColumn{
+display: flex;
+width: 366px;
+padding: var(--reg, 12px) var(--reg, 12px) var(--lg, 16px) var(--reg, 12px);
+flex-direction: column;
+align-items: center;
+gap: 24px;
+border: 1px solid var(--White-Grey-3, #EAEAEA);
+background: var(--White-Grey-1, #FAFAFA);
+}
+
+.secondColumnGold{
+display: flex;
+width: 366px;
+padding: var(--reg, 12px) var(--reg, 12px) var(--lg, 16px) var(--reg, 12px);
+flex-direction: column;
+align-items: center;
+gap: 24px;
+border: 1px solid var(--White-Grey-3, #EAEAEA);
+background: var(--Gold, #FCC97E);
+}
+
+
+
+.secondColumnActions{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
+
+.secondColumnButtonContainer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+}
+
+}
+
+.logo_groups{
+color: var(--Black-Black, #000);
+font-variant-numeric: slashed-zero;
+
+/* Mobile/Display/Normal (M) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 38.4px */
+letter-spacing: 0.5px;
+}
+
+.logo_text{
+color: var(--Black-Black, #000);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.logo_secondary{
+color: var(--Dark-Grey-Grey-9, #5E5E5E);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.logo_secondary_group{
+display: flex;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+}
+
+.secondaryContainer{
+  display: flex;
+padding: 0 var(--none, 0);
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 24px;
+}

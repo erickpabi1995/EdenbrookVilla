@@ -1,0 +1,126 @@
+.mission{
+display: flex;
+width: 100%;
+padding: var(--Section-Padding-padding-section-large, 112px) var(--Page-Padding-padding-global, 64px);
+flex-direction: column;
+align-items: center;
+gap: 80px;
+background: var(--White, #FFF);
+
+.cta6{
+display: flex;
+max-width: 1312px;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+margin-left: auto;
+margin-right: auto;
+}
+
+.frame{
+display: flex;
+align-items: flex-start;
+gap: 64px;
+align-self: stretch;
+}
+
+.secondFrame{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 32px;
+flex: 1 0 0;
+align-self: stretch;
+
+}
+
+.text{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 32px;
+flex: 1 0 0;
+align-self: stretch;
+}
+
+.secondColumn{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.secondText{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Headline/Normal (M) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-2xl, 24px);
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 33.6px */
+}
+
+.secondColumnActions{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+flex: 1 0 0;
+}
+
+.secondColumnButtonContainer{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
+
+}
+
+.logo_groups{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.logo_text{
+  color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Headline/Normal (M) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-2xl, 24px);
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 33.6px */
+}
+
+.logo_secondary{
+    display: flex;
+align-items: center;
+gap: 32.557px;
+}
+
+.logo_secondary_group{
+    display: flex;
+align-items: center;
+gap: 32.557px;
+}

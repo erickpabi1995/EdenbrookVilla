@@ -1,0 +1,217 @@
+.partnerAgents{
+display: flex;
+padding: var(--4xl, 40px) var(--Page-Padding-padding-global, 64px);
+flex-direction: column;
+align-items: center;
+gap: 80px;
+align-self: stretch;
+background: var(--Deep-Green, #172B22);
+
+.container{
+display: flex;
+max-width: 1312px;
+flex-direction: column;
+align-items: flex-start;
+margin-left: auto;
+margin-right: auto;
+gap: 80px;
+align-self: stretch;
+}
+
+.title{
+display: flex;
+align-items: flex-start;
+gap: 64px;
+align-self: stretch;
+}
+
+.titleColumn{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 32px;
+flex: 1 0 0;
+}
+
+.titleText{
+color: var(--White, #FFF);
+font-variant-numeric: slashed-zero;
+width: 600px;
+/* Desktop/Display/Large (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-6xl, 56px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 67.2px */
+text-transform: uppercase;
+}
+
+.titleDescription{
+color: var(--White-2, #FAFAFA);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Large (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-lg, 18px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 27px */
+letter-spacing: -0.5px;
+}
+
+.button{
+display: flex;
+align-items: flex-start;
+gap: 16px;
+
+}
+
+.insights {
+display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--Gold, #FCC97E);
+background: var(--Gold, #FCC97E);
+color: var(--Charcoal, #222);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Label/Normal (SB) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+
+.insightCard{
+display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--White, #FFF);
+color: var(--White, #FFF);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Label/Normal (SB) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.blogSubContainer{
+display: flex;
+align-items: center;
+gap: var(--2xs, 6px);
+}
+
+.blogColumn{
+display: flex;
+align-items: center;
+gap: -12px;
+}
+
+.blogSubColumn{
+color: var(--White-2, #FAFAFA);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Label/Normal (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.2px;
+}
+
+.blogSub{
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+flex: 1 0 0;
+}
+
+.badge{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+align-self: stretch;
+}
+
+.badge_text{
+    color:#172B22;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+}
+.date_text{
+    color:  #FAFAFA;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.header{
+    color:  #FFF;
+font-variant-numeric: slashed-zero;
+font-family: "TheSeasons";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.5px;
+}
+}
+
+.logo_groups{
+display: flex;
+align-items: center;
+gap: 12px;
+
+.logo_subgroups{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.logo_text{
+color: #FFF;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.logo_secondary{
+color:  #FAFAFA;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+}

@@ -1,0 +1,215 @@
+.partners{
+display: flex;
+padding: var(--Section-Padding-padding-section-large, 112px) var(--Page-Padding-padding-global, 64px);
+flex-direction: column;
+align-items: center;
+gap: 80px;
+align-self: stretch;
+background: var(--White, #FFF);
+
+.container{
+display: flex;
+max-width: 1312px;
+margin-left: auto;
+margin-right: auto;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.title{
+display: flex;
+max-width: 600px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
+
+.titleColumn{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.titleText{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Display/Normal (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-5xl, 48px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.titleDescription{
+ color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Large (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-lg, 18px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 27px */
+letter-spacing: -0.5px;
+}
+
+.button{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+
+}
+
+.insights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; // or 16px
+  width: 100%;
+  
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+.insightCard{
+display: flex;
+height: 316px;
+justify-content: center;
+align-items: center;
+gap: 24px;
+flex: 1 0 0;
+aspect-ratio: 1/1;
+}
+
+.blogSubContainer{
+display: flex;
+padding: 12px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 12px;
+background: var(--Light-Grey-Grey-4, #E5E5E5);
+}
+
+.blogColumn{
+display: flex;
+width: 50px;
+height: 50px;
+padding: 3.157px 4.094px 7.521px 4.875px;
+justify-content: center;
+align-items: center;
+aspect-ratio: 1/1;
+}
+
+.blogSubColumn{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+align-self: stretch;
+}
+
+.blogSub{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+}
+
+.badge{
+  display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+gap: 2px;
+border-radius: 0;
+background:#EAEAEA;
+}
+
+.badge_text{
+    color:#172B22;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+}
+.date_text{
+    color:  #FAFAFA;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.header{
+    color:  #FFF;
+font-variant-numeric: slashed-zero;
+font-family: "TheSeasons";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.5px;
+}
+}
+
+.logo_groups{
+display: flex;
+align-items: center;
+gap: 12px;
+
+.logo_subgroups{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.logo_text{
+color: #FFF;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.logo_secondary{
+color:  #FAFAFA;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+}

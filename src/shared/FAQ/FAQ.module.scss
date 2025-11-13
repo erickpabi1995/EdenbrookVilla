@@ -1,0 +1,220 @@
+.newsLetter{
+display: flex;
+padding: 112px var(--6xl, 64px);
+justify-content: center;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+
+.container{
+display: flex;
+max-width: 1312px;
+margin-left: auto;
+margin-right: auto;
+align-items: flex-start;
+gap: 40px;
+flex: 1 0 0;
+}
+
+.title{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+flex: 1 0 0;
+align-self: stretch;
+}
+
+.titleColumn{
+color:  #172B22;
+font-variant-numeric: slashed-zero;
+font-family: "TheSeasons";
+font-size:  48px;
+font-style: normal;
+align-self: stretch;
+font-weight: 700;
+line-height: 120%;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.titleText{
+ color: var(--Dark-Grey-Grey-9, #5E5E5E);
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; 
+letter-spacing: -0.2px;
+align-self: stretch;
+}
+
+.titleDescription{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+}
+
+.button{
+display: flex;
+width: 770px;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.insights{
+display: flex;
+padding: 24px 12px;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+align-self: stretch;
+}
+
+.insightCard{
+display: flex;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+}
+
+.blogSubContainer{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+letter-spacing: -0.3px;
+}
+
+
+.blogColumn{
+display: flex;
+width: 32px;
+height: 32px;
+padding: 6px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 12px;
+background: var(--White-2, #FAFAFA);
+}
+
+.blogSubColumn{
+color: var(--Dark-Grey-Grey-9, #5E5E5E);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Small (R) */
+font-family: 'Satoshi', sans-serif;
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+letter-spacing: -0.2px;
+}
+
+.blogSub{
+display: flex;
+padding: 24px 12px;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+border-bottom: 1px solid var(--Light-Grey-Grey-4, #E5E5E5);
+}
+
+.badge{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.badge_text{
+ display: flex;
+width: 32px;
+height: 32px;
+padding: 6px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 12px;
+background: var(--White-2, #FAFAFA);
+}
+.date_text{
+ display: flex;
+width: 770px;
+padding: 22px 24px;
+align-items: center;
+gap: 8px;
+border-radius: var(--No-Radius, 0);
+border: 1px solid var(--White-Grey-3, #EAEAEA);
+}
+
+.header{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+flex: 1 0 0;
+}
+}
+
+.logo_groups{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+letter-spacing: -0.3px;
+}
+
+.logo_subgroups{
+color: #5E5E5E;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+.logo_text{
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+cursor:pointer;
+gap: var(--3xs, 4px);
+border: 1px solid var(--Deep-Brown, #AF771E);
+color: var(--Deep-Brown, #AF771E);
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size:  14px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.logo_secondary{
+color:  #FAFAFA;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}

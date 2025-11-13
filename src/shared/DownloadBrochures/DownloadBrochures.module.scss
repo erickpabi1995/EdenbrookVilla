@@ -1,0 +1,215 @@
+.downloadBrochures{
+display: flex;
+height: 1024px;
+width: 100%;
+flex-direction: column;
+align-items: center;
+align-self: stretch;
+background: var(--White, #FFF);
+position: relative;
+
+
+.container{
+display: flex;
+padding: var(--Section-Padding-padding-section-medium, 80px) var(--Page-Padding-padding-global, 64px);
+justify-content: center;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.title{
+display: flex;
+max-width: 1312px;
+margin-left: auto;
+margin-right: auto;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+flex: 1 0 0;
+}
+
+.titleColumn{
+display: flex;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.titleText{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Display/Normal (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-5xl, 48px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.titleDescription{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex: 1 0 0;
+}
+
+.button{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 32px;
+flex: 1 0 0;
+
+}
+
+.insights {
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Long paragraph/Large (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-lg, 18px);
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 32.4px */
+letter-spacing: -0.5px;
+
+}
+
+
+.insightCard{
+display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--Deep-Brown, #AF771E);
+color: var(--Deep-Brown, #AF771E);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Label/Normal (SB) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.blogSubContainer{
+display: flex;
+padding: 12px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 12px;
+background: var(--Light-Grey-Grey-4, #E5E5E5);
+}
+
+.blogColumn{
+display: flex;
+width: 50px;
+height: 50px;
+padding: 3.157px 4.094px 7.521px 4.875px;
+justify-content: center;
+align-items: center;
+aspect-ratio: 1/1;
+}
+
+.blogSubColumn{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+align-self: stretch;
+}
+
+.blogSub{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+}
+
+.badge{
+  display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+gap: 2px;
+border-radius: 0;
+background:#EAEAEA;
+}
+
+.badge_text{
+    color:#172B22;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+}
+.date_text{
+    color:  #FAFAFA;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.header{
+    color:  #FFF;
+font-variant-numeric: slashed-zero;
+font-family: "TheSeasons";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.5px;
+}
+}
+
+.logo_groups{
+display: flex;
+align-items: center;
+gap: 12px;
+
+.logo_subgroups{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.logo_text{
+color: #FFF;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.logo_secondary{
+color:  #FAFAFA;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+}

@@ -1,0 +1,149 @@
+.investors{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+background: linear-gradient(304deg, rgba(0, 0, 0, 0.00) -0.46%, rgba(23, 43, 34, 0.90) 109.06%), url('../investors.jpg') lightgray 50% / cover no-repeat;
+
+.container{
+display: flex;
+height: 800px;
+padding: var(--6xl, 64px) var(--Page-Padding-padding-global, 64px);
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.title{
+display: flex;
+max-width: 1312px;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.titleColumn{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.titleText{
+display: flex;
+max-width: 560px;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 32px;
+align-self: stretch;
+}
+
+.titleDescription{
+color: var(--White-White, #FFF);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Display/Large (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-6xl, 56px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 67.2px */
+text-transform: uppercase;
+}
+
+.button{
+color: var(--White-Grey-1, #FAFAFA);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Large (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-lg, 18px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 27px */
+letter-spacing: -0.5px;
+}
+
+.insights{
+display: flex;
+align-items: flex-start;
+gap: 16px;
+}
+
+.input{
+display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--Gold, #FCC97E);
+background: var(--Gold, #FCC97E);
+color: var(--Charcoal, #222);
+font-variant-numeric: slashed-zero;
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.label{
+ display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border: 1px solid var(--White-White, #FFF);
+color: var(--White-White, #FFF);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Label/Normal (SB) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.tabContainer{
+display: flex;
+align-items: center;
+gap: 16px;
+align-self: stretch;
+}
+
+.tabs{
+display: flex;
+padding: 16px 32px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 1 0 0;
+border-bottom: 4px solid var(--Color-White, #FFF);
+}
+
+.tabText{
+color: var(--Color-White, #FFF);
+text-align: center;
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+}

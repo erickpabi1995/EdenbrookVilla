@@ -1,0 +1,204 @@
+.sustainable{
+display: flex;
+padding: var(--Section-Padding-padding-section-large, 112px) var(--Page-Padding-padding-global, 64px);
+flex-direction: column;
+align-items: center;
+gap: 80px;
+align-self: stretch;
+
+.container{
+display: flex;
+max-width: var(--Container-container-large, 1280px);
+margin-left: auto;
+margin-right: auto;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.title{
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
+.titleColumn{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Headline/Large (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-3xl, 32px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 38.4px */
+letter-spacing: 0.5px;
+max-width: 600px;
+flex: 1 0 0;
+
+}
+
+.titleText{
+display: flex;
+align-items: flex-start;
+gap: 64px;
+align-self: stretch;
+
+}
+
+.titleDescription{
+display: flex;
+padding-top: 80px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+}
+
+.button{
+display: flex;
+align-items: center;
+gap: 16px;
+}
+
+.insights{
+display: flex;
+width: 325px;
+height: 420px;
+padding: 32px;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+background: var(--White-Grey-1, #FAFAFA);
+}
+
+.insightCard{
+color: var(--Dark-Grey-Grey-9, #5E5E5E);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.blogSubContainer{
+display: flex;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+}
+
+.blogColumn{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex: 1 0 0;
+
+}
+
+.blogSubColumn{
+color: var(--Black-Black, #000);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.blogSub{
+color: var(--Dark-Grey-Grey-8, #7C7C7C);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Small (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+letter-spacing: -0.2px;
+}
+
+.badge{
+ display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 16px;
+align-self: stretch;
+}
+
+.badge_text{
+  display: flex;
+padding: 16px;
+align-items: center;
+gap: 16px;
+border-radius: 200px;
+background: var(--Deep-Green, #172B22);
+}
+.date_text{
+    color:  #FAFAFA;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.header{
+    color:  #FFF;
+font-variant-numeric: slashed-zero;
+font-family: "TheSeasons";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.5px;
+}
+}
+
+.logo_groups{
+display: flex;
+align-items: center;
+gap: 12px;
+
+.logo_subgroups{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.logo_text{
+color: #FFF;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.logo_secondary{
+color:  #FAFAFA;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+}

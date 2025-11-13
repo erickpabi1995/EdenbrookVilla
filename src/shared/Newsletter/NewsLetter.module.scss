@@ -1,0 +1,264 @@
+.newsLetter{
+display: flex;
+height: 720px;
+padding: var(--6xl, 64px);
+justify-content: center;
+align-items: flex-end;
+gap: var(--6xl, 64px);
+align-self: stretch;
+background: var(--White-White, #FFF);
+
+.container{
+display: flex;
+max-width: 1312px;
+margin-left: auto;
+margin-right: auto;
+padding: 60px;
+align-items: center;
+gap: 64px;
+flex: 1 0 0;
+align-self: stretch;
+border-radius: var(--No-Radius, 0);
+background: var(--Deep-Green, #172B22);
+}
+
+.title{
+ display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+flex: 1 0 0;
+align-self: stretch;
+}
+
+.titleColumn{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
+
+.titleText{
+  color:  #FAFAFA;
+text-align: center;
+font-family: "Cinzel", serif;
+font-size:  14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 1.3px;
+text-transform: uppercase;
+}
+
+.titleDescription{
+color:  #FFF;
+font-variant-numeric: slashed-zero;
+font-family: "TheSeasons";
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;
+max-width: 450px;
+align-self: stretch;
+letter-spacing: 0.5px;
+}
+
+.button{
+color: #FAFAFA;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 16px;
+font-style: normal;
+cursor: pointer;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.3px;
+max-width: 400px;
+align-self: stretch;
+}
+
+.insights{
+display: flex;
+width: 372px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+}
+
+.insightCard{
+display: flex;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+}
+
+.blogSubContainer{
+ display: flex;
+padding:  8px  12px;
+align-items: center;
+gap:  8px;
+flex: 1 0 0;
+border: 0.5px solid #FAFAFA;
+background-color:  #FFF;
+}
+
+input::placeholder {
+ color: #5E5E5E;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.3px;
+}
+
+/* Vendor prefixes for broader support */
+input::-webkit-input-placeholder {
+ color: #5E5E5E;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.3px;
+}
+
+input::-moz-placeholder {
+  color: #5E5E5E;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.3px;
+}
+
+input:-ms-input-placeholder {
+ color: #5E5E5E;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.3px;
+}
+
+.blogColumn{
+display: flex;
+padding: 10px 16px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+background: #FCC97E;
+color:  #222;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.blogSubColumn{
+ color:  #FAFAFA;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+height: 18px;
+align-self: stretch;
+}
+
+.blogSub{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+}
+
+.badge{
+  display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+gap: 2px;
+border-radius: 0;
+background:#EAEAEA;
+}
+
+.badge_text{
+    color:#172B22;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+}
+.date_text{
+    color:  #FAFAFA;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.header{
+    color:  #FFF;
+font-variant-numeric: slashed-zero;
+font-family: "TheSeasons";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+letter-spacing: 0.5px;
+}
+}
+
+.logo_groups{
+display: flex;
+align-items: center;
+gap: 12px;
+
+.logo_subgroups{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.logo_text{
+color: #FFF;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+
+.logo_secondary{
+color:  #FAFAFA;
+text-align: center;
+font-variant-numeric: slashed-zero;
+font-family: 'Satoshi', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.2px;
+}
+}

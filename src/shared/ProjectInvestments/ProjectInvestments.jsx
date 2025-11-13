@@ -1,0 +1,143 @@
+import styles from './ProjectInvestments.module.scss';
+
+const ProjectInvestments = () => {
+  return (
+    <div className={styles.projectInvestments}>
+      <div className={styles.container}>
+        <div className={styles.frame}>
+          <div className={styles.subFrame}>
+            <div className={styles.secondFrame}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='18'
+                height='18'
+                viewBox='0 0 18 18'
+                fill='none'
+              >
+                <path
+                  d='M7.875 5.625C7.875 5.4025 7.94098 5.18499 8.0646 4.99998C8.18821 4.81498 8.36391 4.67078 8.56948 4.58564C8.77505 4.50049 9.00125 4.47821 9.21948 4.52162C9.43771 4.56502 9.63816 4.67217 9.7955 4.8295C9.95283 4.98684 10.06 5.18729 10.1034 5.40552C10.1468 5.62375 10.1245 5.84995 10.0394 6.05552C9.95422 6.26109 9.81002 6.43679 9.62502 6.5604C9.44001 6.68402 9.2225 6.75 9 6.75C8.70163 6.75 8.41548 6.63147 8.2045 6.4205C7.99353 6.20952 7.875 5.92337 7.875 5.625ZM4.5 5.625C4.5 4.43153 4.97411 3.28693 5.81802 2.44302C6.66193 1.59911 7.80653 1.125 9 1.125C10.1935 1.125 11.3381 1.59911 12.182 2.44302C13.0259 3.28693 13.5 4.43153 13.5 5.625C13.5 9.84023 9.45141 12.202 9.28125 12.3012C9.19624 12.3498 9.10002 12.3753 9.00211 12.3753C8.90419 12.3753 8.80798 12.3498 8.72297 12.3012C8.54859 12.202 4.5 9.84375 4.5 5.625ZM5.625 5.625C5.625 8.59219 8.145 10.5616 9 11.1445C9.8543 10.5623 12.375 8.59219 12.375 5.625C12.375 4.72989 12.0194 3.87145 11.3865 3.23851C10.7536 2.60558 9.89511 2.25 9 2.25C8.10489 2.25 7.24645 2.60558 6.61351 3.23851C5.98058 3.87145 5.625 4.72989 5.625 5.625ZM14.2573 10.3802C14.1188 10.3345 13.968 10.3443 13.8367 10.4076C13.7053 10.4709 13.6037 10.5827 13.5532 10.7195C13.5026 10.8562 13.5072 11.0073 13.5659 11.1407C13.6246 11.2742 13.7328 11.3797 13.8677 11.4349C15.0286 11.8645 15.75 12.4397 15.75 12.9375C15.75 13.8769 13.1822 15.1875 9 15.1875C4.81781 15.1875 2.25 13.8769 2.25 12.9375C2.25 12.4397 2.97141 11.8645 4.13227 11.4356C4.2672 11.3804 4.37542 11.2749 4.43411 11.1415C4.4928 11.008 4.49736 10.8569 4.44685 10.7202C4.39633 10.5834 4.29468 10.4716 4.16333 10.4083C4.03197 10.345 3.88118 10.3352 3.74273 10.3809C2.05453 11.0032 1.125 11.9116 1.125 12.9375C1.125 15.1298 5.18273 16.3125 9 16.3125C12.8173 16.3125 16.875 15.1298 16.875 12.9375C16.875 11.9116 15.9455 11.0032 14.2573 10.3802Z'
+                  fill='#FAFAFA'
+                />
+              </svg>
+              <p className={styles.locationText}>East Legon Hills, Accra</p>
+            </div>
+            <div className={styles.nameContainer}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='64'
+                height='63'
+                viewBox='0 0 64 63'
+                fill='none'
+              >
+                <path
+                  d='M64 31.586V4.41161H36.6936V22.8445H7.72736V15.7493H31.0426V0H3.73621V27.1744H22.9555V54.6165H15.8258V31.414H0V58.5884H27.3064V40.1555H55.7514V47.2507H32.4362V63H59.7426V35.8256H41.0445V8.38346H48.1742V31.586H64ZM7.72736 4.32422H27.0514V11.4194H7.72736V4.32422ZM11.4749 54.6137H4.34522V35.3831H11.4749V54.6137ZM55.7458 58.673H36.4217V51.5777H55.7458V58.673ZM27.3035 35.8256V27.1715H36.6965V35.8256H27.3035ZM52.5223 8.38346H59.6519V27.6141H52.5223V8.38346Z'
+                  fill='url(#paint0_linear_11288_1883)'
+                />
+                <defs>
+                  <linearGradient
+                    id='paint0_linear_11288_1883'
+                    x1='10.645'
+                    y1='10.2496'
+                    x2='70.0107'
+                    y2='69.9037'
+                    gradientUnits='userSpaceOnUse'
+                  >
+                    <stop stop-color='#AF771E' />
+                    <stop offset='0.53' stop-color='#FCC97E' />
+                    <stop offset='1' stop-color='#AF771E' />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p className={styles.name}>Edenbrook Villa</p>
+            </div>
+          </div>
+          <p className={styles.description}>
+            Luxury residential enclave in East Legon Hills offering 12 premium
+            villas with modern architecture and strong capital appreciation
+            potential.
+          </p>
+          <div className={styles.buttonContainer}>
+            <div className={styles.buttonSubContainer}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='6'
+                height='6'
+                viewBox='0 0 6 6'
+                fill='none'
+              >
+                <path
+                  d='M2.625 0.75C3.12228 0.75 3.59954 0.947198 3.95117 1.29883C4.3028 1.65046 4.5 2.12772 4.5 2.625C4.5 2.99584 4.38962 3.35865 4.18359 3.66699C3.97761 3.9751 3.68517 4.21556 3.34277 4.35742C3.00016 4.49934 2.6225 4.53621 2.25879 4.46387C1.89524 4.39147 1.56095 4.21329 1.29883 3.95117C1.03671 3.68905 0.858534 3.35476 0.786133 2.99121C0.713786 2.6275 0.750664 2.24984 0.892578 1.90723C1.03444 1.56483 1.2749 1.27239 1.58301 1.06641C1.89135 0.860379 2.25416 0.75 2.625 0.75Z'
+                  fill='white'
+                  stroke='white'
+                  stroke-width='1.5'
+                />
+              </svg>
+              <p className={styles.investorText}>Now Accepting Investors</p>
+            </div>
+            <div className={styles.buttonActions}>
+              <button className={styles.projectDetailsBtn}>
+                View project details
+              </button>
+              <button className={styles.contactButton}>
+                contact investment team
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className={styles.sliderContainer}>
+          <div className={styles.sliderBtnContainer}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='6'
+              height='6'
+              viewBox='0 0 6 6'
+              fill='none'
+            >
+              <path
+                d='M2.625 0.75C3.12228 0.75 3.59954 0.947198 3.95117 1.29883C4.3028 1.65046 4.5 2.12772 4.5 2.625C4.5 2.99584 4.38962 3.35865 4.18359 3.66699C3.97761 3.9751 3.68517 4.21556 3.34277 4.35742C3.00016 4.49934 2.6225 4.53621 2.25879 4.46387C1.89524 4.39147 1.56095 4.21329 1.29883 3.95117C1.03671 3.68905 0.858534 3.35476 0.786133 2.99121C0.713786 2.6275 0.750664 2.24984 0.892578 1.90723C1.03444 1.56483 1.2749 1.27239 1.58301 1.06641C1.89135 0.860379 2.25416 0.75 2.625 0.75Z'
+                fill='white'
+                stroke='white'
+                stroke-width='1.5'
+              />
+            </svg>
+            <p className={styles.sliderText}>
+              1 / 32 projects open for investments
+            </p>
+          </div>
+          <div className={styles.carouselContainer}>
+            <div className={styles.carousel}>
+              <div className={styles.carouselSlider}>
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+                <img src='../ImageFrame.png' alt='Image' />
+              </div>
+                        <div className={styles.previousContainer}>
+<div className={styles.previousSlide}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M11 17L6 12M6 12L11 7M6 12H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+<div className={styles.previousSlide}>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M13 17L18 12M18 12L13 7M18 12H6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+          </div>
+            </div>
+          </div>{' '}
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectInvestments;

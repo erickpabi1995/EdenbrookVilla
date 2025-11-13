@@ -1,0 +1,230 @@
+.paymentPlan{
+display: flex;
+padding: var(--Section-Padding-padding-section-large, 112px) var(--Page-Padding-padding-global, 64px);
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+background: var(--White, #FFF);
+
+.container{
+display: flex;
+align-items: center;
+gap: 112px;
+align-self: stretch;
+}
+
+.title{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Display/Normal (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-5xl, 48px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.titleColumn{
+display: flex;
+max-width: var(--Container-container-large, 1280px);
+margin-left: auto;
+margin-right: auto;
+align-items: center;
+gap: 80px;
+align-self: stretch;
+
+}
+
+.titleText{
+display: flex;
+padding: 24px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+border: 1px solid var(--White-2, #FAFAFA);
+background: var(--White, #FFF);
+
+/* Soft/xs */
+box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.10);
+}
+
+.titleDescription{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+font-family: "Satoshi";
+font-size: var(--Font-Size-5xl, 48px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+}
+
+.button{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
+
+.insights{
+display: flex;
+align-items: center;
+gap: 6px;
+align-self: stretch;
+}
+
+.insightCard{
+height: 1px;
+flex: 1 0 0;
+background: var(--Bright-Green, #3C7A5B);
+
+}
+
+.blogSubContainer{
+display: flex;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+
+}
+
+.blogColumn{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Normal (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
+
+.blogSubColumn{
+display: flex;
+height: 235px;
+padding-left: 24px;
+align-items: center;
+gap: 24px;
+flex: 1 0 0;
+border-left: 1px solid var(--Deep-Green, #172B22);
+}
+
+.blogSub{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+flex: 1 0 0;
+}
+
+.badge{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Large (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-lg, 18px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 27px */
+letter-spacing: -0.5px;
+}
+
+.social_icons{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+font-family: "Satoshi";
+font-size: var(--Font-Size-5xl, 48px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+}
+.date_text{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Large (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-lg, 18px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 27px */
+letter-spacing: -0.5px;
+}
+
+.header{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
+
+.grid{
+height: 1px;
+flex: 1 0 0;
+background: var(--Light-Grey-Grey-4, #E5E5E5);
+}
+
+.grid_secondary{
+display: flex;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+}
+.type{
+display: flex;
+padding-top: 3px;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+}
+
+.dividerContainer{
+color: var(--Deep-Brown, #AF771E);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Label/Normal (SB) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.divider{
+  width: 1px;
+flex: 1 0 0;
+background: var(--Light-Grey-Grey-4, #E5E5E5);
+}
+
+.downloadBrochure{
+  display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+border: 1px solid var(--Deep-Brown, #AF771E);
+color: var(--Deep-Brown, #AF771E);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Label/Normal (SB) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 700;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+}
