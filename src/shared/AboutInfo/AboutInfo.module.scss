@@ -12,7 +12,8 @@ display: flex;
 max-width: 1312px;
 flex-direction: column;
 justify-content: flex-end;
-border: 1px solid red;
+width: 100%;
+margin-left: auto;
 gap: 80px;
 align-self: stretch;
 }
@@ -23,9 +24,9 @@ max-width: var(--Max-Width-max-width-xlarge, 1024px);
 flex-direction: column;
 align-items: flex-end;
 justify-content: flex-end;
-border: 1px solid yellow;
 gap: 16px;
 align-self: stretch;
+margin-left: auto;
 }
 
 .secondFrame{

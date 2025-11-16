@@ -19,21 +19,24 @@ const FloorPlan = () => {
       sub: ["OPEN PLAN LIVING AND DINING AREA", "OPEN PLAN LIVING AND DINING AREA", "OPEN PLAN LIVING AND DINING AREA"],
       price: "$420,000",
       typeA: "Type A",
-      typeB: "Type B"
+      typeB: "Type B",
+      image:'../floorPlanA.jpg'
     },
     "Tab B": {
       bedrooms: "3 bedrooms, spacious lounge",
       sub: ["PRIVATE BALCONY", "MODERN KITCHEN", "GUEST BATHROOM"],
       price: "$350,000",
       typeA: "Type C",
-      typeB: "Type D"
+      typeB: "Type D",
+      image:"../floorPlanB.jpg"
     },
     "Tab C": {
       bedrooms: "2 bedrooms, compact design",
       sub: ["COZY DINING", "INTEGRATED STORAGE", "SMART HOME FEATURES"],
       price: "$250,000",
       typeA: "Type E",
-      typeB: "Type F"
+      typeB: "Type F",
+      image:"../floorPlanC.jpg"
     }
   };
 
@@ -53,7 +56,7 @@ return(
 </div>
 <div className={styles.insights}>
 <div className={styles.insightCard}>
-<img src='../PlaceholderImage.svg' alt='Placeholder Image'/>
+<img src={content.image} alt='Placeholder Image' style={{width:'552px',height:'552px'}}/>
 <div className={styles.blogSubContainer}>
 <p className={styles.blogColumn}>{content.bedrooms}</p>
 <div className={styles.blogSubColumn}>

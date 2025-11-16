@@ -13,9 +13,29 @@ import FAQ from '../../shared/FAQ/FAQ'
 import Footer from '../../shared/Footer/Footer'
 
 const PartnerAgents = () => {
+  const navItems = [
+    {
+      name:'About',
+      link:''
+    },
+        {
+      name:'Projects',
+      link:''
+    },
+        {
+      name:'Partner Agents',
+      link:''
+    },
+        {
+      name:'Insights',
+      link:''
+    },
+  
+
+  ]
 return(
     <>
-<NavBar/>
+<NavBar navItems={navItems}/>
 <PartnerAgentHero/>
   <AboutInfo content={'Collaboration Built on Trust and Integrity. We believe great partnerships create exceptional results. Our agent network is built on professionalism, transparency, and a shared commitment to providing clients with the highest standard of service and luxury property experiences.'}/>
     <Containers content={'BROWSE OUR AGENT DIRECTORY'} contentBackground={true} title={true}/>

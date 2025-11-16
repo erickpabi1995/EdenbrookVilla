@@ -85,7 +85,11 @@ return(
 
 </div>
 <div>
-    <img src='../house.png' alt="House Image"/>
+    <picture>
+        <source media="(max-width: 768px)" srcSet="../house-mobile.png" />
+        <source media="(min-width: 769px)" srcSet="../house.png" />
+        <img src="../house.png" alt="House Image" style={{width: '100%'}} />
+    </picture>
 </div>
 </div>
     </div>

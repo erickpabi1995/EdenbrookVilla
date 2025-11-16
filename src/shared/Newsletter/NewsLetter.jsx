@@ -20,9 +20,16 @@ return(
 <p className={styles.blogSubColumn}>Only updates. No spam</p>
 </div>
 </div>
-<div>
+{/* <div>
   <img src='../newsLetterImage.svg' alt='NewsLetter'/>
-</div>
+</div> */}
+ <div>
+    <picture>
+        <source media="(max-width: 768px)" srcSet="../newsLetterMobile.png" />
+        <source media="(min-width: 769px)" srcSet="../newsLetterImage.svg" />
+        <img src="../newsLetterImage.svg" alt="NewsLetter Image" style={{width: '100%'}} />
+    </picture>
+</div> 
 </div>
 
 </div>

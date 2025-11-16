@@ -12,11 +12,11 @@ return(
 </div>
 <div className={styles.secondText}>
   <div className='relative float-right'>
-  <img src='../headerImage.png' alt='HeaderImage'/>
+  <img src='../architecture.jpg' alt='HeaderImage'/>
   </div>
- <div className='absolute left-[122px] top-[450px]'>
-  <img src='../headerImage2.png' alt='HeaderImage'/>
-  </div>
+ {/* <div className='absolute left-[122px] top-[450px]'>
+  <img src='../architecure.jpg' alt='HeaderImage'/>
+  </div> */}
 </div>
 </div>
 </div>

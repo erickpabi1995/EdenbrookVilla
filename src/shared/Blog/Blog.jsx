@@ -36,7 +36,7 @@ return(
 <p className={styles.titleText}>— Insights</p>
 <p className={styles.titleDescription}>Insights from the World of Qluxe.</p>
 </div>
-<button className={styles.button}> View all Insights</button>
+ <button className={styles.button}> View all Insights</button> 
 </div>
 
 <div className={styles.insights}>
