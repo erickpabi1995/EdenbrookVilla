@@ -1,7 +1,7 @@
 import styles from './History.module.scss'
 
 const History = () => {
-
+const youtubeVideoId = 'RC6iqLKt74Y'
 return(
     <div className={styles.history}>
 <div className={styles.container}>
@@ -16,7 +16,15 @@ return(
 </div>
 </div>
 </div>
-  <img src='../PlaceholderVideo.svg' alt='QLuxe Video'/>
+ <iframe
+          width="100%"
+          height="500"
+          src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
 </div>
 
 )

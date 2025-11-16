@@ -1,0 +1,31 @@
+.neighbourhood{
+display: flex;
+padding: var(--6xl, 64px) var(--Page-Padding-padding-global, 64px);
+flex-direction: column;
+align-items: center;
+gap: 48px;
+align-self: stretch;
+
+.container{
+color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+max-width: 1312px;
+align-self: stretch;
+/* Desktop/Display/Normal (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: var(--Font-Size-5xl, 48px);
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+.insightCard{
+height: 600px;
+max-width: 1312px;
+align-self: stretch;
+
+}
+
+}

@@ -191,6 +191,7 @@ align-self: stretch;
 .dividerContainer{
 color: var(--Deep-Brown, #AF771E);
 font-variant-numeric: slashed-zero;
+cursor: pointer;
 
 /* Desktop/Label/Normal (SB) */
 font-family: var(--Font-Family-Body, "Satoshi");

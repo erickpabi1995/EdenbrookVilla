@@ -14,10 +14,13 @@ import NewsLetter from '../../shared/Newsletter/NewsLetter'
 import Footer from '../../shared/Footer/Footer'
 import Header from '../../shared/Header/Header'
 import UnitGallery from '../../shared/UnitGallery/UnitGallery'
+import ProjectDetailsHero from '../../shared/ProjectDetailsHero/ProjectDetailsHero'
+import Map from '../../shared/Map/Map'
 
 const ProjectDetails = () => {
     return(
         <>
+        <ProjectDetailsHero/>
         <Header/>
         <History/>
         <Journey/>
@@ -26,6 +29,7 @@ const ProjectDetails = () => {
         <FloorPlan/>
         <Neighbourhood/>
         <PaymentPlan/>
+        <Map/>
         <DownloadBrochures/>
         <Sustainable/>
         <ContactUs/>

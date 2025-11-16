@@ -194,12 +194,14 @@ letter-spacing: -0.2px;
    display: flex;
 justify-content: space-between;
 align-items: center;
+
 align-self: stretch;
+gap:12px;
 }
 
 .carousel{
   display: flex;
-width: 320px;
+min-width: 220px;
 padding: 24px;
 flex-direction: column;
 align-items: flex-start;
