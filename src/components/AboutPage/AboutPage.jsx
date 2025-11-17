@@ -13,9 +13,31 @@ import FAQ from '../../shared/FAQ/FAQ'
 import Footer from '../../shared/Footer/Footer'
 import NavBar from '../../shared/NavBar/NavBar'
 const AboutPage = () => {
+
+      const navList = [{
+      name:'About',
+      link:''
+    },
+{
+  name:'Projects',
+  link:''
+},
+{
+  name:'Partner Agents',
+  link:''
+},
+{
+  name:'Investors',
+  link:''
+},
+{
+  name:'Insights',
+  link:''
+},
+]
     return(
       <>
-      <NavBar/>
+      <NavBar navItems={navList}/>
       <AboutHero/>
       <AboutInfo content={'Founded with a commitment to excellence, Qluxe Homes combines modern architecture with timeless sophistication. Each project reflects our belief that a home should be more than a space — it should be a statement of taste, innovation, and comfort.'}/>
       <Mission/> 

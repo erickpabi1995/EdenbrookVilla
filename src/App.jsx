@@ -4,11 +4,12 @@ import { lazy,Suspense } from 'react'
 
 const ProjectsHub = lazy(()=>import('./components/ProjectsHub'))
 const InvestorsPage = lazy(()=>import('./components/InvestorsPage'))
+const InsightDetailsPage = lazy(()=>import('./components/InsightDetails'))
 const InsightHubPage = lazy(()=>import('./components/InsightHubPage'))
 const PartnerAgents = lazy(()=>import('./components/PartnerAgents/PartnerAgents'))
 const ProjectDetails = lazy(()=>import('./components/ProjectsDetails/ProjectsDetails'))
 const AboutPage = lazy(()=>import('./components/AboutPage/AboutPage'))
-const Testimonials = lazy(()=>import('./shared/InsightIndex/InsightIndex'))
+const Testimonials = lazy(()=>import('./shared/InsightDetailsHero/InsightDetailsHero'))
 const LandingPage = lazy(()=>import('./components/LandingPage'))
 
 function App() {
@@ -32,6 +33,15 @@ function App() {
           <Suspense fallback={<p>Loading...</p>}>
             {' '}
             <ProjectsHub />
+          </Suspense>
+        }
+      />
+         <Route
+        path={'/insightDetails'}
+        element={
+          <Suspense fallback={<p>Loading...</p>}>
+            {' '}
+            <InsightDetailsPage />
           </Suspense>
         }
       />
