@@ -18,15 +18,25 @@ const LandingPage = () => {
 return(
     <>
     <HomeHero/>
-    <HomeAbout/>
+    <div id='about'>
+  <HomeAbout/>
+    </div>
     <Containers content={'Discover our developments'}/>
+    <div id='projects'>
     <LandProjects/>
+    </div>
+<div id='partnerAgents'>
     <Partners/>
+</div>
+
     <Metrics/>
     <Sustainable/>
     <Testimonials/>
     <CTA/>
+    <div id='insights'>
     <Blog/>
+    </div>
+
     <NewsLetter/>
     <FAQ/>
     <Footer/>

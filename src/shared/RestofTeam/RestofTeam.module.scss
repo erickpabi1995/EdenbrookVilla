@@ -8,6 +8,16 @@ gap: 80px;
 align-self: stretch;
 background: var(--White, #FFF);
 
+@media (max-width:768px) {
+  display: flex;
+padding: var(--6xl, 64px) var(--xl, 20px);
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
 .cta6{
 display: flex;
 max-width: 1312px;
@@ -15,6 +25,16 @@ flex-direction: column;
 align-items: flex-start;
 gap: 80px;
 align-self: stretch;
+
+@media (max-width:768px) {
+  display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 60px;
+align-self: stretch;
+}
 
 }
 
@@ -32,6 +52,20 @@ letter-spacing: 0.5px;
 max-width: 500px;
 align-self: stretch;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+  color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+
+/* Mobile/Display/Normal (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 38.4px */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
 }
 
 .secondFrame{
@@ -41,6 +75,16 @@ align-items: center;
 gap: 32px;
 align-self: stretch;
 
+@media (max-width:768px) {
+  display: flex;
+padding: 0 var(--none, 0);
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+}
+
 }
 
 .text{
@@ -49,6 +93,10 @@ width: 1017.125px;
 flex-direction: column;
 align-items: flex-start;
 gap: 8px;
+
+@media (max-width:786px) {
+  display: none;
+}
 }
 
 .secondColumn{
@@ -57,12 +105,19 @@ justify-content: center;
 align-items: center;
 gap: 16px;
 align-self: stretch;
-&:hover {
+
+// &:hover {
+//   .secondColumnButtonContainer,
+//   .logo_text {
+//     color: black;
+//   }
+// }
+}
+.selected{
   .secondColumnButtonContainer,
   .logo_text {
     color: black;
   }
-}
 }
 
 
@@ -120,6 +175,15 @@ flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 gap: 12px;
+
+@media (max-width:768px) {
+  display: flex;
+width: 90%;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 12px;
+}
 }
 
 .secondaryContainer{

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from './InsightIndex.module.scss'
 
 const InsightIndex = () => {
@@ -10,6 +11,7 @@ const InsightIndex = () => {
         'Social Highlight',
         'ReaL Estate Trends'
     ]
+        const [selected, setSelected] = useState('All')
 
    
     
@@ -20,7 +22,8 @@ const InsightIndex = () => {
       heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
       author: 'Kojo Annan',
       imageAuthor: '../blog_author.svg',
-      title:'Blogger, QLuxe Homes'
+      title:'Blogger, QLuxe Homes',
+      category:'Press Releases'
     },
         {
       image: '../blog2.svg',
@@ -28,7 +31,8 @@ const InsightIndex = () => {
       heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
       author: 'Kojo Annan',
       imageAuthor: '../blog_author2.svg',
-      title:'Blogger, QLuxe Homes'
+      title:'Blogger, QLuxe Homes',
+      category:'Market Highlights'
     },
         {
       image: '../blog3.svg',
@@ -36,7 +40,8 @@ const InsightIndex = () => {
       heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
       author: 'Kojo Annan',
       imageAuthor: '../blog_author3.svg',
-      title:'Blogger, QLuxe Homes'
+      title:'Blogger, QLuxe Homes',
+      category:'Events & Expos'
     },
            {
       image: '../blog4.png',
@@ -44,9 +49,15 @@ const InsightIndex = () => {
       heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
       author: 'Kojo Annan',
       imageAuthor: '../blog_author3.svg',
-      title:'Blogger, QLuxe Homes'
+      title:'Blogger, QLuxe Homes',
+      category:'Press Releases'
     }
   ]
+
+   const filteredBlogs = selected === 'All'
+        ? blogs
+        : blogs.filter(blog => blog.category === selected)
+
 
 return(
     <div className={styles.containers}>
@@ -58,22 +69,31 @@ return(
    <div className={styles.button}>
 <div className={styles.insights}>
     {index.map((item)=>
-<div className={styles.insightCard}>
+<div  
+onClick={()=>setSelected(item)}
+className={`${styles.insightCard}
+
+${selected === item ? styles.selected : ''}`} key={item}>
     <p className={styles.blogSubContainer}>{item}</p>
 </div>
 )}
 </div>
     <div className={styles.blogColumn}>
 <div className={styles.blogSubColumn}>
-    {blogs.map((item)=>
-    <div className={styles.blogSub}>
+      {filteredBlogs.length === 0 ? (
+        <div className={styles.emptyState}>
+        <p className={styles.logo_subgroups}>No insights available for this category.</p>
+        </div>
+    ) : (
+    filteredBlogs.map((item,idx)=>
+    <div className={styles.blogSub} key={idx}>
 <img src={item.image} alt='Blog Image' style={{height:"231px",width:"448px",objectFit:"cover"}}/>
 <div className={styles.badge}>
     <div className={styles.badge_text}>
         <div className={styles.date_text}>
             <div className='flex items-center justify-center gap-3'>
             <div className={styles.header}>
-                <p className={styles.badge_text_secondary}>Press Release</p>
+                <p className={styles.badge_text_secondary}>{item.category}</p>
                 </div>
                      <p className={styles.logo_groups}>{item.date}</p>
                      </div>
@@ -89,6 +109,7 @@ return(
           </div>
         </div>
     </div>
+    )
     )}
 </div>
 </div>

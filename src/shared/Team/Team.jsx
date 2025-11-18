@@ -8,7 +8,9 @@ return(
 <div className={styles.secondFrame}>
  <div className={styles.text}>
   <div className={styles.secondColumn}>
-    <img src='../restOfTeam.jpg' alt='Team Image Placeholder'/>
+     <div className={styles.imageContainer}>
+    <img src='../restOfTeam.jpg' alt='Team Image Placeholder'  style={{height:"100%",width:"100%",objectFit:"contain"}}/>
+    </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
    <p className={styles.logo_groups}>Eric Nana Kpabi</p>
@@ -36,7 +38,9 @@ return(
     </div>
   </div>
     <div className={styles.secondColumn}>
-    <img src='../restOfTeam2.jpg' alt='Team Image Placeholder'/>
+       <div className={styles.imageContainer}>
+    <img src='../restOfTeam2.jpg' alt='Team Image Placeholder' style={{height:"100%",width:"100%",objectFit:"contain"}}/>
+    </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
    <p className={styles.logo_groups}>Bright Baiden</p>
@@ -67,7 +71,10 @@ return(
  </div>
  <div className={styles.secondaryContainer}>
   <div className={styles.secondColumnGold}>
-    <img src='../restOfTeam2.jpg' alt='Team Image Placeholder'/>
+    <div className={styles.imageContainer}>
+         <img src='../restOfTeam2.jpg' alt='Team Image Placeholder' style={{height:"100%",width:"100%",objectFit:"contain"}}/> 
+    </div>
+
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
    <p className={styles.logo_groups}>Francis Quansah</p>
@@ -95,7 +102,9 @@ return(
     </div>
   </div>
     <div className={styles.secondColumn}>
-    <img src='../restOfTeam.jpg' alt='Team Image Placeholder'/>
+       <div className={styles.imageContainer}>
+    <img src='../restOfTeam.jpg' alt='Team Image Placeholder' style={{height:"100%",width:"100%",objectFit:"contain"}}/>
+    </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
    <p className={styles.logo_groups}>Joe Wise</p>

@@ -1,8 +1,15 @@
 import styles from './FAQ.module.scss'
 import { useState } from 'react';
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const FAQ = () => {
+
+  const navigate = useNavigate()
+
+  const handleContact = () =>{
+    navigate('/contactUs')
+  }
 
   // Track only one open index at a time
   const [openIndex, setOpenIndex] = useState(null);
@@ -89,7 +96,7 @@ const FAQ = () => {
               <p className={styles.logo_groups}>Still have a question in mind?</p>
               <p className={styles.logo_subgroups}>Contact us if you have any other questions.</p>
             </div>
-            <button className={styles.logo_text}>Contact us</button>
+            <button className={styles.logo_text} onClick={handleContact}>Contact us</button>
           </div>
         </div>
       </div>

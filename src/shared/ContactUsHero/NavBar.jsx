@@ -1,27 +1,26 @@
 
 import styles from './NavBar.module.scss'
-import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     const navList = [{
       name:'About',
-      link:'/about'
+      link:''
     },
 {
   name:'Projects',
-  link:'/projects'
+  link:''
 },
 {
   name:'Partner Agents',
-  link:'/partnerAgents'
+  link:''
 },
 {
   name:'Investors',
-  link:'/investors'
+  link:''
 },
 {
   name:'Insights',
-  link:'/insights'
+  link:''
 },
 ]
     return (
@@ -33,9 +32,9 @@ const NavBar = () => {
                    <ul className={styles.logo}>
   {navList.map((item, index) => (
     <li key={index} className={styles.listItems}>
-      <Link to={item.link}>
+      <a href={item.link}>
         {item.name}
-      </Link>
+      </a>
     </li>
   ))}
   <div className={styles.button_container}>
