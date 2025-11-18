@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './Blog.module.scss'
 
 const Blog = () => {
+
+     const navigate = useNavigate()
+
+    const handleInsight = () => {
+        navigate('/insightHub')
+    }
 
   const blogs = [
     {
@@ -36,7 +43,7 @@ return(
 <p className={styles.titleText}>— Insights</p>
 <p className={styles.titleDescription}>Insights from the World of Qluxe.</p>
 </div>
- <button className={styles.button}> View all Insights</button> 
+ <button className={styles.button} onClick={handleInsight}> View all Insights</button> 
 </div>
 
 <div className={styles.insights}>

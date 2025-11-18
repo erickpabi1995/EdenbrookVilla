@@ -22,7 +22,7 @@ return(
 <p className={styles.blogSubColumn}>Our Partners</p>
     </div>
 </div>
-<div>
+<div className={styles.image}>
     <img src='../Image.png' alt='Image'/>
 </div>
 </div>

@@ -3,7 +3,7 @@ import styles from './RestofTeam.module.scss'
 
 const RestofTeam = () => {
 
-  const [hoveredItem,setHoveredItem] = useState()
+  const [hoveredItem,setHoveredItem] = useState(0)
   const team = [
     {
       id:1,
@@ -68,7 +68,9 @@ return(
 <div className={styles.secondFrame}>
  <div className={styles.text}>
   {team.map((item,index)=>
-  <div className={styles.secondColumn} key={item.id} onMouseOver={()=>setHoveredItem(index)}>
+  <div className={`${styles.secondColumn} ${hoveredItem === index ? styles.selected : ''}`}
+  
+  key={item.id} onMouseOver={()=>setHoveredItem(index)}>
     <div className={styles.secondColumnActions}>
 <p className={styles.secondColumnButtonContainer}>{item.title}</p>
 </div>

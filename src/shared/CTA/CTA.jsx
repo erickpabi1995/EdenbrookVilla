@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './CTA.module.scss'
 
 const CTA = () => {
+
+   const navigate = useNavigate()
+
+    const handleContact = () => {
+        navigate('/contactUs')
+    }
 return(
     <div className={styles.cta}>
 <div className={styles.cta6}>
@@ -12,7 +19,7 @@ return(
 <div className={styles.secondColumnActions}>
 <button className={styles.secondColumnButtonContainer}>Book a viewing</button>
 
-<button className={styles.secondColumnSecondaryButtonContainer}>Contact us</button>
+<button className={styles.secondColumnSecondaryButtonContainer} onClick={handleContact}>Contact us</button>
 </div>
 
 </div>

@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './HomeAbout.module.scss'
 
 const HomeAbout = () => {
+
+       const navigate = useNavigate()
+
+    const handleAbout = () => {
+        navigate('/about')
+    }
 
 return(
     <div className={styles.about}>
@@ -17,7 +24,7 @@ A Vision Rooted in Design and Distinction.
          <div className={styles.button}>
 <div className={styles.insights}>
 <p className={styles.insightCard}>Qluxe Homes redefines real estate in Ghana through architecture that balances precision, serenity, and sophistication. Each development reflects a deep respect for craft and community.</p>
-<button className={styles.blogSubContainer}>
+<button className={styles.blogSubContainer} onClick={handleAbout}>
 More about us
 </button>
 </div>

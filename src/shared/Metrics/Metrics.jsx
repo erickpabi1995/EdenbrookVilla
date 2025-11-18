@@ -6,22 +6,22 @@ const Metrics = () => {
   {
     name:"Years of Excellence",
     value:10,
-    unit:"%"
+    unit:""
   },
    {
     name:"Luxury Developments",
     value:6,
-    unit:"%"
+    unit:""
   },
    {
     name:"Partner Agents",
     value:50,
-    unit:"%"
+    unit:""
   },
     {
     name:"Homeowners Inspired",
     value:1000,
-    unit:"%"
+    unit:""
   },
   
   ]

@@ -86,11 +86,23 @@ display: flex;
 padding: var(--3xs, 4px) var(--reg, 12px);
 justify-content: center;
 align-items: center;
+cursor: pointer;
 border-radius: var(--Full-Radius, 999px);
 background: var(--White-Grey-3, #EAEAEA);
 gap: var(--3xs, 4px);
 }
 
+.emptyState {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.selected{
+background: var(--Gold, #FCC97E);
+}
 .blogSubContainer{
 color: var(--Dark-Grey-Grey-9, #5E5E5E);
 text-align: center;

@@ -1,7 +1,17 @@
 import styles from './HomeHero.module.scss'
 import NavBar from './NavBar'
+import { useNavigate } from 'react-router-dom'
 
 const HomeHero = () => {
+    const navigate = useNavigate()
+
+    const handleProjects = () => {
+        navigate('/projectsHub')
+    }
+
+     const handleContact = () => {
+        navigate('/contactUs')
+    }
 
 return(
     <div className={styles.containers}>
@@ -29,8 +39,8 @@ return(
 <div className={styles.insights}>
 <p className={styles.insightText}>From design to detail, Qluxe Homes creates architectural landmarks that embody modern elegance and timeless value.</p>
 <div className={styles.blogSubContainer}>
-    <button className={styles.blogColumn}>See Projects</button>
-      <button className={styles.blogSubColumn}>Contact us</button>
+    <button className={styles.blogColumn} onClick={handleProjects}>See Projects</button>
+      <button className={styles.blogSubColumn} onClick={handleContact}>Contact us</button>
 </div>
 
 </div>
