@@ -16,23 +16,23 @@ const AboutPage = () => {
 
       const navList = [{
       name:'About',
-      link:''
+      link:'/about'
     },
 {
   name:'Projects',
-  link:''
+  link:'/projectsHub'
 },
 {
   name:'Partner Agents',
-  link:''
+  link:'/partnerAgents'
 },
 {
   name:'Investors',
-  link:''
+  link:'/investors'
 },
 {
   name:'Insights',
-  link:''
+  link:'/insightHub'
 },
 ]
     return(

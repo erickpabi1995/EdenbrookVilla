@@ -5,6 +5,13 @@ align-items: flex-start;
 align-self: stretch;
 background: linear-gradient(304deg, rgba(0, 0, 0, 0.00) -0.46%, rgba(23, 43, 34, 0.90) 109.06%), url('../investors.jpg') lightgray 50% / cover no-repeat;
 
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+}
+
 .container{
 display: flex;
 height: 800px;
@@ -14,6 +21,17 @@ justify-content: flex-end;
 align-items: flex-start;
 gap: 80px;
 align-self: stretch;
+
+@media (max-width:768px) {
+ display: flex;
+height: 812px;
+padding: 0 var(--Page-Padding-padding-global, 20px);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 16px;
+align-self: stretch;
+}
 }
 
 .title{
@@ -23,6 +41,16 @@ flex-direction: column;
 align-items: flex-start;
 gap: 80px;
 align-self: stretch;
+
+@media (max-width:768px) {
+display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: center;
+gap: 48px;
+align-self: stretch;
+}
 }
 
 .titleColumn{
@@ -32,6 +60,10 @@ justify-content: center;
 align-items: flex-start;
 gap: 80px;
 align-self: stretch;
+
+@media (max-width:768px) {
+gap: 0px;
+}
 }
 
 .titleText{
@@ -42,6 +74,16 @@ justify-content: flex-end;
 align-items: flex-start;
 gap: 32px;
 align-self: stretch;
+
+@media (max-width:768px) {
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+width: 100%;
+align-items: flex-start;
+gap: 32px;
+align-self: stretch;
+}
 }
 
 .titleDescription{
@@ -55,6 +97,21 @@ font-style: normal;
 font-weight: 700;
 line-height: 120%; /* 67.2px */
 text-transform: uppercase;
+
+@media (max-width:768px) {
+    color: var(--White-White, #FFF);
+font-variant-numeric: slashed-zero;
+align-self: stretch;
+
+/* Mobile/Display/Large (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 38px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 45.6px */
+letter-spacing: -1.5px;
+text-transform: uppercase;
+}
 }
 
 .button{
@@ -68,12 +125,34 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
+
+@media (max-width:768px) {
+    color: var(--White-Grey-1, #FAFAFA);
+font-variant-numeric: slashed-zero;
+align-self: stretch;
+
+/* Desktop/Body/Normal (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-md, 16px);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.3px;
+}
 }
 
 .insights{
 display: flex;
 align-items: flex-start;
 gap: 16px;
+
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
 }
 
 .input{
@@ -93,6 +172,10 @@ font-weight: 700;
 line-height: 20px;
 letter-spacing: -0.2px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+    align-self: stretch;
+}
 }
 
 .label{
@@ -113,6 +196,10 @@ font-weight: 700;
 line-height: 20px; /* 142.857% */
 letter-spacing: -0.2px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+    align-self: stretch;
+}
 }
 
 .tabContainer{
@@ -120,6 +207,15 @@ display: flex;
 align-items: center;
 gap: 16px;
 align-self: stretch;
+
+@media screen {
+    display: flex;
+width: 100%;
+max-width: 100%;
+align-items: flex-start;
+gap: 16px;
+
+}
 }
 
 .tabs{
@@ -130,6 +226,15 @@ justify-content: center;
 align-items: center;
 flex: 1 0 0;
 border-bottom: 4px solid var(--Color-White, #FFF);
+
+@media (max-width:768px) {
+    display: flex;
+padding: 16px 32px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 1 0 0;
+}
 }
 
 .tabText{
@@ -144,6 +249,10 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 24px */
 letter-spacing: -0.3px;
+
+@media (max-width:768px) {
+  letter-spacing: -0.5px;  
+}
 }
 
 }

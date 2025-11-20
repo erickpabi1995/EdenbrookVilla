@@ -14,14 +14,14 @@ const UnitGallery = () => {
             </div>
             <p className={styles.nameContainer}>The warm embrace of every home is the entrance — a cozy welcoming space meant for ushering a sense of peace and serenity</p>
           </div>
-        <div className={styles.sliderContainer}>
+        {/* <div className={styles.sliderContainer}>
                 <img src='../ImageFrame.png' alt='Image' />
                 <img src='../ImageFrame.png' alt='Image' />
                 <img src='../ImageFrame.png' alt='Image' />
                 <img src='../ImageFrame.png' alt='Image' />
                 <img src='../ImageFrame.png' alt='Image' />
                 <img src='../ImageFrame.png' alt='Image' />
-              </div>
+              </div> */}
             </div>
             </div>
   );

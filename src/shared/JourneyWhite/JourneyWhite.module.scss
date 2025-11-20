@@ -7,6 +7,15 @@ gap: 112px;
 align-self: stretch;
 background: var(--White, #FFF);
 
+@media (max-width:768px) {
+    display: flex;
+padding: var(--Section-Padding-padding-section-large, 64px) var(--Page-Padding-padding-global, 20px);
+flex-direction: column;
+align-items: center;
+gap: 64px;
+align-self: stretch;
+}
+
 .container{
 display: flex;
 max-width: var(--Container-container-large, 1280px);
@@ -16,6 +25,16 @@ gap: 112px;
 align-self: stretch;
 margin-left: auto;
 margin-right: auto;
+
+@media (max-width:768px) {
+    display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 64px;
+align-self: stretch;
+}
 }
 
 .title{
@@ -24,6 +43,10 @@ flex-direction: column;
 align-items: center;
 gap: 24px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    gap:20px
+}
 }
 
 .titleColumn{
@@ -39,6 +62,10 @@ font-weight: 700;
 line-height: 120%; /* 57.6px */
 letter-spacing: 0.5px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+    font-size: 32px;
+}
 }
 
 .titleText{
@@ -56,6 +83,21 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
+
+@media (max-width:768px) {
+    color: var(--Deep-Green, #172B22);
+text-align: center;
+font-variant-numeric: slashed-zero;
+
+/* Mobile/Body/Large (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.5px;
+align-self: stretch;
+}
 }
 
 .titleDescription{
@@ -78,6 +120,24 @@ justify-content: flex-end;
 align-items: flex-start;
 flex: 1 0 0;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+padding: var(--5xl, 48px) 0;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+flex: 1 0 0;
+align-self: stretch;
+}
+}
+
+.content{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
 }
 
 .insightCard{
@@ -91,6 +151,16 @@ font-size: var(--Font-Size-2xl, 24px);
 font-style: normal;
 font-weight: 700;
 line-height: 140%; /* 33.6px */
+
+@media (max-width:768px) {
+    color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%;
+}
 }
 
 .blogSubContainer{
@@ -100,6 +170,15 @@ flex-direction: column;
 align-items: center;
 gap: 10px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+width: 48px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+}
 }
 
 .blogColumn{
@@ -138,6 +217,10 @@ flex-direction: column;
 align-items: flex-start;
 gap: 24px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    gap:12px;
+}
 }
 .date_text{
 color: var(--Deep-Green, #172B22);
@@ -149,6 +232,11 @@ font-size: var(--Font-Size-2xl, 24px);
 font-style: normal;
 font-weight: 700;
 line-height: 140%; /* 33.6px */
+
+@media (max-width:768px) {
+    font-size: var(--Font-Size-2xl, 20px);
+    align-self: stretch;
+}
 }
 
 .header{

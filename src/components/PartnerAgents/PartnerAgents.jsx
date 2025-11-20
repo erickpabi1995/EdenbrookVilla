@@ -16,19 +16,23 @@ const PartnerAgents = () => {
   const navItems = [
     {
       name:'About',
-      link:''
+      link:'/about'
     },
         {
       name:'Projects',
-      link:''
+      link:'/projectsHub'
     },
         {
       name:'Partner Agents',
-      link:''
+      link:'/partnerAgents'
+    },
+       {
+      name:'Investors',
+      link:'/investors'
     },
         {
       name:'Insights',
-      link:''
+      link:'/insightHub'
     },
   
 
