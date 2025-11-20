@@ -13,6 +13,7 @@ import Partners from '../shared/Partners/Partners'
 import Sustainable from '../shared/Sustainable/Sustainable'
 import Testimonials from '../shared/Testimonials/Testimonials'
 import Investment from '../shared/Investment/Investment'
+// import NavBar from '../shared/NavBar/NavBar'
 
 const InvestorsPage = () => {
 

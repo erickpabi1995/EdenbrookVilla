@@ -6,17 +6,17 @@ const InvestorRelations = () => {
         {
             name:'square feet developed',
             value:'3M',
-            unit: '%'
+            unit: ''
         },
            {
             name:'premium units sold',
             value:'100',
-            unit: '%'
+            unit: ''
         },
            {
             name:'active developments across Ghana',
             value:'10',
-            unit: '%'
+            unit: ''
         }
     ]
 

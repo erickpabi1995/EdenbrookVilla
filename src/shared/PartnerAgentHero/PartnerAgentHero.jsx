@@ -24,21 +24,21 @@ return(
 
     </div>
     <div className={styles.blogSub}>
-<img src='../p1.png' alt='Partner 1'/>
+<img src='../agent2.jpg' alt='Partner 1'/>
 <div className={styles.badge}>
-<img src='../p1.png' alt='Partner 1'/>
-<img src='../p1.png' alt='Partner 2'/>
+<img src='../agent2.jpg' alt='Partner 1' />
+<img src='../agent4.jpg' alt='Partner 1' />
 </div>
 <div className={styles.badge}>
-<img src='../p1.png' alt='Partner 1'/>
-<img src='../p1.png' alt='Partner 2'/>
-<img src='../p1.png' alt='Partner 3'/>
+<img src='../agent2.jpg' alt='Partner 1'/>
+<img src='../agent4.jpg' alt='Partner 1'/>
+<img src='../agent2.jpg' alt='Partner 1' />
 </div>
 <div className={styles.badge}>
-<img src='../p1.png' alt='Partner 1'/>
-<img src='../p1.png' alt='Partner 2'/>
-<img src='../p1.png' alt='Partner 3'/>
-<img src='../p1.png' alt='Partner 4'/>
+<img src='../agent2.jpg' alt='Partner 1'/>
+<img src='../agent4.jpg' alt='Partner 2'/>
+<img src='../agent2.jpg' alt='Partner 3'/>
+<img src='../agent4.jpg' alt='Partner 4'/>
 </div>
     </div>
 </div>

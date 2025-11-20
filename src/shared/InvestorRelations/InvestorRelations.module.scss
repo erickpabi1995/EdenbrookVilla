@@ -7,6 +7,15 @@ gap: 80px;
 align-self: stretch;
 background: var(--White, #FFF);
 
+@media (max-width:768px) {
+    display: flex;
+padding: var(--Section-Padding-padding-section-large, 64px) var(--Page-Padding-padding-global, 20px);
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+
 .container{
 display: flex;
 max-width: 1312px;
@@ -16,6 +25,16 @@ gap: 80px;
 align-self: stretch;
 margin-left: auto;
 margin-right: auto;
+
+@media (max-width:768px) {
+    display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-end;
+gap: 48px;
+align-self: stretch;
+}
 }
 
 .title{
@@ -25,6 +44,16 @@ flex-direction: column;
 align-items: flex-end;
 gap: 16px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+align-self: stretch;
+}
 }
 
 .titleColumn{
@@ -39,6 +68,10 @@ font-weight: 700;
 line-height: 120%; /* 57.6px */
 letter-spacing: 0.5px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+    font-size: 32px;
+}
 }
 
 .titleText{
@@ -53,6 +86,10 @@ font-weight: 400;
 line-height: 120%;
 letter-spacing: 0.5px;
 text-transform: lowercase;
+
+@media (max-width:768px) {
+    font-size: 32px;
+}
 }
 
 .titleDescription{
@@ -60,6 +97,14 @@ display: flex;
 align-items: flex-start;
 gap: 120px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+}
 }
 
 .button{
@@ -68,12 +113,24 @@ height: 298px;
 align-items: center;
 gap: 20px;
 flex: 1 0 0;
+
+@media (max-width:768px) {
+    display: flex;
+height: 200px;
+align-items: center;
+gap: 20px;
+align-self: stretch;
+}
 }
 
 .insights {
 width: 1px;
 height: 298px;
 background: #C0C0C0;
+
+@media (max-width:768px) {
+    height: 200px;
+}
 }
 
 

@@ -9,7 +9,7 @@ const NavBar = () => {
     },
 {
   name:'Projects',
-  link:'/projects'
+  link:'/projectsHub'
 },
 {
   name:'Partner Agents',

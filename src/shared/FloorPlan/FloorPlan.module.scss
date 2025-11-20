@@ -7,6 +7,17 @@ gap: 80px;
 align-self: stretch;
 background: var(--Color-Scheme-1-Background, #FFF);
 
+@media (max-width:768px) {
+  display: flex;
+padding: var(--Section-Padding-padding-section-large, 64px) var(--Page-Padding-padding-global, 20px);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 48px;
+align-self: stretch;
+}
+
+
 .container{
 display: flex;
 max-width:  1280px;
@@ -16,6 +27,16 @@ flex-direction: column;
 align-items: center;
 gap: 80px;
 align-self: stretch;
+
+@media (max-width:768px) {
+  display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 48px;
+align-self: stretch;
+}
 }
 
 .title{
@@ -31,6 +52,22 @@ font-weight: 700;
 line-height: 120%; /* 57.6px */
 letter-spacing: 0.5px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+  color: var(--Deep-Green, #172B22);
+text-align: center;
+font-variant-numeric: slashed-zero;
+
+/* Mobile/Display/Normal (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 38.4px */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+align-self: stretch;
+}
 }
 
 .titleColumn{
@@ -50,6 +87,13 @@ display: flex;
 align-items: flex-start;
 align-self: stretch;
 
+@media (max-width:768px) {
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+}
+
 }
 
 .titleDescription{
@@ -62,6 +106,17 @@ gap: 16px;
 flex: 1 0 0;
 border-right: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
 align-self: stretch;
+
+@media (max-width:768px) {
+display: flex;
+padding: 24px 32px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+border-bottom: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
+}
 }
 
 .nonActive{
@@ -80,12 +135,17 @@ font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
+
+@media (max-width:768px) {
+  align-self: stretch;
+}
 }
 
 .insights{
 display: flex;
 align-items: flex-start;
 align-self: stretch;
+
 }
 
 .insightCard{
@@ -106,6 +166,14 @@ gap: 48px;
 flex: 1 0 0;
 align-self: stretch;
 
+@media (max-width:768px) {
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 60px;
+align-self: stretch;
+}
+
 }
 
 .blogColumn{
@@ -119,6 +187,16 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
+
+@media (max-width:768px) {
+  align-self: stretch;
+}
+}
+.content{
+  display: flex;
+align-items: center;
+gap: 50px;
+align-self: stretch;
 }
 
 .blogSubColumn{
@@ -141,6 +219,11 @@ font-style: normal;
 font-weight: 500;
 line-height: 24px; /* 150% */
 letter-spacing: -0.3px;
+
+@media (max-width:768px) {
+  max-width: 155px;
+flex: 1 0 0;
+}
 }
 
 .badge{
@@ -151,12 +234,24 @@ font-size: var(--Font-Size-5xl, 48px);
 font-style: normal;
 font-weight: 700;
 line-height: 120%; /* 57.6px */
+
+@media (max-width:768px) {
+  align-self: stretch;
+}
 }
 
 .social_icons{
 display: flex;
 align-items: flex-start;
 gap: 24px;
+
+@media (max-width:768px) {
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
 }
 .date_text{
 display: flex;
@@ -166,6 +261,10 @@ align-items: flex-start;
 gap: 4px;
 border-radius: 100px;
 background: var(--White-Grey-2, #F5F5F5);
+
+@media (max-width:768px) {
+align-self: stretch;
+}
 }
 
 .header{
@@ -177,6 +276,11 @@ align-items: center;
 gap: 8px;
 cursor: pointer;
 border-radius: 100px;
+
+@media (max-width:768px) {
+  flex: 1 0 0;
+  width:auto;
+}
 
 }
 
@@ -211,6 +315,16 @@ align-items: center;
 cursor: pointer;
 gap: 8px;
 border-radius: 100px;
+
+@media (max-width:768px) {
+  display: flex;
+padding: 8px 0;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex: 1 0 0;
+width: auto;
+}
 }
 .type{
 color: var(--Deep-Green, #172B22);
@@ -231,6 +345,14 @@ flex-direction: column;
 align-items: center;
 gap: 6px;
 align-self: stretch;
+
+@media (max-width:768px) {
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+border-top: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
+}
 }
 
 .divider{
@@ -257,5 +379,9 @@ font-weight: 700;
 line-height: 20px; /* 142.857% */
 letter-spacing: -0.2px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+  align-self: stretch;
+}
 }
 }
