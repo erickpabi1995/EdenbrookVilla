@@ -8,6 +8,15 @@ align-self: stretch;
 border-top: 1.5px solid var(--Gold, #FCC97E);
 background: var(--Deep-Green, #172B22);
 
+@media (max-width:768px) {
+    display: flex;
+padding: var(--5xl, 48px) var(--xl, 20px);
+flex-direction: column;
+align-items: center;
+gap: var(--4xl, 40px);
+align-self: stretch;
+}
+
 .container{
 display: flex;
 max-width: 1312px;
@@ -17,6 +26,16 @@ flex-direction: column;
 align-items: flex-start;
 gap: 40px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+}
 }
 
 .title{
@@ -24,6 +43,14 @@ display: flex;
 align-items: flex-start;
 gap: 80px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+}
 }
 
 .titleColumn{
@@ -36,6 +63,20 @@ font-style: normal;
 font-weight: 700;
 line-height: 140%; /* 33.6px */
 width: 476px;
+
+@media (max-width:768px) {
+    color: var(--Color-White, #FFF);
+font-variant-numeric: slashed-zero;
+
+/* Mobile/Headline/Normal (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 28px */
+align-self: stretch;
+width: auto;
+}
 }
 
 .titleText{
@@ -43,6 +84,14 @@ display: flex;
 align-items: flex-start;
 gap: var(--6xl, 64px);
 flex: 1 0 0;
+
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: var(--4xl, 40px);
+align-self: stretch;
+}
 }
 
 .titleDescription{
@@ -52,6 +101,10 @@ justify-content: center;
 align-items: center;
 gap: var(--lg, 16px);
 flex: 1 0 0;
+
+@media (max-width:768px) {
+align-self: stretch;
+}
 }
 
 .button{
@@ -105,12 +158,28 @@ background: var(--Gold, #FCC97E);
 justify-content: space-between;
 align-items: center;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
 }
 
 .blogSub{
 display: flex;
 align-items: center;
 gap: var(--reg, 12px);
+
+@media (max-width:768px) {
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: var(--reg, 12px);
+align-self: stretch;
+}
 }
 
 .badge{
@@ -130,6 +199,14 @@ letter-spacing: -0.2px;
 display: flex;
 align-items: center;
 gap: var(--lg, 16px);
+
+@media (max-width:768px) {
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: var(--lg, 16px);
+align-self: stretch;
+}
 }
 .date_text{
     color:  #FAFAFA;

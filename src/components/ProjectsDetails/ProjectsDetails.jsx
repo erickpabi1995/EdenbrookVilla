@@ -22,17 +22,33 @@ const ProjectDetails = () => {
         <>
         <ProjectDetailsHero/>
         <Header/>
+        <div id='history'>
         <History/>
+        </div>
+        <div id='journey'>
         <Journey/>
+        </div>
+        <div id='unitGallery'>
         <UnitGallery/>
+        </div>
         <PropertyInfo/>
+        <div id='floorPlans'>
         <FloorPlan/>
+        </div>
+        <div id='neighborhood'>
         <Neighbourhood/>
+        </div>
+        <div id='paymentplan'>
         <PaymentPlan/>
+        </div>
         <Map/>
+        <div id='brochure'>
         <DownloadBrochures/>
+        </div>
         <Sustainable/>
+        <div id='contactus'>
         <ContactUs/>
+        </div>
         <FAQ/>
         <CTA/>
            <Blog/>

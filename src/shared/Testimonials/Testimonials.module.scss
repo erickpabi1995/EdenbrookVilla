@@ -7,6 +7,15 @@ gap: 80px;
 align-self: stretch;
 background: var(--White-White, #FFF);
 
+@media (max-width:768px) {
+    display: flex;
+padding: var(--6xl, 64px) var(--xl, 20px);
+flex-direction: column;
+align-items: center;
+gap: 80px;
+align-self: stretch;
+}
+
 .container{
 display: flex;
 max-width: 1312px;
@@ -16,6 +25,16 @@ flex-direction: column;
 align-items: center;
 gap: 80px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
 }
 
 .title{
@@ -38,6 +57,12 @@ font-style: normal;
 font-weight: 500;
 line-height: 150%; /* 24px */
 letter-spacing: -0.3px;
+
+@media (max-width:768px) {
+    align-self: stretch;
+    letter-spacing: -0.2px;
+    font-size: 14px;
+}
 }
 
 .titleText{
@@ -53,6 +78,13 @@ font-weight: 700;
 line-height: 120%; /* 57.6px */
 letter-spacing: 0.5px;
 text-transform: uppercase;
+
+
+@media (max-width:768px) {
+    align-self: stretch;
+    font-size: 32px;
+    width: 100%;
+}
 }
 
 .titleDescription{
@@ -67,6 +99,13 @@ font-style: normal;
 font-weight: 500;
 line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
+
+
+@media (max-width:768px) {
+    align-self: stretch;
+    font-size: 16px;
+    width: 100%;
+}
 }
 
 .button{

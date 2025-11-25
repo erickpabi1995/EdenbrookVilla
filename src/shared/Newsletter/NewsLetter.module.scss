@@ -19,6 +19,40 @@ height: auto;
 
 }
 
+.blogSubContainer.error {
+  border: 1px solid #ff4444;
+  background-color: #fff5f5;
+}
+
+.blogSubContainer.success {
+  border: 1px solid #22c55e;
+  background-color: #f0fff4;
+}
+
+.blogColumn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.blogColumn.subscribed {
+  background-color: #22c55e;
+  cursor: not-allowed;
+}
+
+.blogColumn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.blogSubContainer:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #ff4444;
+}
+
 .container{
 display: flex;
 max-width: 1312px;

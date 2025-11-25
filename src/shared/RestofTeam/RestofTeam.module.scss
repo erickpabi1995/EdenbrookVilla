@@ -55,16 +55,9 @@ text-transform: uppercase;
 
 @media (max-width:768px) {
   color: var(--Deep-Green, #172B22);
-font-variant-numeric: slashed-zero;
-
-/* Mobile/Display/Normal (SB) */
-font-family: var(--Font-Family-Heading, "TheSeasons");
 font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; /* 38.4px */
-letter-spacing: 0.5px;
-text-transform: uppercase;
+max-width: 100%;
+width: 100%;
 }
 }
 
@@ -93,10 +86,6 @@ width: 1017.125px;
 flex-direction: column;
 align-items: flex-start;
 gap: 8px;
-
-@media (max-width:786px) {
-  display: none;
-}
 }
 
 .secondColumn{
@@ -144,6 +133,12 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 24px */
 letter-spacing: -0.3px;
+
+@media (max-width:768px) {
+  align-self: stretch;
+  color: var(--Deep-Green, #172B22);
+  text-align: left;
+}
 }
 
 }
@@ -153,6 +148,16 @@ display: flex;
 width: 400px;
 align-items: center;
 gap: 8px;
+
+@media (max-width:768px) {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 16px;
+align-self: stretch;
+width: 100%;
+}
 
 
 .logo_text{
@@ -169,6 +174,18 @@ letter-spacing: 0.5px;
 }
 }
 
+.nameMobile{
+  color: var(--Deep-Green, #172B22);
+font-variant-numeric: slashed-zero;
+align-self: stretch;
+/* Mobile/Display/Normal (M) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 38.4px */
+letter-spacing: 0.5px;
+}
 .logo_secondary_group{
 display: flex;
 flex-direction: column;
@@ -178,12 +195,22 @@ gap: 12px;
 
 @media (max-width:768px) {
   display: flex;
-width: 90%;
+width: 100%;
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 gap: 12px;
 }
+}
+
+.mobileRole{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+
 }
 
 .secondaryContainer{
@@ -198,6 +225,16 @@ font-weight: 400;
 line-height: 150%; /* 24px */
 letter-spacing: -0.3px;
 width: 287px;
+
+@media (max-width:768px) {
+  width: 100%;
+  max-width: 100%;
+  align-self: stretch;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap:break-word;
+  white-space: normal;
+}
 }
 
 .social_icons{

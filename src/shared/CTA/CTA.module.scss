@@ -266,9 +266,10 @@ gap: 32.557px;
     display: flex;
 align-items: center;
 gap: 32.557px;
+
+@media (max-width:768px) {
+    gap:12px
+}
 }
 
-.image{
-
-}
 }

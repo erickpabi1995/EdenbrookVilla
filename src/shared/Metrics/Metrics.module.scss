@@ -7,6 +7,15 @@ gap: 200px;
 align-self: stretch;
 background: var(--White-White, #FFF);
 
+@media (max-width:768px) {
+    display: flex;
+padding: var(--6xl, 64px) var(--xl, 20px);
+flex-direction: column;
+align-items: center;
+gap: 200px;
+align-self: stretch;
+}
+
 .container{
 display: flex;
 max-width: 1312px;
@@ -16,6 +25,16 @@ flex-direction: column;
 align-items: flex-start;
 gap: 200px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
 }
 
 .title{
@@ -26,6 +45,11 @@ justify-content: center;
 align-items: flex-start;
 gap: 24px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    max-width: 100%;
+    width: 100%;
+}
 }
 
 .titleColumn{
@@ -53,6 +77,11 @@ font-weight: 700;
 line-height: 120%; /* 57.6px */
 letter-spacing: 0.5px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+    align-self: stretch;
+    font-size: 32px;
+}
 }
 
 .titleDescription{
@@ -60,6 +89,14 @@ display: flex;
 align-items: flex-start;
 gap: 120px;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+}
 }
 
 .button{
@@ -68,12 +105,21 @@ height: 298px;
 align-items: center;
 gap: 20px;
 flex: 1 0 0;
+
+@media (max-width:768px) {
+    height: 200px;
+    align-self: stretch;
+}
 }
 
 .insights{
 width: 1px;
 height: 298px;
 background: var(--Bright-Green, #3C7A5B);
+
+@media (max-width:768px) {
+    height: 200px;
+}
 }
 
 .insightCard{
@@ -96,6 +142,10 @@ font-style: normal;
 font-weight: 500;
 line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
+
+@media (max-width:768px) {
+    align-self: stretch;
+}
 }
 
 .blogColumn{
@@ -113,6 +163,10 @@ font-style: normal;
 font-weight: 400;
 line-height: 80%; /* 64px */
 letter-spacing: -2px;
+
+@media (max-width:768px) {
+    font-size: 56px;
+}
 }
 
 .blogSub{
@@ -126,78 +180,4 @@ line-height: 90%; /* 36px */
 letter-spacing: -1.5px;
 }
 
-.badge{
-color: var(--White-White, #FFF);
-font-variant-numeric: slashed-zero;
-
-/* Desktop/Long paragraph/Small (R) */
-font-family: var(--Font-Family-Body, "Satoshi");
-font-size: var(--Font-Size-sm, 14px);
-font-style: normal;
-font-weight: 400;
-line-height: 180%; /* 25.2px */
-letter-spacing: -0.2px;
-}
-
-.social_icons{
-display: flex;
-align-items: center;
-gap: var(--lg, 16px);
-}
-.date_text{
-    color:  #FAFAFA;
-font-variant-numeric: slashed-zero;
-font-family: 'Satoshi', sans-serif;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
-letter-spacing: -0.2px;
-}
-
-.header{
-    color:  #FFF;
-font-variant-numeric: slashed-zero;
-font-family: "TheSeasons";
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%;
-letter-spacing: 0.5px;
-}
-}
-
-.logo_groups{
-display: flex;
-align-items: center;
-gap: 12px;
-
-.logo_subgroups{
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-}
-.logo_text{
-color: #FFF;
-text-align: center;
-font-variant-numeric: slashed-zero;
-font-family: 'Satoshi', sans-serif;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 150%;
-letter-spacing: -0.2px;
-}
-
-.logo_secondary{
-color:  #FAFAFA;
-text-align: center;
-font-variant-numeric: slashed-zero;
-font-family: 'Satoshi', sans-serif;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
-letter-spacing: -0.2px;
-}
 }

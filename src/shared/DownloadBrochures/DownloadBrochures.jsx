@@ -4,7 +4,11 @@ const DownloadBrochures = () => {
 
 return(
     <div className={styles.downloadBrochures}>
-        <img src='../edenBrookContainer.png' alt='Edenbrook Villa'/>
+         <picture>
+        <source media="(max-width: 768px)" srcSet="../edenbrookContainerMobile.png" />
+        <source media="(min-width: 769px)" srcSet="../edenBrookContainer.png" />
+        <img src="../edenBrookContainer.png" alt="Edenbrook Villa" style={{width: '100%'}} />
+    </picture>
 <div className={styles.container}>
 <div className={styles.title}>
     <div className={styles.titleColumn}>
@@ -17,9 +21,9 @@ return(
 <button className={styles.insightCard}>Download Brochure</button>
     </div>
     </div>
-    <div className='absolute bottom-[262px] right-24'>
+    {/* <div className='absolute bottom-[262px] right-24'>
     <img src='../edenPlaceHolder.png' alt='Edenbrook Villa Living room'/>
-    </div>
+    </div> */}
 
 
 </div>

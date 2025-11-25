@@ -51,7 +51,6 @@ flex-direction: column;
 align-items: flex-start;
 gap: 24px;
 align-self: stretch;
-order: 1;
 }
 }
 
@@ -130,6 +129,11 @@ text-transform: uppercase;
 }
 }
 
+.controlsContainer.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .insights{
 display: flex;
 height: 410px;
@@ -204,6 +208,26 @@ align-items: center;
 gap: 2px;
 border-radius: 0;
 background:#EAEAEA;
+}
+
+.controls{
+    display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 32px;
+align-self: stretch;
+}
+
+.controlsContainer{
+    display: flex;
+width: 48px;
+height: 48px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+aspect-ratio: 1/1;
+border-radius: 999px;
+border: 1px solid var(--White-White, #FFF);
 }
 
 .badge_text{

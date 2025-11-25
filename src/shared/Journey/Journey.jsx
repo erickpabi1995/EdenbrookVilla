@@ -1,8 +1,7 @@
 import styles from './Journey.module.scss'
+import useMediaQuery from '../useMediaQuery'
 
-const Journey = () => {
-
- const Journey = [
+ const JourneyData = [
   {
     name:"Concept",
     year:2024,
@@ -19,7 +18,17 @@ const Journey = () => {
     description:"Move-in begins — Early 2026."
   },
   ]
-return(
+
+
+const Journey = () => {
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  return isMobile ? <MobileUI /> : <DesktopUI />;
+}
+
+function DesktopUI(){
+  return(
     <div className={styles.journey}>
 <div className={styles.container}>
 <div className={styles.title}>
@@ -27,7 +36,7 @@ return(
 <p className={styles.titleText}>From our first concept to landmark developments, each milestone marks our ongoing pursuit of excellence.</p>
 </div>
 <div className={styles.titleDescription}>
-  {Journey.map((item)=>
+  {JourneyData.map((item)=>
   <div className={styles.button}>
   <div className={styles.insights}>
     <p className={styles.insightCard}>{item.year}</p>
@@ -53,8 +62,46 @@ return(
 </div>
 </div>
 </div>
+  )
+}
 
-)
+function MobileUI(){
+  return(
+    <div className={styles.journey}>
+<div className={styles.container}>
+<div className={styles.title}>
+<p className={styles.titleColumn}>PROJECT TIMELINE</p>
+<p className={styles.titleText}>From our first concept to landmark developments, each milestone marks our ongoing pursuit of excellence.</p>
+</div>
+<div className={styles.titleDescription}>
+  {JourneyData.map((item)=>
+  <div className={styles.button}>
+          <div className={styles.blogSubContainer}>
+        <div className={styles.blogColumn}>
+<div className={styles.blogSubColumn}></div>
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+  <circle cx="7.5" cy="7.5" r="7.5" fill="#FCC97E"/>
+</svg>
+<div className={styles.blogSub}></div>
+        </div>
+      </div>
+  <div className={styles.insights}>
+    <div className={styles.contentCard}>
+    <p className={styles.insightCard}>{item.year}</p>
+
+<div className={styles.social_icons}>
+  <p className={styles.date_text}>{item.name}</p>
+  <p className={styles.header}>{item.description}</p>
+      </div>
+      </div>
+  </div>
+  </div>
+  )}
+
+</div>
+</div>
+</div>
+  )
 }
 
 export default Journey

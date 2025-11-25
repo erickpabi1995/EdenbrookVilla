@@ -1,7 +1,8 @@
+
 import styles from './QLuxePartners.module.scss'
+import { motion } from 'framer-motion'
 
 const QLuxePartners = () => {
-
 
 return(
     <div className={styles.qluxePartners}>
@@ -16,17 +17,26 @@ return(
 
 </div>
 <div className={styles.insights}>
-  <div className={styles.insightCard}>
- <img src='../kutahyaLogo.png' alt='Logo'/>
-     <img src='../whirlpoollogo.svg' alt='Logo'/>
-      <img src='../coralLogo.svg' alt='Logo'/>
-  </div>
-  <div className={styles.insightCard}>
- <img src='../kutahyaLogo.png' alt='Logo'/>
-     <img src='../whirlpoollogo.svg' alt='Logo'/>
-      <img src='../coralLogo.svg' alt='Logo'/>
-
-  </div>
+  <motion.div 
+    className={styles.insightCard}
+    initial={{ x: -200, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}
+  >
+    <img src='../kutahyaLogo.png' alt='Logo'/>
+    <img src='../whirlpoollogo.svg' alt='Logo'/>
+    <img src='../coralLogo.svg' alt='Logo'/>
+  </motion.div>
+  <motion.div 
+    className={styles.insightCard}
+    initial={{ x: 200, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+  >
+    <img src='../kutahyaLogo.png' alt='Logo'/>
+    <img src='../whirlpoollogo.svg' alt='Logo'/>
+    <img src='../coralLogo.svg' alt='Logo'/>
+  </motion.div>
 </div>
 </div>
 )

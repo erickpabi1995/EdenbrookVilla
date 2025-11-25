@@ -56,6 +56,7 @@ Kojo Annan
 )}
 </div>
 </div>
+<div className={styles.newsLetterMainContainer}>
 <div className={styles.newsLetterContainer}>
 <div className={styles.newsLetter}>
     <p className={styles.newsLetterText}>Subscribe to our newsletter</p>
@@ -64,6 +65,7 @@ Kojo Annan
 <div className={styles.inputContainer}>
 <input className={styles.inputStyles} placeholder='Jessica@email.com'></input>
 <button className={styles.subscribeBtn}>Subscribe</button>
+</div>
 </div>
 </div>
     </div>
