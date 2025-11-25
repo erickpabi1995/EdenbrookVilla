@@ -96,6 +96,15 @@ align-self: stretch;
 
 }
 
+.mobileImageContainer{
+  display: flex;
+padding: 24px;
+flex-direction: column;
+align-items: flex-start;
+gap: 48px;
+align-self: stretch;
+}
+
 .titleDescription{
 display: flex;
 padding: 24px 32px;
@@ -117,6 +126,10 @@ gap: 16px;
 align-self: stretch;
 border-bottom: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
 }
+}
+
+.noBorderRight {
+  border-right: none;
 }
 
 .nonActive{
@@ -276,6 +289,8 @@ align-items: center;
 gap: 8px;
 cursor: pointer;
 border-radius: 100px;
+background: var(--Deep-Green, #172B22);
+color: #FFF;
 
 @media (max-width:768px) {
   flex: 1 0 0;
@@ -284,10 +299,6 @@ border-radius: 100px;
 
 }
 
-.activeType{
-background: var(--Deep-Green, #172B22);
-color: #FFF;
-}
 
 .nonActiveType{
 color:#172B22
@@ -351,7 +362,7 @@ align-self: stretch;
 flex-direction: column;
 align-items: flex-start;
 align-self: stretch;
-border-top: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
+border: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
 }
 }
 
@@ -366,6 +377,7 @@ background: var(--Light-Grey-Grey-4, #E5E5E5);
 padding: 12px 24px;
 justify-content: center;
 align-items: center;
+cursor: pointer;
 gap: 12px;
 border: 1px solid var(--Deep-Brown, #AF771E);
 color: var(--Deep-Brown, #AF771E);

@@ -33,10 +33,25 @@ More about us
 
 <div className={styles.blogColumn}>
 <div className={styles.blogSubColumn}>
-    <img src='../aboutImage3.svg' alt="About Image" style={{width: '348px', height: '348px'}}/>
+    {/* <img src='../aboutImage3.svg' alt="About Image" style={{width: '348px', height: '348px'}}/> */}
+         <picture>
+        <source media="(max-width: 768px)" srcSet="../aboutImageMobile3.png" />
+        <source media="(min-width: 769px)" srcSet="../aboutImage3.svg" />
+        <img src="../aboutImage3.svg" alt="Edenbrook Villa" style={{width: '100%'}} />
+    </picture>
 </div>
-     <img src='../aboutImage2.svg' alt="About Image" style={{height: '828px'}}/>
-      <img src='../aboutImage.svg' alt="About Image" style={{width: '348px', height: '522px'}}/>
+     {/* <img src='../aboutImage2.svg' alt="About Image" style={{height: '828px'}}/> */}
+         <picture>
+        <source media="(max-width: 768px)" srcSet="../aboutImageMobile2.png" />
+        <source media="(min-width: 769px)" srcSet="../aboutImage2.svg" />
+        <img src="../aboutImage2.svg" alt="Edenbrook Villa" style={{width: '100%'}} />
+    </picture>
+      {/* <img src='../aboutImage.svg' alt="About Image" style={{width: '348px', height: '522px'}}/> */}
+           <picture>
+        <source media="(max-width: 768px)" srcSet="../aboutImageMobile.png" />
+        <source media="(min-width: 769px)" srcSet="../aboutImage.svg" />
+        <img src="../aboutImage.svg" alt="Edenbrook Villa" style={{width: '100%'}} />
+    </picture>
 </div>
 </div>
 </div>

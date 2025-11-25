@@ -1,8 +1,60 @@
 import styles from './NewsLetter.module.scss'
-
+import { useState } from 'react'
 const NewsLetter = () => {
 
+  const [email, setEmail] = useState('')
+    const [isValidEmail, setIsValidEmail] = useState(true)
+    const [isSubscribed, setIsSubscribed] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        return emailRegex.test(email)
+    }
+
+       const handleEmailChange = (e) => {
+        const emailValue = e.target.value
+        setEmail(emailValue)
+        
+        // Reset validation state when user starts typing
+        if (!isValidEmail) {
+            setIsValidEmail(true)
+        }
+        
+        // Reset subscription state if user changes email after subscribing
+        if (isSubscribed) {
+            setIsSubscribed(false)
+        }
+    }
+
+    
+    const handleSubscribe = async () => {
+        if (!email.trim()) {
+            setIsValidEmail(false)
+            return
+        }
+
+        if (!validateEmail(email)) {
+            setIsValidEmail(false)
+            return
+        }
+
+        setIsLoading(true)
+        
+        // Simulate API call delay
+        setTimeout(() => {
+            setIsLoading(false)
+            setIsSubscribed(true)
+            // You can store the email locally or log it for now
+            console.log('Subscribed email:', email)
+        }, 1500)
+    }
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSubscribe()
+        }
+    }
 return(
     <div className={styles.newsLetter}>
 <div className={styles.container}>
@@ -14,10 +66,26 @@ return(
 </div>
 <div className={styles.insights}>
 <div className={styles.insightCard}>
-<input className={styles.blogSubContainer} placeholder='Jessica@email.com'></input>
-<button className={styles.blogColumn}>Subscribe</button>
+ <input 
+                                className={`${styles.blogSubContainer} ${!isValidEmail ? styles.error : ''} ${isSubscribed ? styles.success : ''}`}
+                                placeholder={isSubscribed ? 'Successfully subscribed!' : 'Jessica@email.com'}
+                                value={email}
+                                onChange={handleEmailChange}
+                                onKeyPress={handleKeyPress}
+                                disabled={isSubscribed || isLoading}
+                                type="email"
+                            />
+   <button 
+                                className={`${styles.blogColumn} ${isLoading ? styles.loading : ''} ${isSubscribed ? styles.subscribed : ''}`}
+                                onClick={handleSubscribe}
+                                disabled={isSubscribed || isLoading}
+                            >
+                                {isLoading ? 'Subscribing...' : isSubscribed ? 'Subscribed ✓' : 'Subscribe'}
+                            </button>
 </div>
-<p className={styles.blogSubColumn}>Only updates. No spam</p>
+ <p className={`${styles.blogSubColumn} ${!isValidEmail ? styles.errorText : ''}`}>
+                            {!isValidEmail ? 'Please enter a valid email address' : 'Only updates. No spam'}
+                        </p>
 </div>
 </div>
 {/* <div>

@@ -213,9 +213,43 @@ align-self: stretch;
 .badge{
 display: flex;
 align-items: center;
-gap: 17.6px;
+gap: 8.6px;
 }
 
+.delFur{
+    background: url('../delfur-small-logo.png') lightgray 50% / cover no-repeat;
+    width: 57.131px;
+height: 23.1px;
+aspect-ratio: 57.13/23.10;
+}
+
+.buildings{
+    width: 41.25px;
+height: 41.25px;
+aspect-ratio: 41.25/41.25;
+background: url('../builders-small-logo.png')  50% / cover no-repeat;
+}
+
+
+.coral{
+    width: 55px;
+height: 13.338px;
+aspect-ratio: 55.00/13.34;
+background: url('../coral-dulux-small-logo.png')  50% / cover no-repeat;
+}
+
+.whirlpool{
+    width: 51.425px;
+height: 16.5px;
+aspect-ratio: 51.42/16.50;
+background: url('../whirlpool-small-logo.png')  50% / cover no-repeat;
+}
+.philips{
+    width: 41.8px;
+height: 22.275px;
+aspect-ratio: 41.80/22.27;
+background: url('../lighting-philips-small-logo.png') lightgray 50% / cover no-repeat;
+}
 .badge_text{
     color:#172B22;
 text-align: center;

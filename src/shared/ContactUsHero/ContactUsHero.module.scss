@@ -15,6 +15,11 @@ justify-content: center;
 align-items: center;
 gap: 80px;
 background: rgba(0, 0, 0, 0.50);
+
+@media (max-width:768px) {
+padding: var(--6xl, 64px) var(--xl, 20px);
+align-self: stretch;
+}
 }
 
 .title{
@@ -26,6 +31,11 @@ align-items: flex-start;
 gap: 80px;
 flex: 1 0 0;
 align-self: stretch;
+
+@media (max-width:768px) {
+    width: 100%;
+    max-width: 100%;
+}
 }
 
 .titleColumn{
@@ -33,6 +43,15 @@ display: flex;
 justify-content: space-between;
 align-items: flex-end;
 align-self: stretch;
+
+@media (max-width:768px) {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
+
 }
 
 .titleText{
@@ -41,6 +60,12 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 12px;
+
+
+@media (max-width:768px) {
+    align-self: stretch;
+    align-items: flex-start;
+}
 
 }
 
@@ -70,6 +95,22 @@ font-weight: 700;
 line-height: 120%; /* 67.2px */
 text-transform: uppercase;
 
+@media (max-width:768px) {
+    color: var(--Color-White, #FFF);
+font-variant-numeric: slashed-zero;
+width: 100%;
+align-self: stretch;
+/* Mobile/Display/Large (SB) */
+font-family: var(--Font-Family-Heading, "TheSeasons");
+font-size: 38px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 45.6px */
+letter-spacing: -1.5px;
+text-transform: uppercase;
+}
+
+
 }
 
 .insights {
@@ -84,6 +125,21 @@ font-style: normal;
 font-weight: 500;
 line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
+
+@media (max-width:768px) {
+    color: var(--Color-White, #FFF);
+font-variant-numeric: slashed-zero;
+width: 100%;
+align-self: stretch;
+
+/* Mobile/Body/Large (R) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: -0.5px;
+}
 }
 
 

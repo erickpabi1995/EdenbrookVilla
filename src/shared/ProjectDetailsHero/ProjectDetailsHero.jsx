@@ -1,46 +1,21 @@
-import NavBar from '../NavBar/NavBar';
+import { useNavigate } from 'react-router-dom';
+import NavBar from './NavBar';
 import styles from './ProjectDetails.module.scss';
 
 const ProjectDetailsHero = () => {
-  const navItems = [
-    {
-    name:'history',
-    link:'history',
-  },
-    {
-    name:'journey',
-    link:'journey',
-  },
-    {
-    name:'unit gallery',
-    link:'unitGallery',
-  },
-    {
-    name:'floor plans',
-    link:'floorPlans',
-  },
-    { 
-    name:'neighborhood',
-    link:'neighborhood',
-  },
-   { 
-    name:'paymentplan',
-    link:'paymentplan',
-  },
-   { 
-    name:'brochure',
-    link:'brochure',
-  },
-   { 
-    name:'contact us',
-    link:'contactus',
-  }
+const navigate = useNavigate()
 
-]
+const handleContact = () => {
+  navigate('/contactUs')
+}
+
+const handleOffer = () => {
+  navigate('/investors')
+}
 
   return (
     <div className={styles.overallFrame}>
-      <NavBar background={'##00000066'} navItems={navItems}/>
+      <NavBar/>
       <div className={styles.projectInvestments}>
       <div className={styles.container}>
         <div className={styles.frame}>
@@ -95,10 +70,10 @@ const ProjectDetailsHero = () => {
           </p>
           <div className={styles.buttonContainer}>
             <div className={styles.buttonActions}>
-              <button className={styles.projectDetailsBtn}>
+              <button className={styles.projectDetailsBtn} onClick={handleOffer}>
                 make offer
               </button>
-              <button className={styles.contactButton}>
+              <button className={styles.contactButton} onClick={handleContact}>
                 book a viewing
               </button>
             </div>

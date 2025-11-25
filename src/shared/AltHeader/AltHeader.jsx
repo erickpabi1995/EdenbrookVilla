@@ -22,7 +22,7 @@ const AltHeader = () => {
 return(
     <div className={styles.header}>
 <div className={styles.cta6}>
-  <img src='../altHeaderImage.png' alt='Placeholder Image'/>
+  <div className={styles.img}></div>
 <div className={styles.frame}>
 <div className={styles.secondFrame}>
 <p className={styles.text}>— Why Partner with Qluxe?</p>

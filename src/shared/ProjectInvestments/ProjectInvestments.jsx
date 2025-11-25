@@ -84,7 +84,7 @@ const ProjectInvestments = () => {
             </div>
           </div>
         </div>
-        <div className={styles.sliderContainer}>
+        {/* <div className={styles.sliderContainer}>
           <div className={styles.sliderBtnContainer}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -134,7 +134,7 @@ const ProjectInvestments = () => {
             </div>
           </div>{' '}
 
-        </div>
+        </div> */}
       </div>
     </div>
   );
