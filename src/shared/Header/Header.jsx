@@ -1,6 +1,9 @@
+import useMediaQuery from '../useMediaQuery'
 import styles from './Header.module.scss'
 
 const CTA = () => {
+
+   const isMobile = useMediaQuery("(max-width: 768px)")
 return(
     <div className={styles.header}>
 <div className={styles.cta6}>
@@ -12,9 +15,9 @@ return(
 </div>
 <div className={styles.secondText}>
   <div className='float-right relative'>
-  <img src='../architecture.png' alt='HeaderImage' style={{width:"1120px",height:"746px"}}/>
-     <div className='absolute' style={{top: '80px', left: '-160px'}}> 
-      <img src='../headerImage2.png' alt='HeaderImage'/>
+  <img src='../architecture.png' alt='HeaderImage' style={{ width:isMobile ? '286px' : "1120px",height:isMobile ? '190px' : "746px"}}/>
+     <div className='absolute' style={{top:isMobile ? '20px' : '80px', left: isMobile ? '-60px' :'-160px'}}> 
+      <img src='../headerImage2.png' alt='HeaderImage' style={{ width:isMobile ? '98px' : "auto",height:isMobile ? '98' : "auto"}}/>
     </div>
   
   </div>

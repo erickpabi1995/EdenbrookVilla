@@ -285,6 +285,10 @@ font-size: var(--Font-Size-xs, 12px);
 font-style: normal;
 font-weight: 700;
 line-height: 16px; /* 133.333% */
+
+@media (max-width:768px) {
+ align-self: auto; 
+}
 }
 .date_text{
 display: flex;

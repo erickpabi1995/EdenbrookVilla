@@ -132,6 +132,9 @@ letter-spacing: -0.5px;
 height: 746px;
 align-self: stretch;
 
+@media (max-width:768px) {
+    height: auto;
+}
 
 }
 

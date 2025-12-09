@@ -151,11 +151,11 @@ line-height: 150%; /* 27px */
 letter-spacing: -0.5px;
 
 @media (max-width:768px) {
-    color: var(--Color-White, #FFF);
+    color: var(--Color-White, #FCC97E);
 font-variant-numeric: slashed-zero;
 
 /* Desktop/Body/Large (M) */
-font-family: var(--Font-Family-Body, "Satoshi");
+font-family: var(--Font-Family-Body, "TheSeasons");
 font-size: var(--Font-Size-lg, 18px);
 font-style: normal;
 font-weight: 500;
