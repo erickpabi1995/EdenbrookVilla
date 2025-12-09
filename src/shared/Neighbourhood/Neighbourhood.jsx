@@ -182,22 +182,17 @@ onClick={()=>handleViewToggle('list')}>
 }
 
 function DesktopUI(){
-     const[activeView,setActiveView] = useState('list')
-
-   const handleViewToggle = (value) => {
-    setActiveView(value)
-   }
 
 return(
     <div className={styles.neighbourhood}>
 <div className={styles.container}>
 <p className={styles.title}>Around the Neighborhood</p>
 <div className={styles.titleColumn}>
-<button className={activeView === 'list' ? styles.button : styles.titleText} onClick={()=>handleViewToggle('list')}>
+<button className={styles.titleText}>
   List view
 </button>
-    <button className={activeView === '3d' ? styles.button : styles.titleText}
-    onClick={()=>handleViewToggle('3d')}>3D view</button>
+    <button className={styles.button}
+  >3D view</button>
     </div>
 </div>
 <img src='../listMap.png' alt='Map'/>
