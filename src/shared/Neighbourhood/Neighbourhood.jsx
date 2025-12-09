@@ -1,4 +1,4 @@
-import styles from './Neighbourhood.module.scss'
+import styles from './NeighbourHood.module.scss'
 import useMediaQuery from '../useMediaQuery'
 import { useState } from 'react';
 
@@ -38,7 +38,7 @@ import { useState } from 'react';
     }
   ]
 
-const Neighbourhood = () => {
+const NeighbourHood = () => {
 
 
 
@@ -207,4 +207,4 @@ return(
 )
 }
 
-export default Neighbourhood
+export default NeighbourHood
