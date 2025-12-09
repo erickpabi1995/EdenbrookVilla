@@ -8,10 +8,11 @@ align-self: stretch;
 background: var(--White, #FFF);
 
 @media (max-width:768px) {
-  display: flex;
+display: flex;
+padding: var(--Section-Padding-padding-section-large, 64px) var(--Page-Padding-padding-global, 20px);
 flex-direction: column;
-align-items: flex-start;
-gap: 80px;
+align-items: center;
+gap: 48px;
 align-self: stretch;
 height: auto;
 }
@@ -29,27 +30,16 @@ margin-right: auto;
 align-self: stretch;
 
 @media (max-width:768px) {
-  display: flex;
+display: flex;
 max-width: 100%;
 width: 100%;
 flex-direction: column;
 align-items: flex-start;
+gap: 48px;
 align-self: stretch;
 }
 }
 
-.img{
-  flex: 1 0 0;
-align-self: stretch;
-background: url('../altHeaderImage.png') lightgray 50% / cover no-repeat;
-
-@media (max-width:768px) {
-  order: 2;
-  height: 500px;
-  align-self: stretch;
-  flex: none;
-}
-}
 
 
 .frame{
@@ -59,13 +49,11 @@ gap: 64px;
 align-self: stretch;
 
 @media (max-width:768px) {
-  display: flex;
-padding: var(--Section-Padding-padding-section-large, 64px) var(--Page-Padding-padding-global, 20px);
+display: flex;
 flex-direction: column;
 align-items: flex-start;
-gap: 24px;
+gap: 48px;
 align-self: stretch;
-order: 1;
 }
 }
 
@@ -77,7 +65,11 @@ gap: 32px;
 flex: 1 0 0;
 
 @media (max-width:768px) {
-  max-width: 100%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 32px;
+align-self: stretch;
 }
 }
 
@@ -87,6 +79,14 @@ flex-direction: column;
 align-items: flex-start;
 gap: 24px;
 align-self: stretch;
+
+@media (max-width:768px) {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
 }
 
 .investmentText{
@@ -102,6 +102,10 @@ font-weight: 700;
 line-height: 120%; /* 57.6px */
 letter-spacing: 0.5px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+  font-size: 32px;
+}
 }
 
 .investmentSubtext{
@@ -135,6 +139,16 @@ font-weight: 700;
 line-height: 20px; /* 142.857% */
 letter-spacing: -0.2px;
 text-transform: uppercase;
+
+@media (max-width:768px) {
+  align-self: stretch;
+}
+}
+
+.mobileImageContainer {
+  float: right;
+  display: block;
+  align-self: stretch;
 }
 .secondColumn{
 display: flex;

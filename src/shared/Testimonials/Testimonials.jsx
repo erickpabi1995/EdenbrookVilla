@@ -1,57 +1,75 @@
 import styles from './Testimonials.module.scss'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import useMediaQuery from '../useMediaQuery'
+
 const Testimonials = () => {
 
   const [currentPage,setCurrentPage] = useState(0)
-  const itemsPerPage=3
+  
+  // Responsive items per page
+  const isTablet = useMediaQuery("(max-width: 1024px)")
+  const isMobile = useMediaQuery("(max-width: 768px)")
+  
+  const getItemsPerPage = () => {
+    if (isMobile) return 1
+    if (isTablet) return 2
+    return 4 // Show 4 items on monitors/large screens
+  }
+  
+  const itemsPerPage = getItemsPerPage()
 
-  const Testimonials = [
+  const TestimonialsData = [
   {
     companyImage:'../layer.svg',
-    testimonial:'“Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana.”',
+    testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
     authorImage:'../testimonials_author.svg',
     author:'Kwesi Addo',
     title:'Lead Architect, Partner Firm'
   },
     {
     companyImage:'../shape.svg',
-    testimonial:'“From our first visit to the final handover, Qluxe delivered more than a home — they delivered an experience. Every detail reflects a level of thought and care that’s rare in today’s market.”',
+    testimonial:"'From our first visit to the final handover, Qluxe delivered more than a home — they delivered an experience. Every detail reflects a level of thought and care that's rare in today's market.'",
     authorImage:'../testimonials_author_2.svg',
     author:'Amelia K',
     title:'Homeowner, Edenbrook Villa'
   },
     {
     companyImage:'../base.svg',
-    testimonial:'“Qluxe Homes stood out for their transparency, design integrity, and long-term vision. Investing with them has been seamless and rewarding in every way.”',
+    testimonial:'"Qluxe Homes stood out for their transparency, design integrity, and long-term vision. Investing with them has been seamless and rewarding in every way."',
     authorImage:'../testimonials_author_3.svg',
     author:'David Mensah',
     title:'Property Investor'
   },
     {
     companyImage:'../atlas.svg',
-    testimonial:'“Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana.”',
+    testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
     authorImage:'../testimonials_author.svg',
     author:'Kwesi Addo',
     title:'Lead Architect, Partner Firm'
   },
     {
     companyImage:'../base.svg',
-    testimonial:'“Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana.”',
+    testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
     authorImage:'../testimonials_author.svg',
     author:'Kwesi Addo',
     title:'Lead Architect, Partner Firm'
   },
     {
     companyImage:'../shape.svg',
-    testimonial:'“Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana.”',
+    testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
     authorImage:'../testimonials_author.svg',
     author:'Kwesi Addo',
     title:'Lead Architect, Partner Firm'
   }
   ]
 
+  // Reset to first page when items per page changes
+  useEffect(() => {
+    setCurrentPage(0)
+  }, [itemsPerPage])
+
       const handleNext = () => {
-        const maxPage = Math.ceil(Testimonials.length / itemsPerPage) - 1
+        const maxPage = Math.ceil(TestimonialsData.length / itemsPerPage) - 1
         if (currentPage < maxPage) {
             setCurrentPage(currentPage + 1)
         }
@@ -64,11 +82,11 @@ if(currentPage > 0){
 
   const startIndex = currentPage * itemsPerPage
     const endIndex = startIndex + itemsPerPage
-    const currentTestimonials = Testimonials.slice(startIndex, endIndex)
+    const currentTestimonials = TestimonialsData.slice(startIndex, endIndex)
     
     // Calculate if buttons should be disabled
     const isFirstPage = currentPage === 0
-    const isLastPage = currentPage >= Math.ceil(Testimonials.length / itemsPerPage) - 1
+    const isLastPage = currentPage >= Math.ceil(TestimonialsData.length / itemsPerPage) - 1
 
 return(
     <div className={styles.testimonials}>
@@ -76,7 +94,7 @@ return(
 <div className={styles.title}>
 <p className={styles.titleColumn}>— Testimonials</p>
 <p className={styles.titleText}>The Confidence of Those We Build For.</p>
-<p className={styles.titleDescription}>Our clients’ stories reflect the trust and satisfaction that define every Qluxe home.</p>
+<p className={styles.titleDescription}>Our clients' stories reflect the trust and satisfaction that define every Qluxe home.</p>
 <div className={styles.button}>
   {currentTestimonials.map((item,index)=>
 <div className={styles.insights} key={index}>
@@ -96,17 +114,6 @@ return(
 )}
 </div>
 </div>
-
-{/* <div className={styles.insightCard}>
-<input className={styles.blogSubContainer} placeholder='Jessica@email.com'></input>
-<button className={styles.blogColumn}>Subscribe</button>
-</div>
-<p className={styles.blogSubColumn}>Only updates. No spam</p>
-</div>
-</div>
-<div>
-  <img src='../newsLetterImage.svg' alt='NewsLetter'/>
-</div> */}
 <div className={styles.badge}>
 <button 
 className={`${styles.badge_text} ${isFirstPage ? styles.disabled : ''}`} 

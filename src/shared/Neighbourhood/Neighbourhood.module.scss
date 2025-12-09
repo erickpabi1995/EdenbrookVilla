@@ -72,6 +72,20 @@ line-height: 150%; /* 24px */
 letter-spacing: -0.5px;
 }
 
+.neighbourTextInactive{
+  color: var(--Dark-Grey-Grey-8, #7C7C7C);
+font-variant-numeric: slashed-zero;
+
+/* Mobile/Body/Large (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: 16px;
+font-style: normal;
+flex: 1 0 0;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.5px;
+}
+
 .neighbourDividerContainer{
   display: flex;
 align-items: center;

@@ -1,6 +1,9 @@
+import useMediaQuery from '../useMediaQuery';
 import styles from './DownloadPortfolio.module.scss'
 
 const DownloadPortfolio = () => {
+
+       const isMobile = useMediaQuery("(max-width: 768px)");
 
 return(
     <div className={styles.header}>
@@ -20,7 +23,20 @@ return(
 </div>
 
 </div>
-<img src='../brochureImageBig.png' alt='Building'/>
+
+<div>
+  {isMobile ? (
+    <div className={styles.mobileImageContainer}>
+            <img src="../brochureImageBigMobile.png" alt="House Image" />
+    </div>
+  )
+  :(
+      <img src="../brochureImageBig.png" alt="House Image" />
+  )
+  
+}
+</div>
+
 
 </div>
 </div>
