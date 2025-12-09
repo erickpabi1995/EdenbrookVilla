@@ -12,6 +12,16 @@ const Blog = () => {
         navigate('/insightHub')
     }
 
+    const handleBlogClick = (blogIndex) => {
+        const actualIndex = currentPage * itemsPerPage + blogIndex
+        navigate('/insightDetails', { 
+            state: { 
+                blog: blogs[actualIndex],
+                blogId: actualIndex 
+            } 
+        })
+    }
+
     const handlePrevious = () => {
         if (currentPage > 0) {
             setCurrentPage(currentPage - 1)
@@ -30,23 +40,23 @@ const Blog = () => {
       image: '../blog1.svg',
       date:'28 Feb 2020',
       heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
+      author: 'Ama Annan',
       imageAuthor: '../blog_author.svg',
       title:'Blogger, QLuxe Homes'
     },
         {
       image: '../blog2.svg',
       date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
+      heading: 'How to Buy Property in Ghana from Abroad: A Step by Step Guide for the Diaspora',
+      author: 'Kwesi Adjei',
       imageAuthor: '../blog_author2.svg',
       title:'Blogger, QLuxe Homes'
     },
         {
       image: '../blog3.svg',
       date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
+      heading: 'Choosing the Right Location in Accra: How to Pick a Property with Long-Term Value',
+      author: 'Yaw Boakye',
       imageAuthor: '../blog_author3.svg',
       title:'Blogger, QLuxe Homes'
     },
@@ -61,7 +71,7 @@ const Blog = () => {
         {
       image: '../blog2.svg',
       date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
+      heading: 'How to Buy Property in Ghana from Abroad: A Step by Step Guide for the Diaspora',
       author: 'Kojo Annan',
       imageAuthor: '../blog_author2.svg',
       title:'Blogger, QLuxe Homes'
@@ -69,7 +79,7 @@ const Blog = () => {
         {
       image: '../blog3.svg',
       date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
+       heading: 'Choosing the Right Location in Accra: How to Pick a Property with Long-Term Value',
       author: 'Kojo Annan',
       imageAuthor: '../blog_author3.svg',
       title:'Blogger, QLuxe Homes'
@@ -95,9 +105,10 @@ return(
 </div>
 
 <div className={styles.insights}>
-  {currentBlogs.map((blog)=>
-<div className={styles.insightCard}>
-  <img src={blog.image} alt="Blog" style={{height:"231px",objectFit:"cover"}}/>
+  {currentBlogs.map((blog,index)=>
+<div className={styles.insightCard} key={index}  onClick={() => handleBlogClick(index)}
+                            style={{ cursor: 'pointer' }}>
+  <img src={blog.image} alt="Blog" className={styles.blogImage}/>
   <div className={styles.blogSubContainer}>
     <div className={styles.blogColumn}>
       <div className={styles.blogSubColumn}>
@@ -127,14 +138,14 @@ return(
 <div className={styles.controls}>
 <button className={`${styles.controlsContainer} ${isFirstPage ? styles.disabled : ''}`}  disabled={isFirstPage} onClick={handlePrevious}>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M11 17L6 12M6 12L11 7M6 12H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M11 17L6 12M6 12L11 7M6 12H18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 </button>
 <div className={`${styles.controlsContainer} ${isLastPage ? styles.disabled : ''}`} 
                         onClick={handleNext}
                         disabled={isLastPage}>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M13 17L18 12M18 12L13 7M18 12H6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 17L18 12M18 12L13 7M18 12H6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 </div>
 </div>

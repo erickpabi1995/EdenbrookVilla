@@ -177,6 +177,7 @@ align-self: stretch;
 display: flex;
 align-items: flex-end;
 gap: 12px;
+cursor: pointer;
 align-self: stretch;
 }
 .logo_subgroups{
@@ -189,6 +190,7 @@ display: flex;
 width: 48px;
 height: 48px;
 justify-content: center;
+cursor: pointer;
 align-items: center;
 gap: 10px;
 aspect-ratio: 1/1;

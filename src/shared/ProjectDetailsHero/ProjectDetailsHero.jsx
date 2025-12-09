@@ -1,17 +1,16 @@
-import { useNavigate } from 'react-router-dom';
 import NavBar from './NavBar';
 import styles from './ProjectDetails.module.scss';
 
 const ProjectDetailsHero = () => {
-const navigate = useNavigate()
+// const navigate = useNavigate()
 
-const handleContact = () => {
-  navigate('/contactUs')
-}
+// const handleContact = () => {
+//   navigate('/contactUs')
+// }
 
-const handleOffer = () => {
-  navigate('/investors')
-}
+// const handleOffer = () => {
+//   navigate('/contactUs')
+// }
 
   return (
     <div className={styles.overallFrame}>
@@ -66,22 +65,22 @@ const handleOffer = () => {
             </div>
           </div>
           <p className={styles.description}>
-           Set within Accra’s most exclusive enclave, Edenbrook Villa embodies serenity, privacy, and architectural excellence — redefining what it means to come home.
+           Within These Walls, Time Slows. An Eden of  Your Own.
           </p>
-          <div className={styles.buttonContainer}>
+          {/* <div className={styles.buttonContainer}>
             <div className={styles.buttonActions}>
               <button className={styles.projectDetailsBtn} onClick={handleOffer}>
-                make offer
+                make an offer
               </button>
               <button className={styles.contactButton} onClick={handleContact}>
                 book a viewing
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
           <div className={styles.carouselContainer}>
             <div className={styles.carousel}>
-              <p className={styles.carouselText}>3665 sft</p>
+              <p className={styles.carouselText}>3200 sft</p>
               <div className={styles.previousContainer}>
                 <div className={styles.previousSlide}>
                   <div className={styles.divider}></div>
@@ -111,7 +110,7 @@ const handleOffer = () => {
                         
             </div>
             <div className={styles.carousel}>
-              <p className={styles.carouselText}>3</p>
+              <p className={styles.carouselText}>4.5</p>
               <div className={styles.previousContainer}>
                 <div className={styles.previousSlide}>
                   <div className={styles.divider}></div>
@@ -126,7 +125,7 @@ const handleOffer = () => {
                         
             </div>
                  <div className={styles.carousel}>
-              <p className={styles.carouselText}>$350,000</p>
+              <p className={styles.carouselText}>$420,000</p>
               <div className={styles.previousContainer}>
                 <div className={styles.previousSlide}>
                   <div className={styles.divider}></div>

@@ -25,11 +25,11 @@ return(
     <div className={styles.investorRelations}>
 <div className={styles.container}>
 <div className={styles.title}>
-<p className={styles.titleColumn}>A Proven Vision for Sustainable Growth. <span className={styles.titleText}>From exclusive residential developments to landmark community projects, Qluxe continues to redefine Ghana’s property landscape. Each investment is guided by rigorous market research, premium design execution, and a commitment to long-term value creation.</span></p>
+<p className={styles.titleColumn}>A Proven Vision for Sustainable Growth. <span className={styles.titleText}>From exclusive residential developments to landmark community projects, Qluxe continues to redefine Ghana’s property landscape. Each investment is guided by rigorous market research, premium design execution, and a commitment to long term value creation.</span></p>
 </div>
     <div className={styles.titleDescription}>
-        {InvestorData.map((item)=>
-    <div className={styles.button}>
+        {InvestorData.map((item,index)=>
+    <div className={styles.button} key={index}>
        <div className={styles.insights}></div>
           <div className={styles.insightCard}>
             <p className={styles.blogSubContainer}>{item.name}</p>

@@ -1,53 +1,57 @@
-
 import { useState } from 'react'
 import styles from './NavBar.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 const NavBar = () => {
+  const navigate = useNavigate()
+
       const [isMenuOpen, setIsMenuOpen] = useState(false)
     const navList = [{
       name:'About',
-      link:''
+      link:'/about'
     },
 {
   name:'Projects',
-  link:''
+  link:'/projectsHub'
 },
 {
   name:'Partner Agents',
-  link:''
+  link:'/partnerAgents'
 },
 {
   name:'Investors',
-  link:''
+  link:'/investors'
 },
 {
   name:'Insights',
-  link:''
+  link:'/insightHub'
 },
 ]
+
+const handleContact = () => {
+  navigate('/contactUs')
+}
     return (
         <nav className={styles.navbar}>
             <div className={styles.frame}>
            
-                <img src='./Logo.svg' alt="Logo" />
+                <img src='./Logo.svg' alt="Logo" onClick={()=>navigate('/')} className='cursor-pointer' />
 
-                  {/* <button 
-                    className={styles.hamburger} 
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Toggle menu"
-                ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M2.5 10H17.5M2.5 5H17.5M2.5 15H17.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                </button> */}
-                  <button 
-                    className={styles.hamburger} 
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    <span className={styles.hamburgerLine}></span>
-                    <span className={styles.hamburgerLine}></span>
-                    <span className={styles.hamburgerLine}></span>
-                </button>
+                <div className={styles.mobileControls}>
+                    <div className={styles.button_container}>
+                        <button className={styles.button} onClick={handleContact}>CONTACT US</button>
+                    </div>
+                    
+                    <button 
+                        className={styles.hamburger} 
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <span className={styles.hamburgerLine}></span>
+                        <span className={styles.hamburgerLine}></span>
+                        <span className={styles.hamburgerLine}></span>
+                    </button>
+                </div>
                      
                    <ul className={`${styles.logo} ${isMenuOpen ? styles.menuOpen : ''}`}>
   {navList.map((item, index) => (
@@ -57,8 +61,8 @@ const NavBar = () => {
       </a>
     </li>
   ))}
-  <div className={styles.button_container}>
-    <button className={styles.button}>CONTACT US</button>
+  <div className={`${styles.button_container} ${styles.desktopOnly}`}>
+    <button className={styles.button} onClick={handleContact}>CONTACT US</button>
   </div>
 </ul>
            

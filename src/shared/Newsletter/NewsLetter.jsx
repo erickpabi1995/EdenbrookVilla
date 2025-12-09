@@ -60,9 +60,19 @@ return(
 <div className={styles.container}>
 <div className={styles.title}>
 <div className={styles.titleColumn}>
-<p className={styles.titleText}>Stay updated</p>
-<p className={styles.titleDescription}>Be the first to know when we launch.</p>
-<p className={styles.button}>Sign up to receive exclusive updates, sneak peeks, and be the first to access our launch.</p>
+{!isSubscribed ? (
+    <>
+        <p className={styles.titleText}>Stay updated</p>
+        <p className={styles.titleDescription}>Be the first to know when we launch.</p>
+        <p className={styles.button}>Sign up to receive exclusive updates, sneak peeks, and be the first to access our launch.</p>
+    </>
+) : (
+    <>
+        <p className={styles.titleText}>Thank you!</p>
+        <p className={styles.titleDescription}>You are now subscribed to our newsletter.</p>
+        <p className={styles.button}>We'll keep you updated with the latest news and exclusive content. Check your inbox for a confirmation email.</p>
+    </>
+)}
 </div>
 <div className={styles.insights}>
 <div className={styles.insightCard}>
@@ -84,7 +94,7 @@ return(
                             </button>
 </div>
  <p className={`${styles.blogSubColumn} ${!isValidEmail ? styles.errorText : ''}`}>
-                            {!isValidEmail ? 'Please enter a valid email address' : 'Only updates. No spam'}
+                            {!isValidEmail ? 'Please enter a valid email address' : isSubscribed ? 'Welcome to our community!' : 'Only updates. No spam'}
                         </p>
 </div>
 </div>

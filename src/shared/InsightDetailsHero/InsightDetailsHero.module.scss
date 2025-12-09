@@ -15,6 +15,10 @@ align-self: stretch;
 background: var(--White-White, #FFF);
 }
 
+.active{
+    border-radius: 8px;
+background: var(--Light-Grey-Grey-4, #E5E5E5);
+}
 .container{
 display: flex;
 padding: var(--9xl, 128px) 0;

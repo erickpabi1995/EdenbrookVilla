@@ -25,10 +25,13 @@ align-self: stretch;
 .title{
 display: flex;
 max-width: 1312px;
+width: 100%;
 flex-direction: column;
 justify-content: flex-end;
 align-items: flex-start;
 gap: 80px;
+margin-left: auto;
+margin-right: auto;
 flex: 1 0 0;
 align-self: stretch;
 
@@ -77,6 +80,10 @@ font-style: normal;
 font-weight: 500;
 line-height: 150%; /* 24px */
 letter-spacing: -0.3px;
+
+@media (max-width:768px) {
+    align-self: stretch;
+}
 }
 
 .button{

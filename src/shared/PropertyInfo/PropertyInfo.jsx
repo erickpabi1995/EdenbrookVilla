@@ -4,11 +4,11 @@ const PropertyInfo = () => {
 const Interior = [
   {
     title:"TOTAL BEDROOMS",
-    value:3
+    value:4
   },
     {
     title:"TOTAL BATHROOMS",
-    value:4
+    value:4.5
   },
     {
     title:"KITCHEN AREA",
@@ -113,8 +113,8 @@ return(
 <div className={styles.titleText}>
   <div className={styles.titleDescription}></div>
 </div>
-{Interior.map((item)=>
-  <div className={styles.button}>
+{Interior.map((item,index)=>
+  <div className={styles.button} key={index}>
     <div className={styles.insights}>
 <p className={styles.insightCard}>{item.title}</p>
 <p className={styles.insightValue}>{item.value}</p>
@@ -127,8 +127,8 @@ return(
 <div className={styles.titleText}>
   <div className={styles.titleDescription}></div>
 </div>
-{Exterior.map((item)=>
-  <div className={styles.button}>
+{Exterior.map((item,index)=>
+  <div className={styles.button} key={index}>
     <div className={styles.insights}>
 <p className={styles.insightCard}>{item.title}</p>
 <p className={styles.insightValue}>{item.value}</p>
@@ -143,8 +143,8 @@ return(
 <div className={styles.titleText}>
   <div className={styles.titleDescription}></div>
 </div>
-{Area.map((item)=>
-  <div className={styles.button}>
+{Area.map((item,index)=>
+  <div className={styles.button} key={index}>
     <div className={styles.insights}>
 <p className={styles.insightCard}>{item.title}</p>
 <p className={styles.insightValue}>{item.value}</p>
@@ -157,8 +157,8 @@ return(
 <div className={styles.titleText}>
   <div className={styles.titleDescription}></div>
 </div>
-{Financial.map((item)=>
-  <div className={styles.button}>
+{Financial.map((item,index)=>
+  <div className={styles.button} key={index}>
     <div className={styles.insights}>
 <p className={styles.insightCard}>{item.title}</p>
 <p className={styles.insightValue}>{item.value}</p>

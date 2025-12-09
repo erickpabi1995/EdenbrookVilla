@@ -1,8 +1,12 @@
 
+import { useState } from 'react'
 import styles from './NavBar.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const NavBar = () => {
+  const navigate = useNavigate()
+       const [isMenuOpen, setIsMenuOpen] = useState(false)
+
     const navList = [{
       name:'About',
       link:'/about'
@@ -21,25 +25,45 @@ const NavBar = () => {
 },
 {
   name:'Insights',
-  link:'/insights'
+  link:'/insightHub'
 },
 ]
+
+const handleContact = () => {
+navigate('/contactUs')
+}
     return (
         <nav className={styles.navbar}>
             <div className={styles.frame}>
            
-                <img src='./Logo.svg' alt="Logo" />
+                <img src='./Logo.svg' alt="Logo"  onClick={()=>navigate('/')} className='cursor-pointer'/>
                      
-                   <ul className={styles.logo}>
+                       <div className={styles.mobileControls}>
+                                         <div className={styles.button_container}>
+                                             <button className={styles.button} onClick={handleContact}>CONTACT US</button>
+                                         </div>
+                                         
+                                         <button 
+                                             className={styles.hamburger} 
+                                             onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                             aria-label="Toggle menu"
+                                         >
+                                             <span className={styles.hamburgerLine}></span>
+                                             <span className={styles.hamburgerLine}></span>
+                                             <span className={styles.hamburgerLine}></span>
+                                         </button>
+                                     </div>
+
+  <ul className={`${styles.logo} ${isMenuOpen ? styles.menuOpen : ''}`}>
   {navList.map((item, index) => (
     <li key={index} className={styles.listItems}>
-      <Link to={item.link}>
+      <a href={item.link}>
         {item.name}
-      </Link>
+      </a>
     </li>
   ))}
-  <div className={styles.button_container}>
-    <button className={styles.button}>CONTACT US</button>
+  <div className={`${styles.button_container} ${styles.desktopOnly}`}>
+    <button className={styles.button} onClick={handleContact}>CONTACT US</button>
   </div>
 </ul>
            

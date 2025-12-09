@@ -132,6 +132,12 @@ letter-spacing: -0.5px;
 
 }
 
+.downloading {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
 
 .insightCard{
 display: flex;
@@ -152,6 +158,17 @@ font-weight: 700;
 line-height: 20px; /* 142.857% */
 letter-spacing: -0.2px;
 text-transform: uppercase;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    
+    &:hover:not(:disabled) {
+        // Add hover effects here
+        transform: translateY(-2px);
+        transition: transform 0.2s ease;
+    }
 
 @media (max-width:768px) {
     align-self: stretch;

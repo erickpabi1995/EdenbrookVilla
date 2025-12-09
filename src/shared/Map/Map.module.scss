@@ -10,6 +10,9 @@ align-self: stretch;
 color: var(--Deep-Green, #172B22);
 font-variant-numeric: slashed-zero;
 max-width: 1312px;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
 align-self: stretch;
 /* Desktop/Display/Normal (SB) */
 font-family: var(--Font-Family-Heading, "TheSeasons");
@@ -24,7 +27,10 @@ text-transform: uppercase;
 .insightCard{
 height: 600px;
 max-width: 1312px;
+width: 100%;
 align-self: stretch;
+margin-left: auto;
+margin-right: auto;
 
 }
 

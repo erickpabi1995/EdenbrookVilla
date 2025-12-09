@@ -11,7 +11,7 @@ const AltHeader = () => {
       description:"Participate in discussions and feedback sessions.",
     },
       {
-      title:"Members-Only Events",
+      title:"Members Only Events",
       description:"Attend special workshops and networking events.",
     },
       {
@@ -26,8 +26,8 @@ return(
 <div className={styles.frame}>
 <div className={styles.secondFrame}>
 <p className={styles.text}>— Why Partner with Qluxe?</p>
-{data.map((item)=>
-<div className={styles.secondColumn}>
+{data.map((item,index)=>
+<div className={styles.secondColumn} key={index}>
   <p className={styles.secondText}>{item.title}</p>
   <p className={styles.smallText}>{item.description}</p>
 </div>

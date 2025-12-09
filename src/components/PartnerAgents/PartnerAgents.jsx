@@ -1,6 +1,6 @@
 import AboutInfo from '../../shared/AboutInfo/AboutInfo'
 import Containers from '../../shared/Containers/Containers'
-import NavBar from '../../shared/NavBar/NavBar'
+import NavBar from '../../shared/PartnerAgentHero/NavBar'
 import PartnerAgentHero from '../../shared/PartnerAgentHero/PartnerAgentHero'
 import PartnerAgentDirectory from '../../shared/PartnerAgentDirectory/PartnerAgentDirectory'
 import AltHeader from '../../shared/AltHeader/AltHeader'
@@ -39,11 +39,13 @@ const PartnerAgents = () => {
   ]
 return(
     <>
-<NavBar navItems={navItems}/>
+<NavBar/>
 <PartnerAgentHero/>
   <AboutInfo content={'Collaboration Built on Trust and Integrity. We believe great partnerships create exceptional results. Our agent network is built on professionalism, transparency, and a shared commitment to providing clients with the highest standard of service and luxury property experiences.'}/>
     <Containers content={'BROWSE OUR AGENT DIRECTORY'} contentBackground={true} title={true}/>
+    <div id='partnerAgentDirectory'>
     <PartnerAgentDirectory/>
+    </div>
     <AltHeader/>
     <Partners/>
     <Referrals/>

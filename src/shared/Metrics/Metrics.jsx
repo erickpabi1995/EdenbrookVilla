@@ -33,8 +33,8 @@ return(
 <p className={styles.titleText}>A Record Built on Precision and Trust.</p>
 </div>
 <div className={styles.titleDescription}>
-  {Company.map((item)=>
-  <div className={styles.button}>
+  {Company.map((item,index)=>
+  <div className={styles.button} key={index}>
   <div className={styles.insights}></div>
     <div className={styles.insightCard}>
       <p className={styles.blogSubContainer}>{item.name}</p>

@@ -21,6 +21,10 @@ align-self: stretch;
 .container{
 display: flex;
 align-items: center;
+max-width: 1280px;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
 gap: 112px;
 align-self: stretch;
 
@@ -50,6 +54,7 @@ text-transform: uppercase;
 .titleColumn{
 display: flex;
 max-width: var(--Container-container-large, 1280px);
+width: 100%;
 margin-left: auto;
 margin-right: auto;
 align-items: center;

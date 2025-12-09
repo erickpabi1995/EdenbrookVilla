@@ -134,6 +134,18 @@ gap: 8px;
 align-self: stretch;
 width: 100%;
 flex-direction: row;
+flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    
+    /* Hide scrollbar for cleaner look */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    
+    &::-webkit-scrollbar {
+        display: none; /* WebKit */
+    }
 }
 }
 
@@ -147,6 +159,12 @@ cursor: pointer;
 border-radius: var(--Full-Radius, 999px);
 background: var(--White-Grey-3, #EAEAEA);
 gap: var(--3xs, 4px);
+
+@media (max-width:768px) {
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: fit-content;
+}
 }
 
 .emptyState {

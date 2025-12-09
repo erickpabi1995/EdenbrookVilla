@@ -25,12 +25,27 @@ align-self: stretch;
 width: 100%;
 max-width: 100%;
 
+@media (max-width:768px) {
+  display: flex;
+max-width: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+}
 }
 
 .img{
   flex: 1 0 0;
 align-self: stretch;
 background: url('../altHeaderImage.png') lightgray 50% / cover no-repeat;
+
+@media (max-width:768px) {
+  order: 2;
+  height: 500px;
+  align-self: stretch;
+  flex: none;
+}
 }
 
 
@@ -43,15 +58,29 @@ align-items: flex-start;
 gap: 32px;
 flex: 1 0 0;
 align-self: stretch;
+
+@media (max-width:768px) {
+  display: flex;
+padding: var(--Section-Padding-padding-section-large, 64px) var(--Page-Padding-padding-global, 20px);
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+order: 1;
+}
 }
 
 .secondFrame{
 display: flex;
-min-width: var(--Max-Width-max-width-medium, 560px);
+max-width: var(--Max-Width-max-width-medium, 560px);
 flex-direction: column;
 align-items: flex-start;
 gap: 32px;
 align-self: stretch;
+
+@media (max-width:768px) {
+  max-width: 100%;
+}
 }
 
 .text{
@@ -74,6 +103,7 @@ flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 gap: 8px;
+cursor: pointer;
 align-self: stretch;
 filter: blur(5px);
 
@@ -93,6 +123,10 @@ font-style: normal;
 font-weight: 700;
 line-height: 120%; /* 48px */
 letter-spacing: 0.5px;
+
+@media (max-width:768px) {
+  font-size: 28px;
+}
 }
 
 .smallText{
