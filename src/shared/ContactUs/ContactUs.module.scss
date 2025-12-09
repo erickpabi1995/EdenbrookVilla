@@ -266,10 +266,31 @@ font-style: normal;
 font-weight: 700;
 line-height: 16px; /* 133.333% */
 }
+
+
+.office_text{
+display: flex;
+padding: var(--xs, 8px) var(--none, 0);
+justify-content: center;
+align-items: center;
+gap: var(--3xs, 4px);
+color: var(--White, #FFF);
+font-variant-numeric: slashed-zero;
+flex: 1 0 0;
+align-self: stretch;
+
+/* Desktop/Label/Small (SB) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-xs, 12px);
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 133.333% */
+}
 .date_text{
 display: flex;
 align-items: center;
 gap: 16px;
+cursor: pointer;
 
 @media (max-width:768px) {
   display: flex;

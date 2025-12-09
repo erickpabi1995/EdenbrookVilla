@@ -3,13 +3,8 @@ import styles from './PaymentPlan.module.scss'
 
 const PaymentPlan = () => {
   const [visibleAmounts, setVisibleAmounts] = useState({})
-  const basePrice = 350000
+  const basePrice = 420000
 
-  const Interior = [
-    "Tab A",
-    "Tab B", 
-    "Tab C"
-  ]
   
   const Exterior = [ 
     {
@@ -106,7 +101,7 @@ const PaymentPlan = () => {
 
       <div className={styles.titleColumn}>
         <div className={styles.titleText}>
-          <p className={styles.titleDescription}>$350,000</p>
+          <p className={styles.titleDescription}>$420,000</p>
           <div className={styles.button}>
             <div className={styles.insights}>
               <div className={styles.insightCard}></div>

@@ -1,7 +1,19 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './PartnerAgentHero.module.scss'
 
 const PartnerAgentHero = () => {
+    const navigate = useNavigate()
 
+    const handleContact = () => {
+        navigate('/contactUs')
+    }
+
+  const handleExplore = () => {
+        const element = document.getElementById('partnerAgentDirectory')
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
 return(
     <div className={styles.partnerAgents}>
 <div className={styles.container}>
@@ -10,8 +22,8 @@ return(
 <p className={styles.titleText}>Trusted Partners in Every Transaction</p>
 <p className={styles.titleDescription}>Qluxe Homes collaborates with a select network of verified agents to deliver seamless client experiences and uphold our standard of excellence.</p>
    <div className={styles.button}>
-<button className={styles.insights}>become a partner agent</button>
-<button className={styles.insightCard}>explore approved agents</button>
+<button className={styles.insights} onClick={handleContact}>become a partner agent</button>
+<button className={styles.insightCard} onClick={handleExplore}>explore approved agents</button>
    </div>
 <div className={styles.blogSubContainer}>
     <div className={styles.blogColumn}>

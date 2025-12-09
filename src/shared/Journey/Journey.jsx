@@ -36,8 +36,8 @@ function DesktopUI(){
 <p className={styles.titleText}>From our first concept to landmark developments, each milestone marks our ongoing pursuit of excellence.</p>
 </div>
 <div className={styles.titleDescription}>
-  {JourneyData.map((item)=>
-  <div className={styles.button}>
+  {JourneyData.map((item,index)=>
+  <div className={styles.button} key={index}>
   <div className={styles.insights}>
     <p className={styles.insightCard}>{item.year}</p>
   </div>
@@ -74,8 +74,8 @@ function MobileUI(){
 <p className={styles.titleText}>From our first concept to landmark developments, each milestone marks our ongoing pursuit of excellence.</p>
 </div>
 <div className={styles.titleDescription}>
-  {JourneyData.map((item)=>
-  <div className={styles.button}>
+  {JourneyData.map((item,index)=>
+  <div className={styles.button} key={index}>
           <div className={styles.blogSubContainer}>
         <div className={styles.blogColumn}>
 <div className={styles.blogSubColumn}></div>

@@ -65,6 +65,16 @@ flex: 1 0 0;
     }
 }
 
+.mobileControls {
+    display: none;
+    
+    @media (max-width:768px) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -117,10 +127,17 @@ flex: 1 0 0;
                         align-items: center;
                         gap: 8px;
 
-                           @media (max-width:768px) {
-        width: 100%;
-        margin-top: 16px;
+                          
+                          @media (max-width:768px) {
+        width: auto;
+        margin-top: 0;
     }
+            &.desktopOnly {
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+    
 
         .button{
             display: flex;
@@ -138,8 +155,8 @@ flex: 1 0 0;
                             line-height: 20px;
                             letter-spacing: -0.2px;
 
-                               @media (max-width:768px) {
-            width: 100%;
+               @media (max-width:768px) {
+            padding: 10px 20px;
         }
         }
                     

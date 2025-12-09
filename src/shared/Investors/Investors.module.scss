@@ -12,6 +12,14 @@ align-items: flex-start;
 align-self: stretch;
 }
 
+.active{
+border-bottom: 4px solid var(--Color-White, #FFF);
+}
+
+.inactive{
+    border-bottom: 4px solid var(--Color-Neutral-Light, #AAA);
+}
+
 .container{
 display: flex;
 height: 800px;
@@ -37,8 +45,11 @@ align-self: stretch;
 .title{
 display: flex;
 max-width: 1312px;
+width: 100%;
 flex-direction: column;
 align-items: flex-start;
+margin-left: auto;
+margin-right: auto;
 gap: 80px;
 align-self: stretch;
 
@@ -62,7 +73,7 @@ gap: 80px;
 align-self: stretch;
 
 @media (max-width:768px) {
-gap: 0px;
+gap: 12px;
 }
 }
 
@@ -163,6 +174,7 @@ align-items: center;
 gap: 8px;
 border: 1px solid var(--Gold, #FCC97E);
 background: var(--Gold, #FCC97E);
+cursor: pointer;
 color: var(--Charcoal, #222);
 font-variant-numeric: slashed-zero;
 font-family: var(--Font-Family-Body, "Satoshi");
@@ -187,6 +199,7 @@ gap: 8px;
 border: 1px solid var(--White-White, #FFF);
 color: var(--White-White, #FFF);
 font-variant-numeric: slashed-zero;
+cursor: pointer;
 
 /* Desktop/Label/Normal (SB) */
 font-family: var(--Font-Family-Body, "Satoshi");
@@ -213,7 +226,7 @@ align-self: stretch;
 width: 100%;
 max-width: 100%;
 align-items: flex-start;
-gap: 16px;
+gap: 3px;
 
 }
 }
@@ -225,7 +238,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 flex: 1 0 0;
-border-bottom: 4px solid var(--Color-White, #FFF);
 
 @media (max-width:768px) {
     display: flex;

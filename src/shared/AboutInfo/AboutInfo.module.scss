@@ -23,6 +23,7 @@ flex-direction: column;
 justify-content: flex-end;
 width: 100%;
 margin-left: auto;
+margin-right: auto;
 gap: 80px;
 align-self: stretch;
 
@@ -68,7 +69,7 @@ font-weight: 400;
 line-height: 120%; /* 48px */
 letter-spacing: 0.5px;
 
-@media screen {
+@media (max-width:768px) {
     color: var(--Deep-Green, #172B22);
 font-variant-numeric: slashed-zero;
 align-self: stretch;

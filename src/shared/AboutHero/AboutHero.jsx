@@ -1,6 +1,9 @@
+import useMediaQuery from '../useMediaQuery'
 import styles from './AboutHero.module.scss'
 
 const AboutHero = () => {
+
+     const isMobile = useMediaQuery("(max-width: 768px)");
 
 return(
     <div className={styles.containers}>
@@ -20,6 +23,20 @@ return(
     </div>
     <div className={styles.blogColumn}>
 <p className={styles.blogSubColumn}>Our Partners</p>
+{isMobile ? (
+    <div className={styles.blogSub}>
+    <div className={styles.badge}>
+<img src='../kutahya-small-logo.png' alt='Kutahya Logo'/>
+{/* <img src='../whirlpool-small-logo.png' alt='Kutahya Logo'/> */}
+<div className={styles.whirlpool}></div>
+<div className={styles.coral}></div>
+{/* <img src='../builders-small-logo.png' alt='Kutahya Logo'/> */}
+<div className={styles.buildings}></div>
+{/* <img src='../lighting-philips-small-logo.png' alt='Kutahya Logo'/> */}
+<div className={styles.philips}></div>
+    </div>
+</div>
+) : (
 <div className={styles.blogSub}>
     <div className={styles.badge}>
 <img src='../kutahya-small-logo.png' alt='Kutahya Logo'/>
@@ -35,6 +52,8 @@ return(
 <img src='../hansgrohe-small-logo.png' alt='Kutahya Logo'/>
     </div>
 </div>
+) }
+
     </div>
 </div>
 <div className={styles.image}>

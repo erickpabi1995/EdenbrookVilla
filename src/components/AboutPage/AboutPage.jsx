@@ -12,6 +12,7 @@ import CTA from '../../shared/CTA/CTA'
 import FAQ from '../../shared/FAQ/FAQ'
 import Footer from '../../shared/Footer/Footer'
 import NavBar from '../../shared/NavBar/NavBar'
+import MainContainer from '../../shared/MainContainer/MainContainer'
 const AboutPage = () => {
 
       const navList = [{
@@ -44,6 +45,7 @@ const AboutPage = () => {
      <Team/>
      <RestofTeam/>
      <JourneyWhite/>
+     <MainContainer/>
      <Sustainable/>
      <Partners/>
      <CTA/>

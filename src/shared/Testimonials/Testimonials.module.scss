@@ -114,6 +114,11 @@ align-items: center;
 gap: 16px;
 }
 
+.badge_text.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .insights{
 display: flex;
 width: 325px;

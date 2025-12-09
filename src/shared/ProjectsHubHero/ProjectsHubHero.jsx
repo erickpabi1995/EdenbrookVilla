@@ -1,7 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import NavBar from './NavBar'
 import styles from './ProjectsHubHero.module.scss'
 
 const ProjectsHubHero = () => {
+  const navigate = useNavigate()
+
+  const handleProjectDetails = () => {
+    navigate('/projectDetails')
+  }
 
 return(
     <div className={styles.containers}>
@@ -21,7 +27,7 @@ return(
 </svg>
 <p className={styles.titleText}>Edenbrook Villa</p>
 <p className={styles.titleDescription}>Set within Accra’s most exclusive enclave, Edenbrook Villa embodies serenity, privacy, and architectural excellence — redefining what it means to come home.</p>
-   <button className={styles.button}>View Project Details</button>
+   <button className={styles.button} onClick={handleProjectDetails}>View Project Details</button>
    </div>
 <div className={styles.insights}>
     <div className={styles.blogColumn}>

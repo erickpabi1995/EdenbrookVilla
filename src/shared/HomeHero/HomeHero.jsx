@@ -15,9 +15,9 @@ const HomeHero = () => {
 
 return(
     <div className={styles.containers}>
-        <NavBar/>
+       
 <div className={styles.container}>
-    
+
       <video 
         className={styles.videoBackground}
         autoPlay 
@@ -29,8 +29,9 @@ return(
         <source src="/path-to-your-video.webm" type="video/webm" />
         Your browser does not support the video tag.
     </video>
+    
     <div className={styles.contentOverlay}>
-
+    <NavBar/> 
 <div className={styles.title}>
     <div className={styles.titleColumn}>
 <p className={styles.titleText}>QLUXE</p>

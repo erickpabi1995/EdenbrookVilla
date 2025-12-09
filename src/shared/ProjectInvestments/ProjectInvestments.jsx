@@ -1,6 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './ProjectInvestments.module.scss';
 
 const ProjectInvestments = () => {
+  const navigate = useNavigate()
+
+  const handleProjectDetails = () => {
+    navigate('/projectDetails')
+  }
+
+  const handleContactTeam = () => {
+    navigate('/contactUs')
+  }
   return (
     <div className={styles.projectInvestments}>
       <div className={styles.container}>
@@ -19,7 +29,7 @@ const ProjectInvestments = () => {
                   fill='#FAFAFA'
                 />
               </svg>
-              <p className={styles.locationText}>East Legon Hills, Accra</p>
+              <p className={styles.locationText}>Tse Addo, Accra</p>
             </div>
             <div className={styles.nameContainer}>
               <svg
@@ -69,16 +79,16 @@ const ProjectInvestments = () => {
                   d='M2.625 0.75C3.12228 0.75 3.59954 0.947198 3.95117 1.29883C4.3028 1.65046 4.5 2.12772 4.5 2.625C4.5 2.99584 4.38962 3.35865 4.18359 3.66699C3.97761 3.9751 3.68517 4.21556 3.34277 4.35742C3.00016 4.49934 2.6225 4.53621 2.25879 4.46387C1.89524 4.39147 1.56095 4.21329 1.29883 3.95117C1.03671 3.68905 0.858534 3.35476 0.786133 2.99121C0.713786 2.6275 0.750664 2.24984 0.892578 1.90723C1.03444 1.56483 1.2749 1.27239 1.58301 1.06641C1.89135 0.860379 2.25416 0.75 2.625 0.75Z'
                   fill='white'
                   stroke='white'
-                  stroke-width='1.5'
+                  strokeWidth='1.5'
                 />
               </svg>
               <p className={styles.investorText}>Now Accepting Investors</p>
             </div>
             <div className={styles.buttonActions}>
-              <button className={styles.projectDetailsBtn}>
+              <button className={styles.projectDetailsBtn} onClick={handleProjectDetails}>
                 View project details
               </button>
-              <button className={styles.contactButton}>
+              <button className={styles.contactButton} onClick={handleContactTeam}>
                 contact investment team
               </button>
             </div>

@@ -1,9 +1,75 @@
 import NavBar from './NavBar'
 import styles from './InsightDetailsHero.module.scss'
+import { useState } from 'react'
 
-const InsightDetailsHero = () => {
+const InsightDetailsHero = ({blogData}) => {
 
     const contentTable =['Intro','A Market on the Rise','Diaspora Demand & Emotional Connection','3. Favourable Conditions for International Buyers','4. The Legacy Factor','5. Why Qluxe Homes']
+
+       const defaultBlog = {
+        image: '../blog1.svg',
+        date: '28 Feb 2020',
+        heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
+        author: 'Kojo Annan',
+        imageAuthor: '../blog_author.svg',
+        title: 'Blogger, QLuxe Homes'
+    }
+
+    const blog = blogData || defaultBlog
+
+    // Newsletter state and logic
+    const [email, setEmail] = useState('')
+    const [isValidEmail, setIsValidEmail] = useState(true)
+    const [isSubscribed, setIsSubscribed] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        return emailRegex.test(email)
+    }
+
+    const handleEmailChange = (e) => {
+        const emailValue = e.target.value
+        setEmail(emailValue)
+        
+        // Reset validation state when user starts typing
+        if (!isValidEmail) {
+            setIsValidEmail(true)
+        }
+        
+        // Reset subscription state if user changes email after subscribing
+        if (isSubscribed) {
+            setIsSubscribed(false)
+        }
+    }
+
+    const handleSubscribe = async () => {
+        if (!email.trim()) {
+            setIsValidEmail(false)
+            return
+        }
+
+        if (!validateEmail(email)) {
+            setIsValidEmail(false)
+            return
+        }
+
+        setIsLoading(true)
+        
+        // Simulate API call delay
+        setTimeout(() => {
+            setIsLoading(false)
+            setIsSubscribed(true)
+            // You can store the email locally or log it for now
+            console.log('Subscribed email:', email)
+        }, 1500)
+    }
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSubscribe()
+        }
+    }
 
 return(
     <div className={styles.containers}>
@@ -17,26 +83,26 @@ return(
 </div>
 
    <div className={styles.button}>
-<p className={styles.insights}>Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate</p>
+<p className={styles.insights}>{blog.heading}</p>
    <p className={styles.insightCard}>Keywords: buy property in Ghana, Ghana real estate investment, diaspora homes Ghana</p>
    </div>
 
    <div className={styles.blogSubContainer}>
-    <img src='../Avatar.png' alt='Avatar'/>
+    <img src={blog.imageAuthor} alt='Avatar'/>
     <p className={styles.blogColumn}>
-Kojo Annan
+{blog.author}
     </p>
    </div>
 </div>
 <div className={styles.blogSubColumn}>
-    <img src='../insightFrame.png' alt='Insight Frame'/>
+    <img src={blog.image} alt='Insight Frame' style={{width:"100%"}}/>
 <div className={styles.blogSub}>
     <div className={styles.badge}>
-        <p className={styles.badge_text}>For Ghanaians living abroad, the idea of owning a home back home has always carried deep emotion — pride, belonging, and the dream of creating something that lasts beyond a lifetime. Today, that dream aligns perfectly with opportunity. Ghana’s real estate market is experiencing steady growth, modernisation, and increasing international attention. For the diaspora, this is the moment to make homeownership a reality and investment a legacy.</p>
+        <p className={styles.badge_text}>For Ghanaians living abroad, the idea of owning a home back home has always carried deep emotion — pride, belonging, and the dream of creating something that lasts beyond a lifetime. Today, that dream aligns perfectly with opportunity. Ghana's real estate market is experiencing steady growth, modernisation, and increasing international attention. For the diaspora, this is the moment to make homeownership a reality and investment a legacy.</p>
     <div className={styles.header}>
 <p className={styles.date_text}>1. A Market on the Rise</p>
-<p className={styles.logo_groups}>Over the past decade, Ghana has become one of Africa’s most stable and attractive destinations for property investment. Cities such as Accra, Tema, and Kumasi are expanding rapidly with new infrastructure, gated communities, and modern developments. Government projects like road expansions and airport upgrades are improving accessibility, while private developers are redefining urban living standards.</p>
-    <p className={styles.logo_subgroups}>For investors abroad, this means one thing: value appreciation. Properties in prime areas such as Tse Addo, Airport Hills, and East Legon have seen consistent year-on-year growth even during global slowdowns. Ghana’s stable political climate and growing demand for quality housing create the perfect environment for long-term returns.</p>
+<p className={styles.logo_groups}>Over the past decade, Ghana has become one of Africa's most stable and attractive destinations for property investment. Cities such as Accra, Tema, and Kumasi are expanding rapidly with new infrastructure, gated communities, and modern developments. Government projects like road expansions and airport upgrades are improving accessibility, while private developers are redefining urban living standards.</p>
+    <p className={styles.logo_subgroups}>For investors abroad, this means one thing: value appreciation. Properties in prime areas such as Tse Addo, Airport Hills, and East Legon have seen consistent year-on-year growth even during global slowdowns. Ghana's stable political climate and growing demand for quality housing create the perfect environment for long-term returns.</p>
     </div>
  <div className={styles.header}>
 <p className={styles.date_text}>2. Diaspora Demand and Emotional Connection</p>
@@ -49,9 +115,9 @@ Kojo Annan
 <p className={styles.logo_text}>Table of content</p>
 <div className={styles.divider}></div>
 <div className={styles.contentSubContainer}>
-    {contentTable.map(item =>
-<div className={styles.contentInnerContainer}>
-<p className={styles.contentInnerText}>{item}</p>
+    {contentTable.map((item,index) =>
+<div className={styles.contentInnerContainer} key={index}>
+<p className={`${styles.contentInnerText} ${styles.active}`}>{item}</p>
 </div>
 )}
 </div>
@@ -59,13 +125,41 @@ Kojo Annan
 <div className={styles.newsLetterMainContainer}>
 <div className={styles.newsLetterContainer}>
 <div className={styles.newsLetter}>
-    <p className={styles.newsLetterText}>Subscribe to our newsletter</p>
-    <p className={styles.newsLetterSubtext}>Our bi-weekly newsletter full of inspiration, podcast, trend and news.</p>
+    {!isSubscribed ? (
+        <>
+            <p className={styles.newsLetterText}>Subscribe to our newsletter</p>
+            <p className={styles.newsLetterSubtext}>Our bi-weekly newsletter full of inspiration, podcast, trend and news.</p>
+        </>
+    ) : (
+        <>
+            <p className={styles.newsLetterText}>Thank you</p>
+            <p className={styles.newsLetterSubtext}>You're now subscribed. Welcome to our community!</p>
+        </>
+    )}
 </div>
 <div className={styles.inputContainer}>
-<input className={styles.inputStyles} placeholder='Jessica@email.com'></input>
-<button className={styles.subscribeBtn}>Subscribe</button>
+<input 
+    className={`${styles.inputStyles} ${!isValidEmail ? styles.error : ''} ${isSubscribed ? styles.success : ''}`}
+    placeholder={isSubscribed ? 'Successfully subscribed!' : 'Jessica@email.com'}
+    value={email}
+    onChange={handleEmailChange}
+    onKeyPress={handleKeyPress}
+    disabled={isSubscribed || isLoading}
+    type="email"
+/>
+<button 
+    className={`${styles.subscribeBtn} ${isLoading ? styles.loading : ''} ${isSubscribed ? styles.subscribed : ''}`}
+    onClick={handleSubscribe}
+    disabled={isSubscribed || isLoading}
+>
+    {isLoading ? 'Subscribing...' : isSubscribed ? 'Subscribed ✓' : 'Subscribe'}
+</button>
 </div>
+{!isValidEmail && (
+    <p className={styles.errorText} style={{color: 'red', fontSize: '12px', marginTop: '5px'}}>
+        Please enter a valid email address
+    </p>
+)}
 </div>
 </div>
     </div>

@@ -170,6 +170,48 @@ gap: var(--2xl, 24px);
 align-self: stretch;
 }
 
+.inputError {
+  border: 1px solid #ff4444 !important;
+  background-color: #fff5f5;
+}
+
+.inputSuccess {
+  border: 1px solid #22c55e !important;
+  background-color: #f0fff4;
+}
+
+.textareaStyles {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.errorText {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.submitBtn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.submitBtn.submitted {
+  background-color: #22c55e;
+  cursor: not-allowed;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inputStyles:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
 
 }
 
@@ -246,6 +288,7 @@ align-self: stretch;
 border-radius: var(--No-Radius, 0);
 background: var(--Gold, #FCC97E);
 color: var(--Charcoal, #222);
+cursor: pointer;
 font-variant-numeric: slashed-zero;
 
 /* Desktop/Label/Normal (SB) */

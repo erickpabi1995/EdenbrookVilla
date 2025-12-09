@@ -21,8 +21,8 @@ return(
 </div>
 
 <div className={styles.tabContainer}>
-  {Tabs.map((item)=>
-<div className={styles.tabs}>
+  {Tabs.map((item,index)=>
+<div className={styles.tabs} key={index}>
 <p className={styles.tabText}>{item}</p>
 </div>
   )}

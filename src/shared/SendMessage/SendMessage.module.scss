@@ -351,6 +351,67 @@ letter-spacing: -0.2px;
 align-self: stretch;
 }
 
+.checkboxContainer{
+  display: flex;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+}
+
+.checkbox{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+justify-content: center;
+align-items: center;
+width: 16px;
+height: 16px;
+border-radius: 8px;
+border: 1px solid var(--Gray-300, #D0D5DD);
+background: var(--White, #FFF);
+cursor: pointer;
+
+ &:checked {
+    background: var(--Gold, #FCC97E);
+    border-color: var(--Gold, #FCC97E);
+  }
+  
+  &:hover {
+    border-color: var(--Gold, #FCC97E);
+  }
+}
+
+.inputError {
+  border-color: #ef4444 !important;
+  background: #fef2f2 !important;
+}
+
+.errorText {
+  color: #ef4444;
+  font-family: var(--Font-Family-Body, "Satoshi");
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.submitting {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.checkboxLabel{
+  color: var(--Dark-Grey-Grey-10, #404040);
+font-variant-numeric: slashed-zero;
+
+/* Desktop/Body/Small (M) */
+font-family: var(--Font-Family-Body, "Satoshi");
+font-size: var(--Font-Size-sm, 14px);
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 21px */
+letter-spacing: -0.2px;
+}
 .inputStyles{
 display: flex;
 padding: var(--xs, 8px) var(--reg, 12px);

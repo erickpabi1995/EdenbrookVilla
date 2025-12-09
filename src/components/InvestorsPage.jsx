@@ -8,11 +8,13 @@ import ProjectInvestments from '../shared/ProjectInvestments/ProjectInvestments'
 import InvestorRelations from '../shared/InvestorRelations/InvestorRelations'
 import Investors from '../shared/Investors/Investors'
 import Metrics from '../shared/Metrics/Metrics'
-import NewsLetter from '../shared/Newsletter/NewsLetter'
+import NewsLetter from '../shared/NewsLetter/NewsLetter'
 import Partners from '../shared/Partners/Partners'
 import Sustainable from '../shared/Sustainable/Sustainable'
 import Testimonials from '../shared/Testimonials/Testimonials'
 import Investment from '../shared/Investment/Investment'
+import InvestorAltHeader from '../shared/InvestorAltHeader/InvestorAltHeader'
+import DownloadPortfolio from '../shared/DownloadPortfolio/DownloadPortfolio'
 // import NavBar from '../shared/NavBar/NavBar'
 
 const InvestorsPage = () => {
@@ -25,8 +27,9 @@ return(
     <Partners/>
     <Containers content={'Discover our developments'} contentBackground={true}/>
     <ProjectInvestments/>
-    <AltHeader/>
+    <InvestorAltHeader/>
     <Investment/>
+    <DownloadPortfolio/>
     <CTA/>
     <Blog/>
     <NewsLetter/>

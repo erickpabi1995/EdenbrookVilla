@@ -1,10 +1,111 @@
 import styles from './ContactUs.module.scss'
 import useMediaQuery from '../useMediaQuery'
+import { useState } from 'react';
 
 const ContactUs = () => {
 
    const isMobile = useMediaQuery("(max-width: 768px)");
 
+   const [contactFormData, setContactFormData] = useState({
+     name: '',
+     email: '',
+     message: ''
+   })
+
+   const [validationErrors, setValidationErrors] = useState({})
+   const [isFormSubmitting, setIsFormSubmitting] = useState(false)
+   const [formSubmissionResult, setFormSubmissionResult] = useState(null)
+
+    const updateFormField = (event) => {
+     const { name, value } = event.target
+     setContactFormData(previousData => ({
+       ...previousData,
+       [name]: value
+     }))
+     
+     // Remove error when user begins typing
+     if (validationErrors[name]) {
+       setValidationErrors(previousErrors => ({
+         ...previousErrors,
+         [name]: ''
+       }))
+     }
+   }
+
+   const checkFormValidity = () => {
+     const fieldErrors = {}
+
+     // Name field validation
+     if (!contactFormData.name.trim()) {
+       fieldErrors.name = 'Full name is required'
+     } else if (contactFormData.name.trim().length < 2) {
+       fieldErrors.name = 'Name should have at least 2 characters'
+     }
+
+     // Email field validation
+     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+     if (!contactFormData.email.trim()) {
+       fieldErrors.email = 'Email address is required'
+     } else if (!emailPattern.test(contactFormData.email)) {
+       fieldErrors.email = 'Please provide a valid email format'
+     }
+
+     // Message field validation
+     if (!contactFormData.message.trim()) {
+       fieldErrors.message = 'Please include a message'
+     } else if (contactFormData.message.trim().length < 10) {
+       fieldErrors.message = 'Message should be at least 10 characters long'
+     }
+
+     return fieldErrors
+   }
+
+    const processFormSubmission = async (event) => {
+     event.preventDefault()
+     
+     const formErrors = checkFormValidity()
+     if (Object.keys(formErrors).length > 0) {
+       setValidationErrors(formErrors)
+       return
+     }
+
+     setIsFormSubmitting(true)
+     setFormSubmissionResult(null)
+
+       try {
+       // API endpoint for form submission
+       localStorage.setItem("form",JSON.stringify({
+           fullName: contactFormData.name,
+           emailAddress: contactFormData.email,
+           inquiryMessage: contactFormData.message,
+           submissionTime: new Date().toISOString()
+         }),
+       )
+       const submissionResponse = localStorage.getItem("form") ? JSON.parse(localStorage.getItem("form")) : null 
+
+       if (submissionResponse) {
+         setFormSubmissionResult('success')
+         setContactFormData({ name: '', email: '', message: '' })
+         setValidationErrors({})
+
+             setTimeout(() => {
+           setFormSubmissionResult(null)
+         }, 5000)
+       } else {
+         throw new Error('Message delivery failed')
+       }
+     } catch (submissionError) {
+       console.error('Form submission error:', submissionError)
+       setFormSubmissionResult('error')
+       
+       // Clear error message after 5 seconds
+       setTimeout(() => {
+         setFormSubmissionResult(null)
+       }, 5000)
+     } finally {
+       setIsFormSubmitting(false)
+     }
+   }
 
   const contactData = [
     {
@@ -44,8 +145,8 @@ return(
 
   <div className={styles.button}>
     <div className={styles.insights}>
-      {contactData.map((item)=>
-      <div className={styles.insightCard}>
+      {contactData.map((item,index)=>
+      <div className={styles.insightCard} key={index}>
 <div className={styles.blogSubContainer}>
 <img src={item.image} alt="ContactInfo"/>
 </div>
@@ -54,7 +155,7 @@ return(
   <p className={styles.blogSub}>{item.title}</p>
   <p className={styles.badge}>{item.description}</p>
 </div>
-<button className={styles.social_icons}>{item.buttonText}</button>
+<p className={item.title === 'Office' ? styles.office_text : styles.social_icons}>{item.buttonText}</p>
 </div>
       </div>
         )}
@@ -63,10 +164,10 @@ return(
       {isMobile ? (
         <>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9455 23L10.396 15.0901L3.44886 23H0.509766L9.09209 13.2311L0.509766 1H8.05571L13.286 8.45502L19.8393 1H22.7784L14.5943 10.3165L23.4914 23H15.9455ZM19.2185 20.77H17.2398L4.71811 3.23H6.6971L11.7121 10.2532L12.5793 11.4719L19.2185 20.77Z" fill="#FCC97E"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M15.9455 23L10.396 15.0901L3.44886 23H0.509766L9.09209 13.2311L0.509766 1H8.05571L13.286 8.45502L19.8393 1H22.7784L14.5943 10.3165L23.4914 23H15.9455ZM19.2185 20.77H17.2398L4.71811 3.23H6.6971L11.7121 10.2532L12.5793 11.4719L19.2185 20.77Z" fill="#FCC97E"/>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <g clip-path="url(#clip0_11487_13637)">
+  <g clipPath="url(#clip0_11487_13637)">
     <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#FCC97E"/>
   </g>
   <defs>
@@ -90,14 +191,14 @@ return(
       ):(
         <>
           <svg
-cursor='pointer'
+onClick={()=>window.open('https://x.com', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2879 19.1663L8.66337 12.5748L2.87405 19.1663H0.424805L7.57674 11.0256L0.424805 0.833008H6.71309L11.0717 7.04552L16.5327 0.833008H18.982L12.1619 8.59674L19.5762 19.1663H13.2879ZM16.0154 17.308H14.3665L3.93176 2.69134H5.58092L9.7601 8.54397L10.4828 9.55956L16.0154 17.308Z" fill="white"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M13.2879 19.1663L8.66337 12.5748L2.87405 19.1663H0.424805L7.57674 11.0256L0.424805 0.833008H6.71309L11.0717 7.04552L16.5327 0.833008H18.982L12.1619 8.59674L19.5762 19.1663H13.2879ZM16.0154 17.308H14.3665L3.93176 2.69134H5.58092L9.7601 8.54397L10.4828 9.55956L16.0154 17.308Z" fill="white"/>
 </svg>
 <svg
-cursor='pointer'
+onClick={()=>window.open('https://facebook.com', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <g clip-path="url(#clip0_11239_12644)">
+  <g clipPath="url(#clip0_11239_12644)">
     <path d="M20 10C20 4.47715 15.5229 0 10 0C4.47715 0 0 4.47715 0 10C0 14.9912 3.65684 19.1283 8.4375 19.8785V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29063 9.93047 3.90625 12.2146 3.90625C13.3084 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1922C11.95 6.5625 11.5625 7.3334 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8785C16.3432 19.1283 20 14.9912 20 10Z" fill="white"/>
   </g>
   <defs>
@@ -107,6 +208,7 @@ xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fi
   </defs>
 </svg>
 <svg
+onClick={()=>window.open('https://instagram.com', '_blank')}
 cursor='pointer'
 xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M10 1.80078C12.6719 1.80078 12.9883 1.8125 14.0391 1.85937C15.0156 1.90234 15.543 2.06641 15.8945 2.20313C16.3594 2.38281 16.6953 2.60156 17.043 2.94922C17.3945 3.30078 17.6094 3.63281 17.7891 4.09766C17.9258 4.44922 18.0898 4.98047 18.1328 5.95312C18.1797 7.00781 18.1914 7.32422 18.1914 9.99219C18.1914 12.6641 18.1797 12.9805 18.1328 14.0313C18.0898 15.0078 17.9258 15.5352 17.7891 15.8867C17.6094 16.3516 17.3906 16.6875 17.043 17.0352C16.6914 17.3867 16.3594 17.6016 15.8945 17.7813C15.543 17.918 15.0117 18.082 14.0391 18.125C12.9844 18.1719 12.668 18.1836 10 18.1836C7.32813 18.1836 7.01172 18.1719 5.96094 18.125C4.98438 18.082 4.45703 17.918 4.10547 17.7813C3.64063 17.6016 3.30469 17.3828 2.95703 17.0352C2.60547 16.6836 2.39063 16.3516 2.21094 15.8867C2.07422 15.5352 1.91016 15.0039 1.86719 14.0313C1.82031 12.9766 1.80859 12.6602 1.80859 9.99219C1.80859 7.32031 1.82031 7.00391 1.86719 5.95312C1.91016 4.97656 2.07422 4.44922 2.21094 4.09766C2.39063 3.63281 2.60938 3.29688 2.95703 2.94922C3.30859 2.59766 3.64063 2.38281 4.10547 2.20313C4.45703 2.06641 4.98828 1.90234 5.96094 1.85937C7.01172 1.8125 7.32813 1.80078 10 1.80078ZM10 0C7.28516 0 6.94531 0.0117187 5.87891 0.0585938C4.81641 0.105469 4.08594 0.277344 3.45313 0.523438C2.79297 0.78125 2.23438 1.12109 1.67969 1.67969C1.12109 2.23438 0.78125 2.79297 0.523438 3.44922C0.277344 4.08594 0.105469 4.8125 0.0585938 5.875C0.0117188 6.94531 0 7.28516 0 10C0 12.7148 0.0117188 13.0547 0.0585938 14.1211C0.105469 15.1836 0.277344 15.9141 0.523438 16.5469C0.78125 17.207 1.12109 17.7656 1.67969 18.3203C2.23438 18.875 2.79297 19.2188 3.44922 19.4727C4.08594 19.7188 4.8125 19.8906 5.875 19.9375C6.94141 19.9844 7.28125 19.9961 9.99609 19.9961C12.7109 19.9961 13.0508 19.9844 14.1172 19.9375C15.1797 19.8906 15.9102 19.7188 16.543 19.4727C17.1992 19.2188 17.7578 18.875 18.3125 18.3203C18.8672 17.7656 19.2109 17.207 19.4648 16.5508C19.7109 15.9141 19.8828 15.1875 19.9297 14.125C19.9766 13.0586 19.9883 12.7188 19.9883 10.0039C19.9883 7.28906 19.9766 6.94922 19.9297 5.88281C19.8828 4.82031 19.7109 4.08984 19.4648 3.45703C19.2188 2.79297 18.8789 2.23438 18.3203 1.67969C17.7656 1.125 17.207 0.78125 16.5508 0.527344C15.9141 0.28125 15.1875 0.109375 14.125 0.0625C13.0547 0.0117188 12.7148 0 10 0Z" fill="white"/>
@@ -114,12 +216,12 @@ xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fi
   <path d="M16.5391 4.66016C16.5391 5.32422 16 5.85938 15.3398 5.85938C14.6758 5.85938 14.1406 5.32031 14.1406 4.66016C14.1406 3.99609 14.6797 3.46094 15.3398 3.46094C16 3.46094 16.5391 4 16.5391 4.66016Z" fill="white"/>
 </svg>
 <svg
-cursor='pointer'
+onClick={()=>window.open('https://youtube.com', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
   <path d="M19.8008 3.03516C19.8008 3.03516 19.6055 1.65625 19.0039 1.05078C18.2422 0.253906 17.3906 0.25 17 0.203125C14.2031 -1.11759e-07 10.0039 0 10.0039 0H9.99609C9.99609 0 5.79688 -1.11759e-07 3 0.203125C2.60938 0.25 1.75781 0.253906 0.996094 1.05078C0.394531 1.65625 0.203125 3.03516 0.203125 3.03516C0.203125 3.03516 0 4.65625 0 6.27344V7.78906C0 9.40625 0.199219 11.0273 0.199219 11.0273C0.199219 11.0273 0.394531 12.4063 0.992187 13.0117C1.75391 13.8086 2.75391 13.7813 3.19922 13.8672C4.80078 14.0195 10 14.0664 10 14.0664C10 14.0664 14.2031 14.0586 17 13.8594C17.3906 13.8125 18.2422 13.8086 19.0039 13.0117C19.6055 12.4063 19.8008 11.0273 19.8008 11.0273C19.8008 11.0273 20 9.41016 20 7.78906V6.27344C20 4.65625 19.8008 3.03516 19.8008 3.03516ZM7.93359 9.62891V4.00781L13.3359 6.82812L7.93359 9.62891Z" fill="white"/>
 </svg>
 <svg
-cursor='pointer'
+onClick={()=>window.open('https://linkedin.com', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M18.5195 0H1.47656C0.660156 0 0 0.644531 0 1.44141V18.5547C0 19.3516 0.660156 20 1.47656 20H18.5195C19.3359 20 20 19.3516 20 18.5586V1.44141C20 0.644531 19.3359 0 18.5195 0ZM5.93359 17.043H2.96484V7.49609H5.93359V17.043ZM4.44922 6.19531C3.49609 6.19531 2.72656 5.42578 2.72656 4.47656C2.72656 3.52734 3.49609 2.75781 4.44922 2.75781C5.39844 2.75781 6.16797 3.52734 6.16797 4.47656C6.16797 5.42188 5.39844 6.19531 4.44922 6.19531ZM17.043 17.043H14.0781V12.4023C14.0781 11.2969 14.0586 9.87109 12.5352 9.87109C10.9922 9.87109 10.7578 11.0781 10.7578 12.3242V17.043H7.79688V7.49609H10.6406V8.80078H10.6797C11.0742 8.05078 12.043 7.25781 13.4844 7.25781C16.4883 7.25781 17.043 9.23438 17.043 11.8047V17.043Z" fill="white"/>
 </svg>
@@ -131,21 +233,75 @@ xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fi
     
   </div>
 <div className={styles.header}>
-  <div className={styles.frame}>
+  <form className={styles.frame} onSubmit={processFormSubmission}>
+       {formSubmissionResult === 'success' && (
+                <div style={{padding: '12px', backgroundColor: '#d4edda', color: '#155724', borderRadius: '4px', marginBottom: '16px'}}>
+                  Thank you! Your message has been sent successfully.
+                </div>
+              )}
+              
+              {formSubmissionResult === 'error' && (
+                <div style={{padding: '12px', backgroundColor: '#f8d7da', color: '#721c24', borderRadius: '4px', marginBottom: '16px'}}>
+                  Sorry, there was an issue sending your message. Please try again.
+                </div>
+              )}
 <div className={styles.input}>
 <p className={styles.label}>Name</p>
-<input className={styles.inputStyles} placeholder='Jacob Moore'/>
+  <input 
+                  className={styles.inputStyles}
+                  name="name"
+                  value={contactFormData.name}
+                  onChange={updateFormField}
+                  placeholder='Jacob Moore'
+                  disabled={isFormSubmitting}
+                />
+                {validationErrors.name && (
+                  <span style={{color: '#dc3545', fontSize: '14px'}}>{validationErrors.name}</span>
+                )}
+              
 </div>
 <div className={styles.input}>
 <p className={styles.label}>Email</p>
-<input className={styles.inputStyles} placeholder='name@email.com'/>
+ <input 
+                  className={styles.inputStyles}
+                  name="email"
+                  type="email"
+                  value={contactFormData.email}
+                  onChange={updateFormField}
+                  placeholder='name@email.com'
+                  disabled={isFormSubmitting}
+                />
+                {validationErrors.email && (
+                  <span style={{color: '#dc3545', fontSize: '14px'}}>{validationErrors.email}</span>
+                )}
+              
 </div>
 <div className={styles.textArea}>
 <p className={styles.label}>Message</p>
-<textarea className={styles.textAreaStyles} placeholder='Leave us a message...'> </textarea>
+   <textarea 
+                  className={styles.textAreaStyles}
+                  name="message"
+                  value={contactFormData.message}
+                  onChange={updateFormField}
+                  placeholder='Leave us a message...'
+                  disabled={isFormSubmitting}
+                />
+                {validationErrors.message && (
+                  <span style={{color: '#dc3545', fontSize: '14px'}}>{validationErrors.message}</span>
+                )}
 </div>
-<button className={styles.submitBtn}>Send  message</button>
-  </div>
+              <button 
+                type="submit"
+                className={styles.submitBtn}
+                disabled={isFormSubmitting}
+                style={{
+                  opacity: isFormSubmitting ? 0.6 : 1,
+                  cursor: isFormSubmitting ? 'not-allowed' : 'pointer'
+                }}
+              >
+                {isFormSubmitting ? 'Sending...' : 'Send message'}
+              </button>
+  </form>
 
 </div>
 </div>
