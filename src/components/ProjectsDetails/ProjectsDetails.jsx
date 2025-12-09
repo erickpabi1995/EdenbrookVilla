@@ -3,7 +3,7 @@ import DownloadBrochures from '../../shared/DownloadBrochures/DownloadBrochures'
 import FloorPlan from '../../shared/FloorPlan/FloorPlan'
 import History from '../../shared/History/History'
 import Journey from '../../shared/Journey/Journey'
-import Neighbourhood from '../../shared/Neighbourhood/Neighbourhood'
+import NeighbourHood from '../../shared/NeighbourHood/NeighbourHood'
 import PaymentPlan from '../../shared/PaymentPlan/PaymentPlan'
 import PropertyInfo from '../../shared/PropertyInfo/PropertyInfo'
 import Sustainable from '../../shared/Sustainable/Sustainable'
@@ -36,7 +36,7 @@ const ProjectDetails = () => {
         <FloorPlan/>
         </div>
         <div id='neighborhood'>
-        <Neighbourhood/>
+        <NeighbourHood/>
         </div>
         <div id='paymentplan'>
         <PaymentPlan/>
