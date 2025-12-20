@@ -9,11 +9,13 @@ const Testimonials = () => {
   // Responsive items per page
   const isTablet = useMediaQuery("(max-width: 1024px)")
   const isMobile = useMediaQuery("(max-width: 768px)")
+  const isLarge = useMediaQuery("(min-width: 1440px)")
   
   const getItemsPerPage = () => {
     if (isMobile) return 1
     if (isTablet) return 2
-    return 4 // Show 4 items on monitors/large screens
+    if (isLarge)  return 4 
+    return 3
   }
   
   const itemsPerPage = getItemsPerPage()

@@ -22,23 +22,23 @@ const FAQ = () => {
   const faqData = [
     {
       question: "What types of properties does Qluxe Homes offer?",
-      answer: "Qluxe specializes in high-end residential developments — from off-plan villas to move-in-ready homes — designed to redefine modern luxury living in Ghana and beyond. Each property combines architectural excellence with functional sophistication."
+      answer: "Qluxe Homes specialises in premium residential developments, from exclusive off-plan townhouses to fully completed move-in-ready homes. Each property reflects a balance of architectural excellence, modern comfort, and timeless design, built to suit families, professionals, and investors seeking long-term value."
     },
     {
       question: "How can I purchase or invest in a Qluxe property?",
-      answer: "To purchase or invest, contact our sales team for details on available properties and investment opportunities."
+      answer: "Purchasing a Qluxe home is a seamless process whether you are in Ghana or abroad. Our team guides you from inquiry to ownership, including virtual tours, payment plans, legal documentation, and after-sale support. Simply reach out through our website or email, and a Qluxe representative will assist you personally."
     },
     {
-      question: "Another question?",
-      answer: "Answer to another question."
+      question: "Does Qluxe offer off-plan investment opportunities?",
+      answer: "Yes. We provide off-plan purchase options that allow clients to invest early at pre-completion prices. This offers flexibility in payment, higher potential returns, and the opportunity to personalise interior finishes before completion."
     },
     {
-      question: "Yet another question?",
-      answer: "Answer to yet another question."
+      question: "Can international buyers purchase Qluxe properties?",
+      answer: "Absolutely. Qluxe Homes serves clients across the US, UK, Canada, and the Ghanaian diaspora. We make the process transparent and convenient, offering virtual consultations, secure payment options, and partnerships with trusted legal and financial institutions to ensure peace of mind."
     },
     {
-      question: "One more question?",
-      answer: "Answer to one more question."
+      question: "What sets Qluxe apart from other real estate developers?",
+      answer: 'At Qluxe, we believe a home is more than walls and roofs; it is a story of belonging.Our developments combine luxury craftsmanship, community design, and emotional connection. Every detail, from the layout to the lighting, is designed to make you feel that "first home" excitement all over again. We do not just build houses; we create homes that last for generations.'
     }
   ];
 

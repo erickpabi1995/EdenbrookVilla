@@ -146,9 +146,17 @@ text-transform: uppercase;
 }
 
 .mobileImageContainer {
-  float: right;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+}
+
+
+.mobileImageContainer img {
+  width: 100%;
+  height: auto;
   display: block;
-  align-self: stretch;
 }
 .secondColumn{
 display: flex;

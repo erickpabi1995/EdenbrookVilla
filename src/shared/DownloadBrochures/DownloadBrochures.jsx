@@ -26,11 +26,12 @@ const handleDownload = async () => {
 
 return(
     <div className={styles.downloadBrochures}>
-         <picture>
-        <source media="(max-width: 768px)" srcSet="../edenbrookContainerMobile.png" />
-        <source media="(min-width: 769px)" srcSet="../edenBrookContainer.png" />
-        <img src="../edenBrookContainer.png" alt="Edenbrook Villa" style={{width: '100%'}} />
-    </picture>
+        <div className='relative'>
+        <img src="../edenBrookContainer.png" alt="Edenbrook Villa" className={styles.brochureImage} />
+          <div style={{ position: 'absolute', bottom: '0px', right: '20px' }}>
+        <img src='../unitGallerySmall.png' alt='HeaderImage'/>
+      </div>
+        </div>
 <div className={styles.container}>
 <div className={styles.title}>
     <div className={styles.titleColumn}>
