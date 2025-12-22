@@ -14,13 +14,24 @@ return(
 <p className={styles.secondColumn}>Edenbrook Villa was designed as a sanctuary — modern spaces filled with natural light, refined materials, and seamless transitions between indoors and out.</p>
 </div>
 <div className={styles.secondText}>
+  {!isMobile ? (
   <div className='float-right relative'>
-  <img src='../architecture.png' alt='HeaderImage' style={{ width:isMobile ? '286px' : "1120px",height:isMobile ? '190px' : "746px"}}/>
-     <div className='absolute' style={{top:isMobile ? '20px' : '80px', left: isMobile ? '-60px' :'-160px'}}> 
-      <img src='../headerImage2.png' alt='HeaderImage' style={{ width:isMobile ? '98px' : "auto",height:isMobile ? '98' : "auto"}}/>
+  <img src='../architecture.png' alt='HeaderImage' style={{ width:"1120px",height:"746px"}}/>
+     <div className='absolute' style={{top:'80px', left: '-160px'}}> 
+      <img src='../headerImage2.png' alt='HeaderImage' style={{ width:"auto",height: "auto"}}/>
     </div>
   
   </div>
+  ):(
+     <div style={{position:'relative', display: 'flex', justifyContent: 'center', width: '100%'}}>
+  <img src='../architecture.png' alt='HeaderImage' style={{ width:'285px',height:'190px'}}/>
+     <div className='absolute' style={{top:'20px', left:'5px'}}> 
+      <img src='../headerImage2.png' alt='HeaderImage' style={{ width:'100%',height:'98px'}}/>
+    </div>
+  
+  </div>
+  )
+  }
   
 </div>
 {/* <div className='absolute top-10'> 

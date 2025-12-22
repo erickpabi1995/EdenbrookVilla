@@ -26,15 +26,20 @@ return(
 
   {isMobile ? (
   <div className={styles.mobileImageContainer}>
-    <div style={{ position: 'relative', width: '100%' }}>
       <img src="../brochureImageBigMobile.png" alt="House Image" />
-      <div style={{ position: 'absolute', top: '50px', left: '-60px' }}>
+      {/* <div style={{ position: 'absolute', top: '35px', left: '-50px' }}>
         <img src='../brochureSmallMobile.png' alt='HeaderImage'/>
-      </div>
+      </div> */}
     </div>
-  </div>
 ) : (
-  <img src="../brochureImageBig.png" alt="House Image" />
+  <div className={styles.imageContainer}>
+  <div style={{position:'relative',float:'right'}}>
+  <img src="../.svg" alt="House Image" />
+     <div style={{ position: 'absolute', top: '65px', left: '-90px' }}>
+        <img src='../brochureSmall.png' alt='HeaderImage'/>
+      </div>
+      </div>
+      </div>
 )}
 </div>
 

@@ -13,30 +13,7 @@ import FAQ from '../../shared/FAQ/FAQ'
 import Footer from '../../shared/Footer/Footer'
 
 const PartnerAgents = () => {
-  const navItems = [
-    {
-      name:'About',
-      link:'/about'
-    },
-        {
-      name:'Projects',
-      link:'/projectsHub'
-    },
-        {
-      name:'Partner Agents',
-      link:'/partnerAgents'
-    },
-       {
-      name:'Investors',
-      link:'/investors'
-    },
-        {
-      name:'Insights',
-      link:'/insightHub'
-    },
-  
 
-  ]
 return(
     <>
 <NavBar/>

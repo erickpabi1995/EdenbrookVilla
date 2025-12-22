@@ -36,6 +36,16 @@ width: 100%;
 justify-content: space-between;
 align-items: center;
 flex: 1 0 0;
+gap: 16px;
+
+  .mobileLogo {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .mobileButtonContainer {
+            flex-shrink: 0;
+        }
         }
 
         .leftNavItems, .rightNavItems {

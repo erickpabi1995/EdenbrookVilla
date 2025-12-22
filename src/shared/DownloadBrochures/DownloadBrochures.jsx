@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import styles from './DownloadBrochures.module.scss'
+import useMediaQuery from '../useMediaQuery';
 
 const DownloadBrochures = () => {
 const [isDownloading,setIsDownloading] = useState(false)
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
 const handleDownload = async () => {
     try{
@@ -28,8 +30,12 @@ return(
     <div className={styles.downloadBrochures}>
         <div className='relative'>
         <img src="../edenBrookContainer.png" alt="Edenbrook Villa" className={styles.brochureImage} />
-          <div style={{ position: 'absolute', bottom: '0px', right: '20px' }}>
+          <div style={{ position: 'absolute', bottom: isMobile ? '0px' : '-5px', right: isMobile ? '20px' : '105px' }}>
+            {isMobile ? 
         <img src='../unitGallerySmall.png' alt='HeaderImage'/>
+        : 
+          <img src='../unitGalleryBig.png' alt='HeaderImage'/>
+            }
       </div>
         </div>
 <div className={styles.container}>
