@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 
 const InsightDetailsHero = ({blogData}) => {
 
-    const contentTable =['Intro','A Market on the Rise','Diaspora Demand & Emotional Connection','3. Favourable Conditions for International Buyers','4. The Legacy Factor','5. Why Qluxe Homes']
 
        const defaultBlog = {
         image: '../blog1.svg',
@@ -16,6 +15,17 @@ const InsightDetailsHero = ({blogData}) => {
     }
 
     const blog = blogData || defaultBlog
+
+     const contentTable = [
+        blog.firstContentHeader,
+        blog.secondContentHeader,
+        blog.thirdContentHeader,
+        blog.fourthContentHeader,
+        blog.fifthContentHeader,
+        blog.sixthContentHeader,
+        blog.seventhContentHeader,
+        blog.eighthContentHeader,
+    ].filter(header => header && header.trim() !== '')
 
     // Newsletter state and logic
     const [email, setEmail] = useState('')
@@ -138,12 +148,12 @@ return(
     <p className={styles.titleColumn}>Press Release</p>
       
 <div className={styles.titleText}></div>
-<p className={styles.titleDescription}>28th feb, 2025</p>
+<p className={styles.titleDescription}>{blog.date}</p>
 </div>
 
    <div className={styles.button}>
-<p className={styles.insights}>{blog.heading}</p>
-   <p className={styles.insightCard}>Keywords: buy property in Ghana, Ghana real estate investment, diaspora homes Ghana</p>
+<p className={styles.insights}>{blog.title}</p>
+   <p className={styles.insightCard}>{blog.keywords}</p>
    </div>
 
    <div className={styles.blogSubContainer}>
@@ -159,60 +169,80 @@ return(
     <div className={styles.badge}>
         <p 
             className={styles.badge_text}
-            ref={el => sectionRefs.current['Intro'] = el}
+            ref={el => sectionRefs.current[blog.firstContentHeader] = el}
         >
-            For Ghanaians living abroad, the idea of owning a home back home has always carried deep emotion — pride, belonging, and the dream of creating something that lasts beyond a lifetime. Today, that dream aligns perfectly with opportunity. Ghana's real estate market is experiencing steady growth, modernisation, and increasing international attention. For the diaspora, this is the moment to make homeownership a reality and investment a legacy.
-    For investors abroad, this means one thing: value appreciation. Properties in prime areas such as Tse Addo, Airport Hills, and East Legon have seen consistent year-on-year growth even during global slowdowns. Ghana’s stable political climate and growing demand for quality housing create the perfect environment for long-term returns.
+            {blog.firstContent}
         </p>
     <div className={styles.header}>
 <p 
     className={styles.date_text}
-    ref={el => sectionRefs.current['A Market on the Rise'] = el}
+    ref={el => sectionRefs.current[blog.secondContentHeader] = el}
 >
-    1. A Market on the Rise
+{blog.secondContentHeader}
 </p>
-<p className={styles.logo_groups}>Over the past decade, Ghana has become one of Africa's most stable and attractive destinations for property investment. Cities such as Accra, Tema, and Kumasi are expanding rapidly with new infrastructure, gated communities, and modern developments. Government projects like road expansions and airport upgrades are improving accessibility, while private developers are redefining urban living standards.</p>
-    <p className={styles.logo_subgroups}>For investors abroad, this means one thing: value appreciation. Properties in prime areas such as Tse Addo, Airport Hills, and East Legon have seen consistent year-on-year growth even during global slowdowns. Ghana's stable political climate and growing demand for quality housing create the perfect environment for long-term returns.</p>
+<p className={styles.logo_groups}>{blog.secondContent}</p>
     </div>
  <div className={styles.header}>
 <p 
     className={styles.date_text}
-    ref={el => sectionRefs.current['Diaspora Demand & Emotional Connection'] = el}
+    ref={el => sectionRefs.current[blog.thirdContentHeader] = el}
 >
-    2. Diaspora Demand and Emotional Connection
+    {blog.thirdContentHeader}
 </p>
-<p className={styles.logo_groups}>Beyond numbers, there is a powerful emotional story driving this growth — the return of the Ghanaian diaspora. Many are no longer just visiting; they are coming home to invest, retire, or build family legacies. Owning property is more than a financial move; it is a reconnection with identity.</p>
-    <p className={styles.logo_subgroups}>At Qluxe Homes, we understand that feeling. Our developments, such as Edenbrook at Tse Addo, are designed with that emotional heartbeat in mind, combining modern design with the warmth of Ghanaian hospitality. Each home becomes a bridge between where you have been and where you belong.</p>
+<p className={styles.logo_groups}>{blog.thirdContent}</p>
     </div>
      <div className={styles.header}>
 <p 
     className={styles.date_text}
-    ref={el => sectionRefs.current['Favourable Conditions for International Buyers'] = el}
+    ref={el => sectionRefs.current[blog.fourthContentHeader] = el}
 >
-    3. Favourable Conditions for International Buyers
+    {blog.fourthContentHeader}
 </p>
-<p className={styles.logo_groups}>Buying property in Ghana from abroad is now easier than ever before. The process is transparent, payment plans are flexible, and trusted developers are catering directly to international clients. With virtual tours, secure online documentation, and clear payment schedules, you can confidently invest from anywhere in the world.</p>
-    <p className={styles.logo_subgroups}>At Qluxe Homes, we understand that feeling. Our developments, such as Edenbrook at Tse Addo, are designed with that emotional heartbeat in mind, combining modern design with the warmth of Ghanaian hospitality. Each home becomes a bridge between where you have been and where you belong.</p>
+<p className={styles.logo_groups}>{blog.fourthContent}</p>
     </div>
      <div className={styles.header}>
 <p 
     className={styles.date_text}
-    ref={el => sectionRefs.current['The Legacy Factor'] = el}
+    ref={el => sectionRefs.current[blog.fifthContentHeader] = el}
 >
-    4. The Legacy Factor
+    {blog.fifthContentHeader}
 </p>
-<p className={styles.logo_groups}>Beyond numbers, there is a powerful emotional story driving this growth — the return of the Ghanaian diaspora. Many are no longer just visiting; they are coming home to invest, retire, or build family legacies. Owning property is more than a financial move; it is a reconnection with identity.</p>
-    <p className={styles.logo_subgroups}>At Qluxe Homes, we understand that feeling. Our developments, such as Edenbrook at Tse Addo, are designed with that emotional heartbeat in mind, combining modern design with the warmth of Ghanaian hospitality. Each home becomes a bridge between where you have been and where you belong.</p>
+<p className={styles.logo_groups}>{blog.fifthContent}</p>
     </div>
      <div className={styles.header}>
 <p 
     className={styles.date_text}
-    ref={el => sectionRefs.current['Why Qluxe Homes'] = el}
+    ref={el => sectionRefs.current[blog.sixthContentHeader] = el}
 >
-    5. Why Qluxe Homes
+   {blog.sixthContentHeader}
 </p>
-<p className={styles.logo_groups}>Beyond numbers, there is a powerful emotional story driving this growth — the return of the Ghanaian diaspora. Many are no longer just visiting; they are coming home to invest, retire, or build family leftovers. Owning property is more than a financial move; it is a reconnection with identity.</p>
-    <p className={styles.logo_subgroups}>At Qluxe Homes, we understand that feeling. Our developments, such as Edenbrook at Tse Addo, are designed with that emotional heartbeat in mind, combining modern design with the warmth of Ghanaian hospitality. Each home becomes a bridge between where you have been and where you belong.</p>
+<p className={styles.logo_groups}>{blog.sixthContent}</p>
+<p className={styles.logo_groups}>{blog.sixthContent ? blog.description : ''}</p>
+
+    </div>
+     <div className={styles.header}>
+<p 
+    className={styles.date_text}
+    ref={el => sectionRefs.current[blog.seventhContentHeader] = el}
+>
+   {blog.seventhContentHeader}
+</p>
+<p className={styles.logo_groups}>{blog.seventhContent}</p>
+<p className={styles.logo_groups}>{blog.seventhContent ? blog.description : ''}</p>
+    </div>
+         <div className={styles.header}>
+<p 
+    className={styles.date_text}
+    ref={el => sectionRefs.current[blog.eighthContentHeader] = el}
+>
+   {blog.eighthContentHeader}
+</p>
+<p className={styles.logo_groups}>{blog.eighthContent}</p>
+<p className={styles.logo_groups}>{blog.eighthContent ? blog.description : ''}</p>
+    </div>
+             <div className={styles.header}>
+
+
     </div>
     </div>
     <div className={styles.logo_secondary}>

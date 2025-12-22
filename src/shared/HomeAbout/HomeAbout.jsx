@@ -46,7 +46,7 @@ More about us
          <picture>
         <source media="(max-width: 768px)" srcSet="../gallery3.png" />
         <source media="(min-width: 769px)" srcSet="../gallery3.png" />
-        <img src="../gallery3.png" alt="Edenbrook Villa" style={{width:isMobile ? '123px' : '552px',height:isMobile ? '185px' : '828px'}} />
+        <img src="../gallery3.png" alt="Edenbrook Villa" style={{width:isMobile ? 'auto' : '552px',height:isMobile ? '185px' : '828px'}} />
     </picture>
       {/* <img src='../aboutImage.svg' alt="About Image" style={{width: '348px', height: '522px'}}/> */}
            <picture>

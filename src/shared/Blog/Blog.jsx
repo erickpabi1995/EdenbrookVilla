@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './Blog.module.scss'
 import { useState } from 'react'
+import { BlogData } from '../BlogData'
 
 const Blog = () => {
 
@@ -35,57 +36,7 @@ const Blog = () => {
         }
     }
 
-  const blogs = [
-    {
-      image: '../blog1.svg',
-      date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Ama Annan',
-      imageAuthor: '../blog_author.svg',
-      title:'Blogger, QLuxe Homes'
-    },
-        {
-      image: '../blog2.svg',
-      date:'28 Feb 2020',
-      heading: 'How to Buy Property in Ghana from Abroad: A Step by Step Guide for the Diaspora',
-      author: 'Kwesi Adjei',
-      imageAuthor: '../blog_author2.svg',
-      title:'Blogger, QLuxe Homes'
-    },
-        {
-      image: '../blog3.svg',
-      date:'28 Feb 2020',
-      heading: 'Choosing the Right Location in Accra: How to Pick a Property with Long-Term Value',
-      author: 'Yaw Boakye',
-      imageAuthor: '../blog_author3.svg',
-      title:'Blogger, QLuxe Homes'
-    },
-        {
-      image: '../blog1.svg',
-      date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
-      imageAuthor: '../blog_author.svg',
-      title:'Blogger, QLuxe Homes'
-    },
-        {
-      image: '../blog2.svg',
-      date:'28 Feb 2020',
-      heading: 'How to Buy Property in Ghana from Abroad: A Step by Step Guide for the Diaspora',
-      author: 'Kojo Annan',
-      imageAuthor: '../blog_author2.svg',
-      title:'Blogger, QLuxe Homes'
-    },
-        {
-      image: '../blog3.svg',
-      date:'28 Feb 2020',
-       heading: 'Choosing the Right Location in Accra: How to Pick a Property with Long-Term Value',
-      author: 'Kojo Annan',
-      imageAuthor: '../blog_author3.svg',
-      title:'Blogger, QLuxe Homes'
-    },
-
-  ]
+  const blogs = BlogData
 
    const startIndex = currentPage * itemsPerPage
     const endIndex = startIndex + itemsPerPage
@@ -118,7 +69,7 @@ return(
 </div>
 <p className={styles.date_text}>{blog.date}</p>
         </div>
-        <p className={styles.header}>{blog.heading}</p>
+        <p className={styles.header}>{blog.title}</p>
 
       </div>
 
@@ -129,7 +80,7 @@ return(
     <img src={blog.imageAuthor} alt="Blog author"/>
     <div className={styles.logo_subgroups}>
       <p className={styles.logo_text}>{blog.author}</p>
-      <p className={styles.logo_secondary}>{blog.title}</p>
+      <p className={styles.logo_secondary}>{blog.jobDescription}</p>
     </div>
   </div>
 </div>

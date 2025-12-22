@@ -29,7 +29,7 @@ return(
     <p className={styles.logo_text}>Our Partners</p>
     <div className={styles.logo_secondary}>
         <div className={styles.logo_secondary_group}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="63" height="7" viewBox="0 0 63 7" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="63" height="7" viewBox="0 0 63 7" fill="none" onClick={()=>window.open('https://ngkutahyaseramik.com.tr/en/','_blank','noopener,noreferrer')}>
   <g clipPath="url(#clip0_11087_3481)">
     <mask id="mask0_11087_3481" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="-1" y="0" width="64" height="7">
       <path d="M62.4278 0H-0.000976562V6.98468H62.4278V0Z" fill="white"/>
@@ -63,12 +63,12 @@ return(
     </clipPath>
   </defs>
 </svg>
-             <img src='../whirlpool.svg' alt="Logo" style={{objectFit:"contain"}}/>
-              <img src='../coral.svg' alt="Logo"/>
-               <img src='../builders.svg' alt="Logo"/>
-                <img src='../philips.svg' alt="Logo"/>
-                 <img src='../del.svg' alt="Logo"/>
-                 <svg xmlns="http://www.w3.org/2000/svg" width="137" height="21" viewBox="0 0 137 21" fill="none">
+             <img src='../whirlpool.svg' alt="Logo" style={{objectFit:"contain"}} onClick={()=>window.open('https://www.whirlpool.ca/','_blank','noopener,noreferrer')} />
+              <img src='../coral.svg' alt="Logo" onClick={()=>window.open('https://www.coraldulux.com.gh/','_blank','noopener,noreferrer')}/>
+               <img src='../builders.svg' alt="Logo" onClick={()=>window.open('https://www.instagram.com/morthanbuilders/','_blank','noopener,noreferrer')}/>
+                <img src='../philips.svg' alt="Logo" onClick={()=>window.open('https://www.lighting.philips.ca/','_blank','noopener,noreferrer')}/>
+                 <img src='../del.svg' alt="Logo"  onClick={()=>window.open('https://www.delfurltd.com/','_blank','noopener,noreferrer')}/>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="137" height="21" viewBox="0 0 137 21" fill="none"  onClick={()=>window.open('https://www.hansgrohe.ca/en/','_blank','noopener,noreferrer')}>
   <g clipPath="url(#clip0_11087_3514)">
     <path d="M136.171 0H0.00488281V20.9492H136.171V0Z" fill="#26A792"/>
     <path fillRule="evenodd" clipRule="evenodd" d="M92.7495 0V15.2013H94.8576V9.74169C94.9515 8.82269 95.6695 8.01404 96.6692 8.01404C97.1384 8.00343 97.5927 8.17937 97.9323 8.50325C98.2719 8.82714 98.4692 9.27252 98.4809 9.74169V15.2013H100.535V8.85893C100.302 7.08846 99.0524 5.81537 97.2407 5.81537C96.3535 5.80446 95.4971 6.14075 94.8543 6.75248V0H92.7495Z" fill="white"/>

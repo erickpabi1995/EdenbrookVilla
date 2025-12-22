@@ -214,6 +214,11 @@ align-self: stretch;
 display: flex;
 align-items: center;
 gap: 17.6px;
+
+@media (max-width: 768px) {
+    gap: 10px;
+    justify-content: flex-start;
+}
 }
 
 .delFur{

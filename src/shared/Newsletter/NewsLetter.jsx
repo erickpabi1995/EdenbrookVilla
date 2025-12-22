@@ -1,3 +1,4 @@
+import useMediaQuery from '../useMediaQuery'
 import styles from './NewsLetter.module.scss'
 import { useState } from 'react'
 const NewsLetter = () => {
@@ -6,6 +7,8 @@ const NewsLetter = () => {
     const [isValidEmail, setIsValidEmail] = useState(true)
     const [isSubscribed, setIsSubscribed] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
+
+     const isMobile = useMediaQuery("(max-width: 768px)");
 
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -98,15 +101,12 @@ return(
                         </p>
 </div>
 </div>
-{/* <div>
-  <img src='../newsLetterImage.svg' alt='NewsLetter'/>
-</div> */}
  <div>
-    <picture>
-        <source media="(max-width: 768px)" srcSet="../newsLetterMobile.png" />
-        <source media="(min-width: 769px)" srcSet="../newsLetterImage.svg" />
-        <img src="../newsLetterImage.svg" alt="NewsLetter Image" style={{width: '100%'}} />
-    </picture>
+    {!isMobile ?
+        <img src="../newsLetterImage.svg" alt="NewsLetter Image" style={{width: '100%'}} />    
+        :
+         <img src="../newsLetterImage.svg" alt="NewsLetter Image" style={{width: '100%', height:'470px',objectFit:'cover'}} />
+} 
 </div> 
 </div>
 

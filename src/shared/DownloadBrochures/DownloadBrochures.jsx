@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import styles from './DownloadBrochures.module.scss'
+import useMediaQuery from '../useMediaQuery';
 
 const DownloadBrochures = () => {
 const [isDownloading,setIsDownloading] = useState(false)
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
 const handleDownload = async () => {
     try{
@@ -26,11 +28,16 @@ const handleDownload = async () => {
 
 return(
     <div className={styles.downloadBrochures}>
-         <picture>
-        <source media="(max-width: 768px)" srcSet="../edenbrookContainerMobile.png" />
-        <source media="(min-width: 769px)" srcSet="../edenBrookContainer.png" />
-        <img src="../edenBrookContainer.png" alt="Edenbrook Villa" style={{width: '100%'}} />
-    </picture>
+        <div className='relative'>
+        <img src="../edenBrookContainer.png" alt="Edenbrook Villa" className={styles.brochureImage} />
+          <div style={{ position: 'absolute', bottom: isMobile ? '0px' : '-5px', right: isMobile ? '20px' : '105px' }}>
+            {isMobile ? 
+        <img src='../unitGallerySmall.png' alt='HeaderImage'/>
+        : 
+          <img src='../unitGalleryBig.png' alt='HeaderImage'/>
+            }
+      </div>
+        </div>
 <div className={styles.container}>
 <div className={styles.title}>
     <div className={styles.titleColumn}>

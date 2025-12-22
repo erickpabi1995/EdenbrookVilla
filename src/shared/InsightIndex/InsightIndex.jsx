@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import styles from './InsightIndex.module.scss'
+import { BlogData } from '../BlogData'
+import { useNavigate } from 'react-router-dom'
 
 const InsightIndex = () => {
+  const navigate = useNavigate()
 
     const index = [
         'All',
@@ -15,49 +18,20 @@ const InsightIndex = () => {
 
    
     
-  const blogs = [
-    {
-      image: '../blog1.svg',
-      date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
-      imageAuthor: '../blog_author.svg',
-      title:'Blogger, QLuxe Homes',
-      category:'Press Releases'
-    },
-        {
-      image: '../blog2.svg',
-      date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
-      imageAuthor: '../blog_author2.svg',
-      title:'Blogger, QLuxe Homes',
-      category:'Market Highlights'
-    },
-        {
-      image: '../blog3.svg',
-      date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
-      imageAuthor: '../blog_author3.svg',
-      title:'Blogger, QLuxe Homes',
-      category:'Events & Expos'
-    },
-           {
-      image: '../blog4.png',
-      date:'28 Feb 2020',
-      heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
-      author: 'Kojo Annan',
-      imageAuthor: '../blog_author3.svg',
-      title:'Blogger, QLuxe Homes',
-      category:'Press Releases'
-    }
-  ]
+  const blogs = BlogData
 
    const filteredBlogs = selected === 'All'
         ? blogs
         : blogs.filter(blog => blog.category === selected)
 
+            const handleBlogClick = (blogIndex) => {
+        navigate('/insightDetails', { 
+            state: { 
+                blog: blogs[blogIndex],
+                blogId: blogIndex 
+            } 
+        })
+      }
 
 return(
     <div className={styles.containers}>
@@ -86,7 +60,7 @@ ${selected === item ? styles.selected : ''}`} key={item}>
         </div>
     ) : (
     filteredBlogs.map((item,idx)=>
-    <div className={styles.blogSub} key={idx}>
+    <div className={styles.blogSub} key={idx}  onClick={() => handleBlogClick(idx)} style={{ cursor: 'pointer' }}>
 <img src={item.image} alt='Blog Image' style={{height:"231px",width:"448px",objectFit:"cover"}}/>
 <div className={styles.badge}>
     <div className={styles.badge_text}>
@@ -97,14 +71,14 @@ ${selected === item ? styles.selected : ''}`} key={item}>
                 </div>
                      <p className={styles.logo_groups}>{item.date}</p>
                      </div>
-                     <p className={styles.logo_subgroups}>{item.heading}</p>
+                     <p className={styles.logo_subgroups}>{item.title}</p>
             </div>
         </div>
           <div className={styles.footer_groups}>
             <img src={item.imageAuthor} alt="Blog author"/>
             <div className={styles.footer_subgroups}>
               <p className={styles.footer_text}>{item.author}</p>
-              <p className={styles.footer_secondary}>{item.title}</p>
+              <p className={styles.footer_secondary}>{item.jobDescription}</p>
             </div>
           </div>
         </div>

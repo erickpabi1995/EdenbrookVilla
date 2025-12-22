@@ -13,16 +13,9 @@ return(
 </div>
 <div className={styles.titleText}>
 <div className={styles.titleDescription}>
-{/* <img src='../placeholder.svg' alt='Placeholder Image'/> */}
-
-    <picture>
-        <source media="(max-width: 768px)" srcSet="../placeholderMobile.png" />
-        <source media="(min-width: 769px)" srcSet="../placeholder.svg" />
         <img src="../placeholder.svg" alt="House Image"/>
-    </picture>
 
 </div>
-{/* <img src='../placeholder2.svg' alt='Placeholder Image'/> */}
     <picture>
         <source media="(max-width: 768px)" srcSet="../placeholder2Mobile.png" />
         <source media="(min-width: 769px)" srcSet="../placeholder2.svg" />
