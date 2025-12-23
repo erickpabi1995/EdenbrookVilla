@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,useLocation } from 'react-router-dom'
 import styles from './Blog.module.scss'
 import { useState } from 'react'
 import { BlogData } from '../BlogData'
@@ -6,6 +6,7 @@ import { BlogData } from '../BlogData'
 const Blog = () => {
 
      const navigate = useNavigate()
+     const location = useLocation()
      const [currentPage,setCurrentPage] = useState(0)
      const itemsPerPage = 3
 
@@ -21,6 +22,9 @@ const Blog = () => {
                 blogId: actualIndex 
             } 
         })
+         if (location.pathname === '/insightDetails') {
+            window.scrollTo({top:0,behavior:'smooth'})
+        }
     }
 
     const handlePrevious = () => {

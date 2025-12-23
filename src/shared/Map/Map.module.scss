@@ -6,6 +6,10 @@ align-items: center;
 gap: 48px;
 align-self: stretch;
 
+@media (max-width:768pc) {
+    padding: 0px;
+}
+
 .container{
 color: var(--Deep-Green, #172B22);
 font-variant-numeric: slashed-zero;
