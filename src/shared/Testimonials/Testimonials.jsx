@@ -22,47 +22,29 @@ const Testimonials = () => {
 
   const TestimonialsData = [
   {
-    companyImage:'../layer.svg',
     testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
     authorImage:'../testimonials_author.svg',
-    author:'Kwesi Addo',
+    author:'James Alexander Brown',
     title:'Lead Architect, Partner Firm'
   },
     {
-    companyImage:'../shape.svg',
     testimonial:"'From our first visit to the final handover, Qluxe delivered more than a home — they delivered an experience. Every detail reflects a level of thought and care that's rare in today's market.'",
     authorImage:'../testimonials_author_2.svg',
     author:'Amelia K',
     title:'Homeowner, Edenbrook Villa'
   },
     {
-    companyImage:'../base.svg',
     testimonial:'"Qluxe Homes stood out for their transparency, design integrity, and long-term vision. Investing with them has been seamless and rewarding in every way."',
     authorImage:'../testimonials_author_3.svg',
-    author:'David Mensah',
+    author:'William Thomas Harris',
     title:'Property Investor'
   },
     {
-    companyImage:'../atlas.svg',
-    testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
-    authorImage:'../testimonials_author.svg',
-    author:'Kwesi Addo',
+    testimonial:'"Partnering with Qluxe has been an exceptional experience. Their attention to detail, dedication to quality, and passion for creating enduring designs make them a standout in Ghana’s luxury development scene"',
+    authorImage:'../Avatar.png',
+    author:'Daniel Matthew Collins',
     title:'Lead Architect, Partner Firm'
   },
-    {
-    companyImage:'../base.svg',
-    testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
-    authorImage:'../testimonials_author.svg',
-    author:'Kwesi Addo',
-    title:'Lead Architect, Partner Firm'
-  },
-    {
-    companyImage:'../shape.svg',
-    testimonial:'"Working with Qluxe means collaborating with a team that truly values craft. Their commitment to timeless design and precision sets a new benchmark for luxury development in Ghana."',
-    authorImage:'../testimonials_author.svg',
-    author:'Kwesi Addo',
-    title:'Lead Architect, Partner Firm'
-  }
   ]
 
   // Reset to first page when items per page changes
@@ -100,7 +82,6 @@ return(
 <div className={styles.button}>
   {currentTestimonials.map((item,index)=>
 <div className={styles.insights} key={index}>
-<img src={item.companyImage} alt='Company Image'/>
 
 <p className={styles.insightCard}>
 {item.testimonial}

@@ -31,7 +31,7 @@ description:'Own your piece of home today. Welcome home to Qluxe.',
     {
         image: '../blog2.svg',
     date:'19th Dec 2025',
-      author: 'Kwesi Adjei',
+      author: 'Emmanuel Delap',
       imageAuthor: '../blog_author2.svg',
     jobDescription:'Blogger, QLuxe Homes',
      category:'Market Highlights',
