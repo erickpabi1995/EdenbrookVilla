@@ -1,12 +1,8 @@
 import NavBar from './NavBar'
 import styles from './Investors.module.scss'
-import { useState } from 'react'
 
 const Investors = () => {
 
-  const Tabs = ["Tab 1" , "Tab 2" , "Tab 3" , "Tab 4"]
-
-  const [active,setActive] = useState("Tab 1")
 
 
 return(
@@ -23,14 +19,6 @@ return(
   <button className={styles.label}>see how it works</button>
 </div>
 </div>
-</div>
-
-<div className={styles.tabContainer}>
-  {Tabs.map((item,index)=>
-<div className={`${styles.tabs} ${active === item ? styles.active : styles.inactive}`} key={index} onClick={() => setActive(item)} >
-<p className={styles.tabText}>{item}</p>
-</div>
-  )}
 </div>
 
 </div>
