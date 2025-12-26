@@ -234,7 +234,7 @@ line-height: 24px; /* 150% */
 letter-spacing: -0.3px;
 
 @media (max-width:768px) {
-  max-width: 155px;
+  min-width: 155px;
 flex: 1 0 0;
 }
 }
@@ -328,7 +328,9 @@ gap: 8px;
 border-radius: 100px;
 
 @media (max-width:768px) {
-  display: none;
+  width: auto;
+  flex: 1 0 0;
+
 
 }
 }

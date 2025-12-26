@@ -82,19 +82,19 @@ const Footer = () => {
     link: '',
     children:[
       {
-        name:'Qluxe Homes',
+        name:'Aria Residence, Suite 200',
         link:''
       },
       {
-        name:'Accra, Ghana',
+        name:'Airport Residential, Accra-Ghana',
         link:''
       },
       {
-        name:'+233 xxx xxx',
+        name:'+233 (257) 353 559',
         link:''
       } ,
       {
-        name:'contact@qluxehomes.com',
+        name:'hello@qluxehomes.com',
         link:''
       }]
   },

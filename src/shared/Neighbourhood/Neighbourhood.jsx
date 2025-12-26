@@ -4,40 +4,48 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 
-  const data = [
-    {
-      name:    'Kotoka International Airport',
-      imageUrl:'../Airport.jpg'
-    },
-        {
-      name:    'Zenith University College',
-      imageUrl:'../zenith.webp'
-    },
-        {
-      name:    'Accra Shopping Mall',
-      imageUrl:'../shopping mall.jpg'
-    },
-        {
-      name:    'Labadi Beach',
-      imageUrl:'../labadi.jpg'
-    },
-        {
-      name:    'Accra Sport Stadium',
-      imageUrl:'../stadium.jpg'
-    },
-        {
-      name:    'University of Ghana, Legon',
-      imageUrl:'../uog.jpg'
-    },
-            {
-      name:    'Flagstaff House',
-      imageUrl:'../flagstaff.jpg'
-    },
-            {
-      name:    'Nyaho Medical Center',
-      imageUrl:'../nyaho.jpg'
-    }
-  ]
+const data = [
+  {
+    name: 'Kotoka International Airport',
+    imageUrl: '../Airport.jpg',
+    description: 'Just 12-15 minutes from Edenbrook Villa, the Kotoka International Airport provides seamless travel for international residents and frequent flyers.'
+  },
+  {
+    name: 'Zenith University College',
+    imageUrl: '../zenith.webp',
+    description: 'Just a short distance away, providing excellent educational opportunities.'
+  },
+  {
+    name: 'Accra Shopping Mall',
+    imageUrl: '../shopping mall.jpg',
+    description: '15-18 minutes drive from Edenbrook Villa. The hub for high-end retail, dining, and cinema.'
+  },
+  {
+    name: 'Labadi Beach',
+    imageUrl: '../labadi.jpg',
+    description: "Immediate access to Accra's premier leisure and resort strip. Just 8-10 minutes drive."
+  },
+  {
+    name: 'Accra Sport Stadium',
+    imageUrl: '../stadium.jpg',
+    description: 'Just 15-20 minutes drive away from Edenbrook Villa, catch exciting sports events and matches in this state-of-the-art facility.'
+  },
+  {
+    name: 'University of Ghana, Legon',
+    imageUrl: '../uog.jpg',
+    description: "20-25 minutes drive. Close to the nation's premier academic and research hub."
+  },
+  {
+    name: 'Flagstaff House',
+    imageUrl: '../flagstaff.jpg',
+    description: '20-25 minutes drive from Edenbrook Villa. The official residence of the President, a symbol of Ghanaian heritage.'
+  },
+  {
+    name: 'Nyaho Medical Center',
+    imageUrl: '../nyaho.jpg',
+    description: '15-20 minutes drive from Edenbrook Villa. World-class healthcare within a short commute.'
+  }
+];
 
 const NeighbourHood = () => {
 
@@ -95,7 +103,7 @@ onClick={()=>handleViewToggle('list')}>
     <div className={styles.content} style={{height:activeView === 'list' ? '700px' : 'auto'}}>
     <p className={styles.title}>Around the Neighborhood</p>
     {activeView === 'list' &&
-  <p className={styles.insightCard}>Just 20 minutes from Edenbrook Villa, the Accra International Airport connects residents to global destinations, making business and leisure travel seamless.</p>
+  <p className={styles.insightCard}>{selectedItem.description}</p>
 }
     {/* Show the list only when list view is active */}
     {activeView === 'list' && (
@@ -202,7 +210,7 @@ return(
 <div className={styles.variantContent}>
   <div className={styles.variantColumn}>
     <p className={styles.variantHeader}>Around the Neighborhood</p>
-    <p className={styles.variantSubtext}>Just 20 minutes from Edenbrook Villa, the Accra International Airport connects residents to global destinations, making business and leisure travel seamless.</p>
+    <p className={styles.variantSubtext}>{selectedItem.description}</p>
     <div className={styles.variantFrame}>
         {data.map((item,index)=>(
 <div className={styles.variantNeighbourhoodTile} key={index} onClick={()=>handleItemClick(item)}   style={{cursor:'pointer'}}>
