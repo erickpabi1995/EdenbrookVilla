@@ -4,18 +4,18 @@ import useMediaQuery from '../useMediaQuery'
  const JourneyData = [
   {
     name:"Concept",
-    year:2024,
-    description:"Vision finalized and design approved — March 2024"
+    year:2025,
+    description:"Vision finalized and design approved — August 2025"
   },
     {
     name:"Construction",
     year:2025,
-    description:"Phase 1 underway — Estimated completion Q3 2025."
+    description:"Phase 1 underway — Estimated completion Q4 2026."
   },
    {
     name:"Handover",
     year:2026,
-    description:"Move-in begins — Early 2026."
+    description:"Move-in begins — Late 2026."
   },
   ]
 

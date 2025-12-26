@@ -1,9 +1,13 @@
 import NavBar from './NavBar'
 import styles from './Investors.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 const Investors = () => {
+const navigate = useNavigate()
 
-
+const handleContactUs = () => {
+navigate('/contactUs')
+}
 
 return(
     <div className={styles.investors}>
@@ -15,8 +19,8 @@ return(
 <p className={styles.titleDescription}>Investing in the Future of Luxury Living</p>
 <p className={styles.button}>Qluxe Homes partners with investors who share our vision for growth, innovation, and design excellence. Every project is built to deliver both financial performance and architectural distinction.</p>
 <div className={styles.insights}>
-  <button className={styles.input}>Contact Investment Team</button>
-  <button className={styles.label}>see how it works</button>
+  <button className={styles.input} onClick={handleContactUs}>Contact Investment Team</button>
+  {/* <button className={styles.label}>see how it works</button> */}
 </div>
 </div>
 </div>

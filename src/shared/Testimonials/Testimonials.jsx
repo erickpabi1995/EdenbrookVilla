@@ -45,6 +45,18 @@ const Testimonials = () => {
     author:'Daniel Matthew Collins',
     title:'Lead Architect, Partner Firm'
   },
+  {
+    testimonial:'"Qluxe redefines excellence in luxury development. Their meticulous attention to detail and unwavering commitment to quality make every project a masterpiece."',
+    authorImage:'../testimonials_author.svg',
+    author:'James Alexander Brown',
+    title:'Lead Architect, Partner Firm'
+  },
+      {
+    testimonial:'"Working with Qluxe is a seamless experience. They combine innovation with elegance, delivering designs that are both timeless and exceptional in craftsmanship."',
+    authorImage:'../Avatar.png',
+    author:'Daniel Matthew Collins',
+    title:'Lead Architect, Partner Firm'
+  },
   ]
 
   // Reset to first page when items per page changes

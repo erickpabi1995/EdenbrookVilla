@@ -37,9 +37,9 @@ More about us
 <div className={styles.blogSubColumn}>
     {/* <img src='../aboutImage3.svg' alt="About Image" style={{width: '348px', height: '348px'}}/> */}
          <picture>
-        <source media="(max-width: 768px)" srcSet="../gallery1.png" />
-        <source media="(min-width: 769px)" srcSet="../gallery1.png" />
-        <img src="../gallery1.png" alt="Edenbrook Villa" style={{width:isMobile ? '82px' : '348px', height:isMobile ? '82px' : "348px"}} />
+        <source media="(max-width: 768px)" srcSet="../headerImage2.png" />
+        <source media="(min-width: 769px)" srcSet="../headerImage2.png" />
+        <img src="../headerImage2.png" alt="Edenbrook Villa" style={{width:isMobile ? '82px' : '348px', height:isMobile ? '82px' : "348px"}} />
     </picture>
 </div>
      {/* <img src='../aboutImage2.svg' alt="About Image" style={{height: '828px'}}/> */}
@@ -50,9 +50,9 @@ More about us
     </picture>
       {/* <img src='../aboutImage.svg' alt="About Image" style={{width: '348px', height: '522px'}}/> */}
            <picture>
-        <source media="(max-width: 768px)" srcSet="../gallery4.png" />
-        <source media="(min-width: 769px)" srcSet="../gallery4.png" />
-        <img src="../gallery4.png" alt="Edenbrook Villa" style={{width:isMobile ? '82px' : '348px',height:isMobile ? '123px' :'522px'}} />
+        <source media="(max-width: 768px)" srcSet="../edenBrookContainer.png" />
+        <source media="(min-width: 769px)" srcSet="../edenBrookContainer.png" />
+        <img src="../edenBrookContainer.png" alt="Edenbrook Villa" style={{width:isMobile ? '82px' : '348px',height:isMobile ? '123px' :'522px'}} />
     </picture>
 </div>
 </div>

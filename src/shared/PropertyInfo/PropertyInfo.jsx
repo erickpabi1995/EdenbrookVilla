@@ -3,107 +3,129 @@ import styles from './PropertyInfo.module.scss'
 const PropertyInfo = () => {
 const Interior = [
   {
-    title:"TOTAL BEDROOMS",
-    value:4
+    title:"TOTAL LIVABLE AREA",
+    value:"2,200 sqft of meticulously designed interior space."
   },
     {
-    title:"TOTAL BATHROOMS",
-    value:4.5
+    title:"FINISHES",
+    value:"High-grade porcelain floor tiles, custom-fitted wardrobes, and skimmed walls with premium matte finishes."
   },
     {
-    title:"KITCHEN AREA",
-    value:3500
+    title:"CLIMATE CONTROL",
+    value:"Energy-efficient multi-split AC systems in all primary rooms."
   },
     {
-    title:"LAUNDRY ROOM",
-    value:3
+    title:"CEILINGS",
+    value:"Recessed LED lighting with architectural POP ceiling designs."
   },
     {
-    title:"FLOORING",
-    value:"Tile"
-  },
-    {
-    title:"FIREPLACE",
-    value:"Den"
-  },
-    {
-    title:"APPLIANCES",
-    value:"Celing Fan, Refrigerator, Washer, Dryer,Intercom,Dishwasher"
-  },
+    title:"KITCHEN",
+    value:"Fully integrated gourmet kitchen with quartz countertops and stainless steel appliances."
+  }
 ]
 const Exterior = [
   {
-    title:"STORIES",
-    value:2
+    title:"EXTERIOR",
+    value:'Focus on the architectural "Fasad" and durability.'
   },
     {
-    title:"POOL",
-    value:"In Ground"
+    title:"DESIGN",
+    value:"Contemporary minimalist architecture featuring natural stone accents and expansive glass windows."
   },
     {
-    title:"LOT FEATURES",
-    value:"lawn, Yard"
+    title:"OUTDOOR LIVING",
+    value:"Private balcony with glass balustrades offering panoramic views of the neighborhood."
   },
     {
-    title:"PARKING",
-    value:"Carport, Carport Attached"
+    title:"SECURITY",
+    value:"Multi-point secure entry systems, automated gate access, and perimeter electric fencing."
   },
     {
-    title:"HEAT TYPE",
-    value:"Central"
-  },
-    {
-    title:"AIR CONDITIONING",
-    value:"Central"
-  },
-    {
-    title:"SECURITY FEATURES",
-    value:"Automatic Gate, Prewired for alarm system"
+    title:"LIGHTING",
+    value:"Automated exterior mood lighting to highlight the Qluxe Homes architectural silhouette at night."
   },
 ]
 const Financial = [
   {
-    title:"SALES PRICE",
-    value:"$795,000"
+    title:"SALE PRICE",
+    value:"Starting at $420, 000 "
   },
     {
-    title:"ZONING",
-    value:"BHR1*"
+    title:"PAYMENT PLAN",
+    value:"5 Payment Plan Installment"
   },
 ]
 const Area = [
-  {
-    title:"STATUS",
-    value:"For Sale"
+    {
+    title:"LOT SIZE",
+    value:"3,200 sqft."
   },
     {
-    title:"LOT AREA",
-    value:"0,700"
+    title:"LANDSCAPING",
+    value:"Professionally curated greenery and low-maintenance tropical landscaping."
   },
     {
-    title:"MLS ID",
-    value:"2548904"
+    title:"DRAINAGE",
+    value:"Engineered drainage systems to ensure a pristine environment during all seasons."
   },
     {
-    title:"TYPE",
-    value:"Residential"
+    title:"UTILITY SPACE",
+    value:"Dedicated hidden area for water storage tanks (poly-tanks) and generator bypass."
+  }
+]
+const Parking = [
+    {
+    title:"CAPACITY",
+    value:"Spacious paved parking area comfortably accommodating 2-3 large vehicles."
   },
     {
-    title:"YEAR BUILT",
-    value:"2024"
+    title:"SURFACE",
+    value:"Surface: High-durability interlocking pavement blocks."
   },
     {
-    title:"NEIGHBORHOOD",
-    value:"New York"
+    title:"ACCESS",
+    value:"Direct secure access from the parking area to the main entrance."
   },
     {
-    title:"WATER FRONTAGE",
-    value:"None"
+    title:"PROTECTION",
+    value:"Optional cantilevered car shade or pergola for weather protection."
+  }
+]
+const Location = [
+    {
+    title:"THE NEIGHBORHOOD",
+    value:'Tse-Addo is Accra’s fastest-growing "Prime" residential hub, known for its serene atmosphere and elite community.'
   },
     {
-    title:"VIEW DESCRIPTION",
-    value:"City, Trees/Woods, Pool"
+    title:"ACCESSIBILITY",
+    value:"Minutes away from Cantonments, Airport Residential, and the Labadi Beach corridor."
   },
+    {
+    title:"COMMUTE",
+    value:"Easy access to the Giffard Road, making your commute to the financial district or Kotoka International Airport seamless."
+  },
+    {
+    title:"LIFESTYLE",
+    value:"Proximity to top-tier international schools, private hospitals, and the vibrant dining scene of the capital."
+  }
+]
+const ProjectHighlights = [
+    {
+    title:"PROJECT STATUS",
+    value:'Ongoing Development'
+  },
+    {
+    title:"DEVELOPER",
+    value:"Qluxe Homes"
+  },
+    {
+    title:"NUMBER OF UNITS",
+    value:"5 units"
+  },
+    {
+    title:"BUILDING TYPE",
+    value:"High-End Residential"
+  }
 ]
 return(
     <div className={styles.propertyInfo}>
@@ -158,6 +180,52 @@ return(
   <div className={styles.titleDescription}></div>
 </div>
 {Financial.map((item,index)=>
+  <div className={styles.button} key={index}>
+    <div className={styles.insights}>
+<p className={styles.insightCard}>{item.title}</p>
+<p className={styles.insightValue}>{item.value}</p>
+    </div>
+  </div>
+  )}
+</div>
+</div>
+<div className={styles.container}>
+<div className={styles.title}>
+<p className={styles.titleColumn}>Parking</p>
+<div className={styles.titleText}>
+  <div className={styles.titleDescription}></div>
+</div>
+{Parking.map((item,index)=>
+  <div className={styles.button} key={index}>
+    <div className={styles.insights}>
+<p className={styles.insightCard}>{item.title}</p>
+<p className={styles.insightValue}>{item.value}</p>
+    </div>
+  </div>
+  )}
+</div>
+<div className={styles.title}>
+<p className={styles.titleColumn}>Location: Tse Addo, Accra</p>
+<div className={styles.titleText}>
+  <div className={styles.titleDescription}></div>
+</div>
+{Location.map((item,index)=>
+  <div className={styles.button} key={index}>
+    <div className={styles.insights}>
+<p className={styles.insightCard}>{item.title}</p>
+<p className={styles.insightValue}>{item.value}</p>
+    </div>
+  </div>
+  )}
+</div>
+</div>
+<div className={styles.container}>
+<div className={styles.title}>
+<p className={styles.titleColumn}>Project Highlights</p>
+<div className={styles.titleText}>
+  <div className={styles.titleDescription}></div>
+</div>
+{ProjectHighlights.map((item,index)=>
   <div className={styles.button} key={index}>
     <div className={styles.insights}>
 <p className={styles.insightCard}>{item.title}</p>

@@ -18,7 +18,7 @@ import styles from './JourneyWhite.module.scss'
     description:"With strong local reception, Qluxe began exploring new territories and strategic land acquisitions in high-demand areas."
   },
      {
-    name:"Digital Presence & Brand Redefinition",
+    name:"Digital Presence And Brand Redefinition",
     year:2025,
     description:"A new online experience and refined brand identity positioned Qluxe as a forward-thinking leader in luxury property development."
   },

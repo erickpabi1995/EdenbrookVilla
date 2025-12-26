@@ -15,27 +15,30 @@ return(
   <div className={styles.secondText}>
     <div className={styles.smallText}>
 <p className={styles.gridText}>Email</p>
-<p className={styles.gridInfoText}>info@qluxe.com</p>
+<p className={styles.gridInfoText}>sales@qluxehomes.com</p>
     </div>
         <div className={styles.smallText}>
 <p className={styles.gridText}>Contact enquiries</p>
-<p className={styles.gridInfoText}>hello@qluxe.com</p>
+<p className={styles.gridInfoText}>hello@qluxehomes.com</p>
     </div>
   </div>
     <div className={styles.secondText}>
     <div className={styles.smallText}>
-<p className={styles.gridText}>Office 1</p>
-<p className={styles.gridInfoText}>East Legon, Accra, Ghana</p>
+<p className={styles.gridText}>Office</p>
+<p className={styles.gridInfoText}>Aria Residence,Suite 200</p>
+<p className={styles.gridInfoText}>Airport Residential,Accra-Ghana</p>
     </div>
         <div className={styles.smallText}>
 <p className={styles.gridText}>Phone</p>
-<p className={styles.gridInfoText}>+1 (628) 555-0147</p>
+<p className={styles.gridInfoText}> +1 (656) 202 5541 </p>
+<p className={styles.gridInfoText}> +233 (257) 353 559 </p>
+<p className={styles.gridInfoText}> +1 (514) 819 3045 </p>
     </div>
   </div>
       <div className={styles.secondText}>
     <div className={styles.smallText}>
-<p className={styles.gridText}>Office 2</p>
-<p className={styles.gridInfoText}>Cantoment, Accra, Ghana</p>
+<p className={styles.gridText}></p>
+<p className={styles.gridInfoText}></p>
     </div>
         <div className={styles.smallText}>
 <p className={styles.gridText}>Follow us</p>
