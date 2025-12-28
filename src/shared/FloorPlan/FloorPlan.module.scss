@@ -119,8 +119,9 @@ gap: 16px;
 flex: 1 0 0;
 border-right: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
 align-self: stretch;
+}
 
-@media (max-width:768px) {
+.titleMobile{
 display: flex;
 padding: 24px 32px;
 flex-direction: column;
@@ -128,12 +129,15 @@ justify-content: center;
 align-items: flex-start;
 gap: 16px;
 align-self: stretch;
-border-bottom: var(--Stroke-Border-Width, 1px) solid var(--Deep-Green, #172B22);
-}
 }
 
-.noBorderRight {
-  border-right: none;
+.titleDescription:last-child{
+  border-right: 0px;
+}
+
+.dividerContainer .titleMobile:last-child {
+  border-bottom: none;
+}
 }
 
 .nonActive{
@@ -402,6 +406,5 @@ text-transform: uppercase;
 
 @media (max-width:768px) {
   align-self: stretch;
-}
 }
 }

@@ -92,8 +92,8 @@ function DesktopUI({content,setActiveTab,activeTab,handleDownload,activeType,set
 <p className={styles.title}>Floor Plans AND Unit Types</p>
 <div className={styles.titleColumn}>
 <div className={styles.titleText}>
-  {Tabs.map((item,index)=>
-  <div className={`${styles.titleDescription} ${activeTab === item ? '' : styles.nonActive} ${index === Tabs.length - 1 ? styles.noBorderRight : ''}`}
+  {Tabs.map((item)=>
+  <div className={`${styles.titleDescription} ${activeTab === item ? '' : styles.nonActive}`}
    key={item} onClick={()=>setActiveTab(item)} style={{cursor:'pointer'}}>
     <p className={styles.button}>{item}</p></div>
   )}
@@ -178,7 +178,7 @@ function MobileUI({content,setActiveTab,activeType,setActiveType,handleDownload,
 
     <div className={styles.dividerContainer}>
     {Tabs.map((item)=>
-  <div className={`${styles.titleDescription} ${activeTab === item ? styles.active : styles.nonActive}`}
+  <div className={`${styles.titleMobile} ${activeTab === item ? styles.active : styles.nonActive}`}
    key={item} onClick={()=>setActiveTab(item)} style={{cursor:'pointer'}}>
     <p className={`${styles.button} ${activeTab === item ? styles.active : ''}`}>{item}</p></div>
   )}
