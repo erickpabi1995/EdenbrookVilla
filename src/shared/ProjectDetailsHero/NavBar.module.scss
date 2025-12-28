@@ -7,6 +7,9 @@ align-items: center;
 gap: 8px;
 align-self: stretch;
 background: var(--Deep-Green, #172B22);
+position: sticky;
+top: 0;
+z-index: 1000;
 
     @media (max-width:768px) {
 display: flex;
@@ -18,7 +21,6 @@ gap: 8px;
 align-self: stretch;
 background: var(--Deep-Green, #172B22);
 width: 100%;
-position: relative;
     }
 
     .frame {

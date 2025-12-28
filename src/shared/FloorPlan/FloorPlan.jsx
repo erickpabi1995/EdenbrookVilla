@@ -100,7 +100,7 @@ function DesktopUI({content,setActiveTab,activeTab,handleDownload,activeType,set
 </div>
 <div className={styles.insights}>
 <div className={styles.insightCard}>
-<img src={currentImage} alt='Placeholder Image' style={{width:'552px',height:'552px'}}/>
+<img src={currentImage} alt='Placeholder Image' style={{width:'100%',height:'552px'}}/>
 <div className={styles.blogSubContainer}>
 <p className={styles.blogColumn}>{content.bedrooms}</p>
 <div className={styles.blogSubColumn}>
@@ -137,7 +137,7 @@ function DesktopUI({content,setActiveTab,activeTab,handleDownload,activeType,set
   )
 }
 
-function MobileUI({content,setActiveTab,activeType,setActiveType,handleDownload}){
+function MobileUI({content,setActiveTab,activeType,setActiveType,handleDownload,activeTab}){
   const currentImage = activeType === content.typeA ? content.typeAImage : content.typeBImage;
   return(
         <div className={styles.floorPlan}>
@@ -146,14 +146,14 @@ function MobileUI({content,setActiveTab,activeType,setActiveType,handleDownload}
 <div className={styles.titleColumn}>
 <div className={styles.titleText}>
   <div className={styles.mobileImageContainer}>
-  <img src={currentImage} alt='Placeholder Image' style={{width:'100%',height:'287px'}}/>
+  <img src={currentImage} alt='Placeholder Image' style={{width:'auto',height:'287px'}}/>
   <div className={styles.blogSubContainer}>
 <p className={styles.blogColumn}>{content.bedrooms}</p>
 <div className={styles.blogSubColumn}>
 
  {content.sub.map((subItem, idx) =>
-   <div className={styles.content}>
-                    <p className={styles.blogSub} key={idx}>{subItem}</p>
+   <div className={styles.content} key={idx}>
+                    <p className={styles.blogSub}>{subItem}</p>
                         </div>
                   )}
               
@@ -178,9 +178,9 @@ function MobileUI({content,setActiveTab,activeType,setActiveType,handleDownload}
 
     <div className={styles.dividerContainer}>
     {Tabs.map((item)=>
-  <div className={`${styles.titleDescription}`}
+  <div className={`${styles.titleDescription} ${activeTab === item ? styles.active : styles.nonActive}`}
    key={item} onClick={()=>setActiveTab(item)} style={{cursor:'pointer'}}>
-    <p className={styles.button}>{item}</p></div>
+    <p className={`${styles.button} ${activeTab === item ? styles.active : ''}`}>{item}</p></div>
   )}
 </div>
 </div>
