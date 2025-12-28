@@ -101,10 +101,6 @@ const Location = [
     value:"Minutes away from Cantonments, Airport Residential, and the Labadi Beach corridor."
   },
     {
-    title:"COMMUTE",
-    value:"Easy access to the Giffard Road, making your commute to the financial district or Kotoka International Airport seamless."
-  },
-    {
     title:"LIFESTYLE",
     value:"Proximity to top-tier international schools, private hospitals, and the vibrant dining scene of the capital."
   }

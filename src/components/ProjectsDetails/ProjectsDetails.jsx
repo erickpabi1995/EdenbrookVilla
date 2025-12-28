@@ -16,10 +16,12 @@ import Header from '../../shared/Header/Header'
 import UnitGallery from '../../shared/UnitGallery/UnitGallery'
 import ProjectDetailsHero from '../../shared/ProjectDetailsHero/ProjectDetailsHero'
 import Map from '../../shared/Map/Map'
+import NavBar from '../../shared/ProjectDetailsHero/NavBar'
 
 const ProjectDetails = () => {
     return(
         <>
+        <NavBar/>
         <ProjectDetailsHero/>
         <Header/>
         <div id='history'>

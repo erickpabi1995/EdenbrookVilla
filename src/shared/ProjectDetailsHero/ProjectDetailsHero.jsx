@@ -1,4 +1,3 @@
-import NavBar from './NavBar';
 import styles from './ProjectDetails.module.scss';
 
 const ProjectDetailsHero = () => {
@@ -14,7 +13,6 @@ const ProjectDetailsHero = () => {
 
   return (
     <div className={styles.overallFrame}>
-      <NavBar/>
       <div className={styles.projectInvestments}>
       <div className={styles.container}>
         <div className={styles.frame}>

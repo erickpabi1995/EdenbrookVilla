@@ -110,8 +110,8 @@ return(
 <div className={styles.titleDescription}>
   <Link className={styles.button} to={item.link}> {item.name}</Link>
   <div className={styles.insights}>
-{item.children.map((it)=>
-<Link className={styles.insightCard} to={it.link} key={it.nameNa}>{it.name}</Link>
+{item.children.map((it,index)=>
+<Link className={styles.insightCard} to={it.link} key={index}>{it.name}</Link>
     )}
 
   </div>
