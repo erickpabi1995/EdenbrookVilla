@@ -13,8 +13,8 @@ return(
     </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
-   <p className={styles.logo_groups}>Eric Nana Kpabi</p>
-   <p  className={styles.logo_text}>Lead Developer</p>
+   <p className={styles.logo_groups}>Jesse Johanne Swaniker</p>
+   <p  className={styles.logo_text}>Vice Chairman</p>
   </div>
   <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
    <div className={styles.logo_secondary_group}>
@@ -43,8 +43,8 @@ return(
     </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
-   <p className={styles.logo_groups}>Bright Baiden</p>
-   <p  className={styles.logo_text}>Lead Designer</p>
+   <p className={styles.logo_groups}>Vicentia Aikens</p>
+   <p  className={styles.logo_text}>Head of Legal</p>
   </div>
   <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
    <div className={styles.logo_secondary_group}>
@@ -78,7 +78,7 @@ return(
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
    <p className={styles.logo_groups}>Francis Quansah</p>
-   <p  className={styles.logo_text}>Product Owner</p>
+   <p  className={styles.logo_text}>Chairman</p>
   </div>
   <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
    <div className={styles.logo_secondary_group}>
@@ -103,12 +103,12 @@ return(
   </div>
     <div className={styles.secondColumn}>
        <div className={styles.imageContainer}>
-    <img src='../restOfTeam.jpg' alt='Team Image Placeholder' style={{height:"100%",width:"100%",objectFit:"contain"}}/>
+    <img src='../finance.JPG' alt='Finance Image' style={{height:"100%",width:"100%",objectFit:"contain"}}/>
     </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
-   <p className={styles.logo_groups}>Joe Wise</p>
-   <p  className={styles.logo_text}>Lead Engineer</p>
+   <p className={styles.logo_groups}>Maame Afua Swaniker</p>
+   <p  className={styles.logo_text}>Head of Finance</p>
   </div>
   <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
    <div className={styles.logo_secondary_group}>

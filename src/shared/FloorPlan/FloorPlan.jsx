@@ -21,7 +21,7 @@ import styles from './FloorPlan.module.scss'
     "Option B: The Horizon": {
       bedrooms: "4 Ensuite Bedrooms | 4.5 Bathrooms",
       sub: ["Private rooftop terrace for exclusive outdoor lounging and entertainment", "Skyline views overlooking the prime Tse-Addo neighborhood.", "Enhanced social space bridging the gap between indoor and outdoor luxury."],
-      price: "$420,000",
+      price: "$440,000",
       typeA:'Ground Floor',
       typeB: 'First Floor',
       typeAImage:'../gf.jpeg',
@@ -30,7 +30,7 @@ import styles from './FloorPlan.module.scss'
     "Option C: The Grand Estate": {
       bedrooms: "5 Ensuite Bedrooms | 5.5 Bathrooms",
       sub: ["Rooftop sitting area plus an additional Penthouse Suite/Office.", "Maximum versatility for large families or premium guest hosting.", "The full Qluxe Experience—our most expansive and prestigious floor plan."],
-      price: "$420,000",
+      price: "$460,000",
       typeA:'Ground Floor',
       typeB: 'First Floor',
       typeAImage:'../gf.jpeg', 

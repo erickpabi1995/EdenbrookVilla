@@ -16,18 +16,14 @@ const Interior = [
   },
     {
     title:"CEILINGS",
-    value:"Recessed LED lighting with architectural POP ceiling designs."
+    value:"Recessed LED lighting with architectural plaster boards ceiling designs."
   },
     {
     title:"KITCHEN",
-    value:"Fully integrated gourmet kitchen with quartz countertops and stainless steel appliances."
+    value:"Fully integrated gourmet kitchen with quartz countertops and stainless steel appliances. Integrated into your open-plan living for high-end social appeal. Chef’s Kitchen: A private, heavy-duty culinary suite for prep and catering."
   }
 ]
 const Exterior = [
-  {
-    title:"EXTERIOR",
-    value:'Focus on the architectural "Fasad" and durability.'
-  },
     {
     title:"DESIGN",
     value:"Contemporary minimalist architecture featuring natural stone accents and expansive glass windows."
@@ -38,12 +34,8 @@ const Exterior = [
   },
     {
     title:"SECURITY",
-    value:"Multi-point secure entry systems, automated gate access, and perimeter electric fencing."
-  },
-    {
-    title:"LIGHTING",
-    value:"Automated exterior mood lighting to highlight the Qluxe Homes architectural silhouette at night."
-  },
+    value:"Provision for CCTV camera installation, electric fencing intercom systems, automated gate access, and perimeter electric fencing."
+  }
 ]
 const Financial = [
   {

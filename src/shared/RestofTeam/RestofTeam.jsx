@@ -5,58 +5,33 @@ import useMediaQuery from '../useMediaQuery'
   const team = [
     {
       id:1,
-      title:'Lead Developer',
-      name:'Eric Kpabi',
+      title:'Head of Marketing',
+      name:'Felix Kojo Annan Quansah',
       image:'../agent2.jpg'
     },
         {
           id:2,
+      title:'Head of Human Resources',
+      name:'Papa Yaw Darko Mensah',
+      image:'../restOfTeam2.jpg'
+    },
+        {
+          id:3,
+      title:'Marketing Manager',
+      name:'Jessica Amenuvor',
+      image:'../restOfTeam.jpg'
+    },
+        {
+          id:4,
       title:'Lead Designer',
       name:'Bright Baiden',
       image:'../restOfTeam2.jpg'
     },
         {
-          id:3,
-      title:'Project Lead',
-      name:'Francis Quansah',
-      image:'../restOfTeam.jpg'
-    },
-        {
-          id:4,
-      title:'Financial Analyst',
-      name:'Ava Anderson',
-      image:'../restOfTeam2.jpg'
-    },
-        {
           id:5,
-      title:'Sales Executive',
-      name:'James Thomas',
-      image:'../restOfTeam.jpg'
-    },
-       {
-        id:6,
-      title:'Project Manager',
-      name:'Sophia Garcia',
-      image:'../restOfTeam2.jpg'
-    },
-        {
-          id:7,
-      title:'Marketing Specialist',
-      name:'Liam Davis',
-      image:'../restOfTeam.jpg'
-    },
-       {
-        id:8,
-      title:'Real Estate Developer',
-      name:'Lucas Brown',
-      image:'../restOfTeam2.jpg'
-    },
-        {
-          id:9,
-      title:'Lead Architect',
-      name:'Jordan Lee',
-      image:'../restOfTeam.jpg'
-
+      title:'Lead Developer',
+      name:'Eric Kpabi',
+      image:'../developer.jpg'
     }
   ]
 
