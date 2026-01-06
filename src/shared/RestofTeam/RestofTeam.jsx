@@ -102,15 +102,15 @@ function DesktopUI({hoveredItem,setHoveredItem}){
   )
 }
 
-function MobileUI({hoveredItem}){
+function MobileUI(){
   return(
       <div className={styles.restOfTeam}>
 <div className={styles.cta6}>
 <p className={styles.frame}>MEET THE REST OF THE TEAM</p>
 <div className={styles.secondFrame}>
-  {team.map((item)=>
+  {team.map((item,index)=>
       <div className={styles.logo_secondary_group} key={item.id}>
-  <img src={team[hoveredItem]?.image} alt='Team' style={{width:'100%', height:'400px',objectFit:"contain"}}/>  
+  <img src={team[index]?.image} alt='Team' style={{width:'100%', height:'400px',objectFit:"cover",objectPosition:'center top'}}/>  
   <div className={styles.mobileRole}>
 <p className={styles.nameMobile}>{item.name}</p>
 <p className={styles.secondColumnButtonContainer}>{item.title}</p>
