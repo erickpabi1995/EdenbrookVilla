@@ -116,14 +116,25 @@ gap: 16px;
 
 .blogSub{
 display: flex;
-justify-content: center;
 align-items: center;
 gap: 12px;
+min-width: 0;
+
+svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
 }
 
 .badge{
 color: var(--White, #FFF);
 font-variant-numeric: slashed-zero;
+word-break: break-word;
+overflow-wrap: break-word;
+white-space: normal;
+flex:1;
+min-width: 0;
 
 /* Desktop/Long paragraph/Large (M) */
 font-family: var(--Font-Family-Body, "Satoshi");
@@ -136,7 +147,8 @@ letter-spacing: -0.5px;
 
 .badge_text{
 display: flex;
-max-width: 400px;
+min-width: 400px;
+width: 100%;
 flex-direction: column;
 align-items: flex-start;
 gap: 16px;
@@ -144,6 +156,8 @@ flex: 1 0 0;
 
 @media (max-width:768px) {
     align-self: stretch;
+    max-width: 400px;
+    min-width: 0px;
 }
 }
 .date_text{

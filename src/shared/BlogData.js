@@ -23,16 +23,16 @@ If you have been waiting for the right time to invest in Ghana real estate, this
 `,
 description:'Own your piece of home today. Welcome home to Qluxe.',
      image: '../blog1.svg',
-      date:'19th Dec 2025',
-    author: 'Ama Annan',
-      imageAuthor: '../blog_author.svg',
+      date:'25th Jun 2025',
+    author: 'Kojo Annan',
+      imageAuthor: '../blog_author3.svg',
       jobDescription:'Blogger, QLuxe Homes'
 },
     {
         image: '../blog2.svg',
-    date:'19th Dec 2025',
-      author: 'Emmanuel Delap',
-      imageAuthor: '../blog_author2.svg',
+    date:'18th Mar 2025',
+      author: 'Kojo Annan',
+      imageAuthor: '../blog_author3.svg',
     jobDescription:'Blogger, QLuxe Homes',
      category:'Market Highlights',
     title:'How to Buy Property in Ghana from Abroad: A Step by Step Guide for the Diaspora',
@@ -68,8 +68,8 @@ description:'Own your piece of home today. Welcome home to Qluxe.'
     {
           
       image: '../blog3.svg',
-    date:'19th Dec 2025',
-      author: 'Yaw Boakye',
+    date:'7th Dec 2025',
+      author: 'Kojo Annan',
            category:'Events & Expos',
      imageAuthor: '../blog_author3.svg',
     jobDescription:'Blogger, QLuxe Homes',
@@ -104,7 +104,7 @@ description:'Own your piece of home today. Welcome home to Qluxe.'
           
       image: '../blog4.png',
     date:'19th Dec 2025',
-      author: 'Yaw Boakye',
+      author: 'Kojo Annan',
      imageAuthor: '../blog_author3.svg',
     jobDescription:'Blogger, QLuxe Homes',
      category:'Press Releases',

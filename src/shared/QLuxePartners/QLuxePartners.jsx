@@ -57,7 +57,7 @@ const QLuxePartners = () => {
             animate="rightToLeft"
           >
             <img 
-              src='../agent2.jpg' 
+              src='../partner.jpeg' 
               alt='Partner Agent 1' 
               className={styles.agentImage}
             />
@@ -85,7 +85,7 @@ const QLuxePartners = () => {
             animate="rightToLeft"
           >
             <img 
-              src='../agent2.jpg' 
+              src='../partner.jpeg' 
               alt='Partner Agent 1' 
               className={styles.agentImage}
             />
@@ -125,7 +125,7 @@ const QLuxePartners = () => {
               className={styles.agentImage}
             />
             <img 
-              src='../agent2.jpg' 
+              src='../partner.jpeg' 
               alt='Partner Agent 7' 
               className={styles.agentImage}
             />
@@ -153,7 +153,7 @@ const QLuxePartners = () => {
               className={styles.agentImage}
             />
             <img 
-              src='../agent2.jpg' 
+              src='../partner.jpeg' 
               alt='Partner Agent 7' 
               className={styles.agentImage}
             />

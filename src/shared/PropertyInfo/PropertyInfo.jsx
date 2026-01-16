@@ -35,6 +35,10 @@ const Exterior = [
     {
     title:"SECURITY",
     value:"Provision for CCTV camera installation, electric fencing intercom systems, automated gate access, and perimeter electric fencing."
+  },
+      {
+    title:"SWIMMING POOL(OPTIONAL)",
+    value:"Optional swimming pool for our clients."
   }
 ]
 const Financial = [

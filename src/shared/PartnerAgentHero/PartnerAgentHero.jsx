@@ -36,7 +36,7 @@ return(
 
     </div>
     <div className={styles.blogSub}>
-<img src='../agent2.jpg' alt='Partner 1'/>
+<img src='../partner.jpeg' alt='Partner 1' style={{objectPosition:"center top", objectFit:"cover"}}/>
 <div className={styles.badge}>
 <img src='../agent2.jpg' alt='Partner 1' />
 <img src='../agent4.jpg' alt='Partner 1' />
