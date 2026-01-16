@@ -213,6 +213,7 @@ align-self: stretch;
 .badge{
 display: flex;
 align-items: center;
+cursor: pointer;
 gap: 17.6px;
 
 @media (max-width: 768px) {

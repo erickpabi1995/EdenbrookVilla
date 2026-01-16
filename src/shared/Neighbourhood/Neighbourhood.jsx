@@ -11,11 +11,6 @@ const data = [
     description: 'Just 12-15 minutes from Edenbrook Villa, the Kotoka International Airport provides seamless travel for international residents and frequent flyers.'
   },
   {
-    name: 'Zenith University College',
-    imageUrl: '../zenith.webp',
-    description: 'Just a short distance away, providing excellent educational opportunities.'
-  },
-  {
     name: 'Accra Shopping Mall',
     imageUrl: '../shopping mall.jpg',
     description: '15-18 minutes drive from Edenbrook Villa. The hub for high-end retail, dining, and cinema.'
