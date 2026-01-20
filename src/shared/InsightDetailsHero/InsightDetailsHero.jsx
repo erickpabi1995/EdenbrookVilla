@@ -10,7 +10,7 @@ const InsightDetailsHero = ({blogData}) => {
         date: '28 Feb 2020',
         heading: 'Why Now Is the Time for the Diaspora to Invest in Ghana Real Estate',
         author: 'Kojo Annan',
-        imageAuthor: '../blog_author.svg',
+        imageAuthor: '../felix.jpeg',
         title: 'Blogger, QLuxe Homes'
     }
 
@@ -157,7 +157,7 @@ return(
    </div>
 
    <div className={styles.blogSubContainer}>
-    <img src={blog.imageAuthor} alt='Avatar'/>
+    <img src={blog.imageAuthor} alt='Avatar' style={{width:'47px',height:'47px'}} className='rounded-full'/>
     <p className={styles.blogColumn}>
 {blog.author}
     </p>

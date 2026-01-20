@@ -75,7 +75,7 @@ ${selected === item ? styles.selected : ''}`} key={item}>
             </div>
         </div>
           <div className={styles.footer_groups}>
-            <img src={item.imageAuthor} alt="Blog author"/>
+            <img src={item.imageAuthor} alt="Blog author" style={{width:'47px',height:'47px'}} className='rounded-full'/>
             <div className={styles.footer_subgroups}>
               <p className={styles.footer_text}>{item.author}</p>
               <p className={styles.footer_secondary}>{item.jobDescription}</p>

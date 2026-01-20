@@ -81,7 +81,7 @@ return(
 
   </div>
   <div className={styles.logo_groups}>
-    <img src={blog.imageAuthor} alt="Blog author"/>
+    <img src={blog.imageAuthor} alt="Blog author" style={{width:'47px',height:'47px'}} className='rounded-full'/>
     <div className={styles.logo_subgroups}>
       <p className={styles.logo_text}>{blog.author}</p>
       <p className={styles.logo_secondary}>{blog.jobDescription}</p>

@@ -7,7 +7,7 @@ import useMediaQuery from '../useMediaQuery'
       id:1,
       title:'Head of Marketing',
       name:'Felix Kojo Annan Quansah',
-      image:'../agent2.jpg'
+      image:'../felix.jpeg'
     },
         {
           id:2,
