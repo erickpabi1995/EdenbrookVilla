@@ -1,7 +1,6 @@
 import styles from './History.module.scss'
 
 const History = () => {
-const youtubeVideoId = 'RC6iqLKt74Y'
 return(
     <div className={styles.history}>
 <div className={styles.container}>
@@ -16,15 +15,15 @@ return(
 </div>
 </div>
 </div>
- <iframe
+ <video
           width="100%"
           height="500"
-          src={`https://www.youtube.com/embed/${youtubeVideoId}`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+          controls
+          style={{ maxWidth: '100%' }}
+        >
+          <source src="/qluxe_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 </div>
 
 )
