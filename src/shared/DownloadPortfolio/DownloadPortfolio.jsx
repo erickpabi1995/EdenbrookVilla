@@ -76,7 +76,7 @@ const DownloadPortfolio = () => {
     }
     await emailjs.send(
       'service_wrmhgus',  
-      'template_cl8tsqj', 
+      'template_6hl9snj', 
       templateParams,
       'Z8nadH7Nmwiyy_0Nf' 
     )
