@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useMediaQuery from '../useMediaQuery';
 import styles from './FloorPlan.module.scss'
+import emailjs from '@emailjs/browser'
 
 
   const Tabs = [
@@ -130,6 +131,24 @@ const [activeType,setActiveType] = useState('Ground Floor')
         pdfFile = '../Investors_Brochure.pdf'
         storageKey = 'portfolioDownloads'
     }
+
+       const templateParams = {
+          to_email: 'felix.quansah@qluxehomes.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          activeTab ,
+          activeType,
+          title:'Floor Plan',
+          subtext:'floor plan',
+          downloaded_at: new Date().toLocaleString(),
+        }
+        await emailjs.send(
+          'service_wrmhgus',  
+          'template_6hl9snj', 
+          templateParams,
+          'Z8nadH7Nmwiyy_0Nf' 
+        )
     
     // Save to localStorage with tab-specific key
     const existingData = JSON.parse(localStorage.getItem(storageKey) || '[]')

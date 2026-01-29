@@ -175,6 +175,18 @@ min-width: 100%;
     }
 }
 
+.agentImage2{
+    width: 416px;
+    height: 340px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    @media (max-width:768px) {
+        width: 280px;
+        height: 230px;
+    }
+}
+
 .blogSubContainer{
 display: flex;
 padding: 12px;

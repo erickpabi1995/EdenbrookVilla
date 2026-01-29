@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useMediaQuery from '../useMediaQuery';
 import styles from './DownloadPortfolio.module.scss'
+import emailjs from '@emailjs/browser'
 
 const DownloadPortfolio = () => {
 
@@ -62,6 +63,23 @@ const DownloadPortfolio = () => {
 
     try {
       setIsDownloading(true)
+
+         const templateParams = {
+      to_email: 'felix.quansah@qluxehomes.com',
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      title:'Investment Portfolio',
+      subtext:'investment portfolio',
+      downloaded_at: new Date().toLocaleString(),
+      message: `New brochure download request from ${formData.name} with email ${formData.email} and phone number ${formData.phone}.`
+    }
+    await emailjs.send(
+      'service_wrmhgus',  
+      'template_cl8tsqj', 
+      templateParams,
+      'Z8nadH7Nmwiyy_0Nf' 
+    )
       
       // Save to localStorage
       const existingData = JSON.parse(localStorage.getItem('portfolioDownloads') || '[]')

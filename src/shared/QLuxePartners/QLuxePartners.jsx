@@ -62,19 +62,19 @@ const QLuxePartners = () => {
               className={styles.agentImage}
             />
             <img 
-              src='../agent4.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 2' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
-              src='../agent1.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 3' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
-              src='../agent3.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 4' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
           </motion.div>
           
@@ -90,19 +90,19 @@ const QLuxePartners = () => {
               className={styles.agentImage}
             />
             <img 
-              src='../agent4.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 2' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
-              src='../agent1.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 3' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
-              src='../agent3.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 4' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
           </motion.div>
         </div>
@@ -115,14 +115,14 @@ const QLuxePartners = () => {
             animate="leftToRight"
           >
             <img 
-              src='../agent1.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 5' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
-              src='../agent3.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 6' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
               src='../partner.jpeg' 
@@ -130,9 +130,9 @@ const QLuxePartners = () => {
               className={styles.agentImage}
             />
             <img 
-              src='../agent4.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 8' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
           </motion.div>
           
@@ -143,14 +143,14 @@ const QLuxePartners = () => {
             animate="leftToRight"
           >
             <img 
-              src='../agent1.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 5' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
-              src='../agent3.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 6' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
             <img 
               src='../partner.jpeg' 
@@ -158,9 +158,9 @@ const QLuxePartners = () => {
               className={styles.agentImage}
             />
             <img 
-              src='../agent4.jpg' 
+              src='../Logo.svg' 
               alt='Partner Agent 8' 
-              className={styles.agentImage}
+              className={styles.agentImage2}
             />
           </motion.div>
         </div>

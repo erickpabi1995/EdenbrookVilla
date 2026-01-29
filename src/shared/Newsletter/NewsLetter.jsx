@@ -1,6 +1,7 @@
 import useMediaQuery from '../useMediaQuery'
 import styles from './NewsLetter.module.scss'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 const NewsLetter = () => {
 
   const [email, setEmail] = useState('')
@@ -43,6 +44,20 @@ const NewsLetter = () => {
         }
 
         setIsLoading(true)
+
+          const templateParams = {
+          to_email: 'felix.quansah@qluxehomes.com',
+          from_email: email,
+          title:'NewsLetter Subscription',
+          subtext:'newsletter form',
+          submitted_at: new Date().toLocaleString(),
+        }
+        await emailjs.send(
+          'service_wrmhgus',  
+          'template_cl8tsqj', 
+          templateParams,
+          'Z8nadH7Nmwiyy_0Nf' 
+        )
         
         // Simulate API call delay
         setTimeout(() => {

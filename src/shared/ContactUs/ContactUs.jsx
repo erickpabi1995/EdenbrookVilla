@@ -1,6 +1,7 @@
 import styles from './ContactUs.module.scss'
 import useMediaQuery from '../useMediaQuery'
 import { useState } from 'react';
+import emailjs from '@emailjs/browser'
 
 const ContactUs = () => {
 
@@ -73,7 +74,23 @@ const ContactUs = () => {
      setFormSubmissionResult(null)
 
        try {
-       // API endpoint for form submission
+       
+         const templateParams = {
+          to_email: 'felix.quansah@qluxehomes.com',
+          from_name: contactFormData.name,
+          from_email: contactFormData.email,
+          message: contactFormData.message,
+          title:'General Enquiries',
+          subtext:'contact us form in project details page',
+          submitted_at: new Date().toLocaleString(),
+        }
+        await emailjs.send(
+          'service_wrmhgus',  
+          'template_cl8tsqj', 
+          templateParams,
+          'Z8nadH7Nmwiyy_0Nf' 
+        )
+    
        localStorage.setItem("form",JSON.stringify({
            fullName: contactFormData.name,
            emailAddress: contactFormData.email,

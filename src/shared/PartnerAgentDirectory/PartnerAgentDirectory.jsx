@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './PartnerAgentDirectory.module.scss'
 import useMediaQuery from '../useMediaQuery';
 
-const PartnerAgentDirectory = () => {
+const PartnerAgentDirectory = ({selectedAgentData}) => {
 
     const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -31,7 +31,7 @@ const PartnerAgentDirectory = () => {
                    instagram:"instagram.com/Kwame Asante/",
                    x:"x.com/Kwame Asante/",
             description: "Specializing in luxury residential properties with over 15 years of experience in the Ghanaian real estate market. We deliver exceptional service and premium locations.",
-            images: '../agent4.jpg',
+            images: '../Logo.svg',
         },
           {
             id: 3,
@@ -44,7 +44,7 @@ const PartnerAgentDirectory = () => {
                      instagram:"instagram.com/Sarah Johnson/",
                            x:"x.com/Sarah Johnson/",
             description: "Delivering exceptional real estate experiences with a focus on luxury properties and personalized client service across Greater Accra.",
-            images: '../agent2.jpg',
+            images: '../Logo.svg',
         },
         {
             id: 4,
@@ -57,7 +57,7 @@ const PartnerAgentDirectory = () => {
                      instagram:"instagram.com/Michael Osei/",
                       x:"x.com/Michael Osei/",
             description: "Specializing in high-end residential and commercial properties with over a decade of excellence in Ghana's real estate market.",
-            images: '../agent4.jpg',
+            images: '../Logo.svg',
         },
           {
             id: 5,
@@ -70,7 +70,7 @@ const PartnerAgentDirectory = () => {
               instagram:"instagram.com/Grace Amoah/",
                 x:"x.com/Grace Amoah/",
             description: "Committed to providing world-class real estate services with integrity, professionalism, and deep market knowledge.",
-            images: '../pd1.png',
+            images: '../Logo.svg',
         },
         {
             id: 6,
@@ -83,7 +83,7 @@ const PartnerAgentDirectory = () => {
               instagram:"instagram.com/James Akuffo/",
               x:"x.com/James Akuffo/",
             description: "Your trusted partner for luxury real estate investments, offering premium properties and expert market insights.",
-            images: '../pd1.png',
+            images: '../Logo.svg',
         },
     ];
 
@@ -131,6 +131,21 @@ const PartnerAgentDirectory = () => {
         const actualIndex = isMobile ? startIndex + agentIndex : agentIndex;
         setCurrentAgentIndex(actualIndex);
     };
+
+        // Effect to handle selectedAgentId prop
+    useEffect(() => {
+        if (selectedAgentData && selectedAgentData.id) {
+            const agentIndex = agents.findIndex(agent => agent.id === selectedAgentData.id)
+            if (agentIndex !== -1) {
+                setCurrentAgentIndex(agentIndex)
+                // Update startIndex to make sure selected agent is visible
+                const itemsToShow = isMobile ? 3 : 6
+                if (agentIndex < startIndex || agentIndex >= startIndex + itemsToShow) {
+                    setStartIndex(Math.max(0, agentIndex - Math.floor(itemsToShow / 2)))
+                }
+            }
+        }
+    }, [selectedAgentData, isMobile])
 
 return(
     <div className={styles.partnerAgentDirectory}>
@@ -259,8 +274,8 @@ return(
                         cursor: 'pointer',
                         width:"117px",
                         height:"142px",
-                        objectFit:"cover",
-                        objectPosition:"center top",
+                        objectFit:index === 0 ? "cover" : 'contain',
+                        objectPosition:index === 0 ? "center top" : '',
                          border: currentAgentIndex === (startIndex + index) ? '2px solid #fff' : 'none',
                         borderRadius: '4px'
                     }}

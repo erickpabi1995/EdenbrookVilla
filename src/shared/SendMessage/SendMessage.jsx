@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './SendMessage.module.scss'
+import emailjs from '@emailjs/browser'
 
 const SendMessage = () => {
   const [formData, setFormData] = useState({
@@ -66,9 +67,23 @@ const SendMessage = () => {
     setIsSubmitting(true)
     
     try {
-      // Replace this with your actual form submission logic
-      // Example: await submitFormToAPI(formData)
-      console.log('Form submitted:', formData)
+   const templateParams = {
+          to_email: 'felix.quansah@qluxehomes.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          phone:formData.phoneNumber,
+          contactReason:formData.contactReason === 'referringBuyer' ? 'Referring a buyer or an investor' : 'Becoming a partner agent',
+          title:'General Enquiries',
+          subtext:'contact us form on the contact page',
+          submitted_at: new Date().toLocaleString(),
+        }
+        await emailjs.send(
+          'service_wrmhgus',  
+          'template_cl8tsqj', 
+          templateParams,
+          'Z8nadH7Nmwiyy_0Nf' 
+        )
       
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))

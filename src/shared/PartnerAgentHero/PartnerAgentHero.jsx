@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './PartnerAgentHero.module.scss'
 
-const PartnerAgentHero = () => {
+const PartnerAgentHero = ({onAgentSelect}) => {
     const navigate = useNavigate()
 
     const handleContact = () => {
@@ -12,6 +12,12 @@ const PartnerAgentHero = () => {
         const element = document.getElementById('partnerAgentDirectory')
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
+        const handleAgentImageClick = () => {
+        if (onAgentSelect) {
+            onAgentSelect(1)
         }
     }
 return(
@@ -27,7 +33,7 @@ return(
    </div>
 <div className={styles.blogSubContainer}>
     <div className={styles.blogColumn}>
-   <img src='../Avatar.png' alt='Avatar'/>
+   <img src='../partner.jpeg' alt='Avatar' style={{width:'32px',height:'32px',objectFit:'cover'}} className='rounded-full cursor-pointer' onClick={handleAgentImageClick}/>
 <img src='../Avatar1.png' alt='Avatar'/>
 <img src='../Avatar2.png' alt='Avatar'/>
     </div>
@@ -38,19 +44,21 @@ return(
     <div className={styles.blogSub}>
 <img src='../partner.jpeg' alt='Partner 1' style={{objectPosition:"center top", objectFit:"cover"}}/>
 <div className={styles.badge}>
-<img src='../agent2.jpg' alt='Partner 1' />
-<img src='../agent4.jpg' alt='Partner 1' />
+<img src='../Logo.svg' alt='Partner 1' style={{objectFit:'contain'}} />
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
 </div>
 <div className={styles.badge}>
-<img src='../agent2.jpg' alt='Partner 1'/>
-<img src='../agent4.jpg' alt='Partner 1'/>
-<img src='../agent2.jpg' alt='Partner 1' />
+
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
 </div>
 <div className={styles.badge}>
-<img src='../agent2.jpg' alt='Partner 1'/>
-<img src='../agent4.jpg' alt='Partner 2'/>
-<img src='../agent2.jpg' alt='Partner 3'/>
-<img src='../agent4.jpg' alt='Partner 4'/>
+
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
+<img src='../Logo.svg' alt='Partner 1'  style={{objectFit:'contain'}} />
 </div>
     </div>
 </div>

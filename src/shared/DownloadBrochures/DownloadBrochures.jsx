@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './DownloadBrochures.module.scss'
 import useMediaQuery from '../useMediaQuery';
+import emailjs from '@emailjs/browser'
 
 const DownloadBrochures = () => {
   const [isDownloading, setIsDownloading] = useState(false)
@@ -60,6 +61,22 @@ const DownloadBrochures = () => {
 
     try {
       setIsDownloading(true)
+
+       const templateParams = {
+      to_email: 'felix.quansah@qluxehomes.com',
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      title:'Brochure',
+      subtext:'brochure',
+      downloaded_at: new Date().toLocaleString(),
+    }
+    await emailjs.send(
+      'service_wrmhgus',  
+      'template_cl8tsqj', 
+      templateParams,
+      'Z8nadH7Nmwiyy_0Nf' 
+    )
       
       // Save to localStorage
       const existingData = JSON.parse(localStorage.getItem('brochureDownloads') || '[]')
