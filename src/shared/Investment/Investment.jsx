@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './Investment.module.scss'
+import emailjs from '@emailjs/browser'
 
 const Investment = () => {
     const [formData, setFormData] = useState({
@@ -81,12 +82,30 @@ const Investment = () => {
         }
 
         setIsLoading(true)
+
+        try{
+
+           const templateParams = {
+          to_email: 'felix.quansah@qluxehomes.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          title:'General Enquiries',
+          subtext:'contact us form on the message us page',
+          submitted_at: new Date().toLocaleString(),
+        }
+        await emailjs.send(
+          'service_wrmhgus',  
+          'template_cl8tsqj', 
+          templateParams,
+          'Z8nadH7Nmwiyy_0Nf' 
+        )
         
         // Simulate API call delay
-        setTimeout(() => {
+
             setIsLoading(false)
             setIsSubmitted(true)
-            console.log('Form submitted:', formData)
+            
             
             // Reset form after successful submission
             setTimeout(() => {
@@ -97,7 +116,15 @@ const Investment = () => {
                 })
                 setIsSubmitted(false)
             }, 3000)
-        }, 1500)
+
+            } catch (error) {
+        console.error('Form submission error:', error)
+        setIsLoading(false)
+        setErrors(prev => ({
+            ...prev,
+            submit: 'Failed to send message. Please try again.'
+        }))
+    }
     }
 
     const handleKeyPress = (e, field) => {
@@ -164,7 +191,7 @@ const Investment = () => {
                         >
                             {isLoading ? 'Sending...' : isSubmitted ? 'Message Sent ✓' : 'Send message'}
                         </button>
-                        
+                         {errors.submit && <p className={styles.errorText}>{errors.submit}</p>}
                         <p className={styles.disclaimer}>
                             Your details are kept confidential. A member of our investor relations team will reach out before each new release.
                         </p>

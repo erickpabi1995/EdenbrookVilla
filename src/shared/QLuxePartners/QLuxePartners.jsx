@@ -6,7 +6,7 @@ const QLuxePartners = () => {
   const navigate = useNavigate()
 
   const handleContact = () => {
-    navigate('/contactUs')
+    navigate('/messageUs?reason=partnerAgent')
   }
 
   // Animation variants for infinite scrolling

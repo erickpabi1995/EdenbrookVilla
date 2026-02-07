@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import styles from './SendMessage.module.scss'
 import emailjs from '@emailjs/browser'
 
 const SendMessage = () => {
+  const [searchParams] = useSearchParams()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,6 +16,22 @@ const SendMessage = () => {
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+
+
+  useEffect(() => {
+    const reason = searchParams.get('reason')
+    if (reason === 'partnerAgent') {
+      setFormData(prev => ({
+        ...prev,
+        contactReason: 'partnerAgent'
+      }))
+    } else if(reason === 'referringBuyer'){
+          setFormData(prev => ({
+        ...prev,
+        contactReason: 'referringBuyer'
+      }))
+    }
+  }, [searchParams])
 
   const validateForm = () => {
     const newErrors = {}

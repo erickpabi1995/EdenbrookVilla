@@ -5,7 +5,7 @@ const PartnerAgentHero = ({onAgentSelect}) => {
     const navigate = useNavigate()
 
     const handleContact = () => {
-        navigate('/contactUs')
+        navigate('/messageUs?reason=partnerAgent')
     }
 
   const handleExplore = () => {

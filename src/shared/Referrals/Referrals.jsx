@@ -5,7 +5,7 @@ const Containers = () => {
     const navigate = useNavigate()
 
     const handleContact = () => {
-navigate('/contactUs')
+navigate('/messageUs?reason=referringBuyer')
     }
 
 return(

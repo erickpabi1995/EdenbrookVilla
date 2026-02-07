@@ -9,7 +9,7 @@ return(
    <div className={styles.text2}>
   <div className={styles.secondColumn}>
      <div className={styles.imageContainer}>
-    <img src='../restOfTeam2.jpg' alt='Team Image Placeholder'  style={{height:"100%",width:"100%",objectFit:"contain"}}/>
+    <img src='../kofi.png' alt='Team Image Placeholder'  style={{height:"100%",width:"100%",objectFit:"contain"}}/>
     </div>
     
     <div className={styles.secondColumnActions}>
@@ -17,10 +17,10 @@ return(
    <p className={styles.logo_groups}>Kofi Addo Darko Mensah</p>
    <p  className={styles.logo_text}>Board Advisor</p>
   </div>
-  <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
+  <p className={styles.logo_secondary}>Kofi provides invaluable guidance with his wealth of experience in business strategy and development. His expertise helps steer Qluxe’s long-term vision and strategic decisions. He is a trusted advisor with a sharp eye for growth opportunities and operational excellence.</p>
    <div className={styles.logo_secondary_group}>
 <svg 
-onClick={()=>window.open('https://linkedin.com', '_blank')}
+onClick={()=>window.open('http://www.linkedin.com/in/qluxe-homes-410a423a7', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="#222222"/>
 </svg>
@@ -54,13 +54,13 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fi
     </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
-   <p className={styles.logo_groups}>Jesse Johanne Swaniker</p>
+   <p className={styles.logo_groups}>Jesse Johann Swaniker</p>
    <p  className={styles.logo_text}>Vice Chairman</p>
   </div>
-  <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
+  <p className={styles.logo_secondary}>As Vice Chairman, Jesse plays a pivotal role in overseeing Qluxe’s business operations and ensuring its alignment with strategic goals. His leadership brings a balanced approach to growth, steering the company through both challenges and successes. His insight shapes Qluxe’s path forward.</p>
    <div className={styles.logo_secondary_group}>
 <svg 
-onClick={()=>window.open('https://linkedin.com', '_blank')}
+onClick={()=>window.open('http://www.linkedin.com/in/qluxe-homes-410a423a7', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="#222222"/>
 </svg>
@@ -92,13 +92,13 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fi
     </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
-   <p className={styles.logo_groups}>Vicentia Aikens</p>
+   <p className={styles.logo_groups}>Vincentia A. Aikins, Esq.</p>
    <p  className={styles.logo_text}>Head of Legal</p>
   </div>
-  <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
+  <p className={styles.logo_secondary}>Vicentia leads the legal department, ensuring Qluxe operates within regulatory frameworks while mitigating risks. Her expertise in law provides the foundation for secure and compliant business operations. She fosters a culture of legal integrity, protecting the company’s interests at all levels.</p>
    <div className={styles.logo_secondary_group}>
 <svg
-onClick={()=>window.open('https://linkedin.com', '_blank')}
+onClick={()=>window.open('http://www.linkedin.com/in/qluxe-homes-410a423a7', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="#222222"/>
 </svg>
@@ -137,10 +137,10 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fi
    <p className={styles.logo_groups}>Francis Quansah</p>
    <p  className={styles.logo_text}>Chairman</p>
   </div>
-  <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
+  <p className={styles.logo_secondary}>As Chairman, Francis brings a wealth of experience and vision to Qluxe, driving the company’s strategic direction. His leadership ensures that the organization stays aligned with its core values while pursuing innovative growth opportunities. He is committed to fostering a culture of excellence and long-term success at Qluxe.</p>
    <div className={styles.logo_secondary_group}>
 <svg
-onClick={()=>window.open('https://linkedin.com', '_blank')}
+onClick={()=>window.open('http://www.linkedin.com/in/qluxe-homes-410a423a7', '_blank')}
  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="#222222"/>
 </svg>
@@ -172,13 +172,13 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fi
     </div>
     <div className={styles.secondColumnActions}>
 <div className={styles.secondColumnButtonContainer}>
-   <p className={styles.logo_groups}>Maame Afua Swaniker</p>
+   <p className={styles.logo_groups}>Nana Afua Darkoa Swaniker, ACCA</p>
    <p  className={styles.logo_text}>Head of Finance</p>
   </div>
-  <p className={styles.logo_secondary}>The mind behind Qluxe’s refined digital identity, blending modern design systems with the warmth of human experience.</p>
+  <p className={styles.logo_secondary}>Maame Afua ensures the financial health of Qluxe by overseeing all financial operations and strategies. She applies her deep knowledge of financial management to maximize profitability and sustainability. Her leadership guarantees that Qluxe maintains a strong financial position in a competitive market.</p>
    <div className={styles.logo_secondary_group}>
 <svg 
-onClick={()=>window.open('https://linkedin.com', '_blank')}
+onClick={()=>window.open('http://www.linkedin.com/in/qluxe-homes-410a423a7', '_blank')}
 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="#222222"/>
 </svg>

@@ -15,6 +15,7 @@ const AboutPage = lazy(()=>import('./components/AboutPage/AboutPage'))
 const Testimonials = lazy(()=>import('./shared/DownloadPortfolio/DownloadPortfolio'))
 const LandingPage = lazy(()=>import('./components/LandingPage'))
 const PrivacyPolicy = lazy(()=>import('./components/PrivacyPolicy'))
+const SendUsMessage = lazy(()=>import('./components/SendMessageComponents'))
 
 
 // Create a proper loading component
@@ -88,6 +89,15 @@ function App() {
           <Suspense fallback={<LoadingSpinner/>}>
             {' '}
             <InsightDetailsPage />
+          </Suspense>
+        }
+      />
+        <Route
+        path={'/messageUs'}
+        element={
+          <Suspense fallback={<LoadingSpinner/>}>
+            {' '}
+            <SendUsMessage />
           </Suspense>
         }
       />
