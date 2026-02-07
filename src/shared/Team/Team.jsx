@@ -95,7 +95,7 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fi
    <p className={styles.logo_groups}>Vincentia A. Aikins, Esq.</p>
    <p  className={styles.logo_text}>Head of Legal</p>
   </div>
-  <p className={styles.logo_secondary}>Vicentia leads the legal department, ensuring Qluxe operates within regulatory frameworks while mitigating risks. Her expertise in law provides the foundation for secure and compliant business operations. She fosters a culture of legal integrity, protecting the company’s interests at all levels.</p>
+  <p className={styles.logo_secondary}>Vincentia leads the legal department, ensuring Qluxe operates within regulatory frameworks while mitigating risks. Her expertise in law provides the foundation for secure and compliant business operations. She fosters a culture of legal integrity, protecting the company’s interests at all levels.</p>
    <div className={styles.logo_secondary_group}>
 <svg
 onClick={()=>window.open('http://www.linkedin.com/in/qluxe-homes-410a423a7', '_blank')}
