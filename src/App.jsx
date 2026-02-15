@@ -1,21 +1,11 @@
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import './App.css'
 import { lazy,Suspense } from 'react'
-import MainContainer from './shared/MainContainer/MainContainer'
 import ScrollToTop from './shared/ScrollToTop'
 
-const ProjectsHub = lazy(()=>import('./components/ProjectsHub'))
-const InvestorsPage = lazy(()=>import('./components/InvestorsPage'))
-const InsightDetailsPage = lazy(()=>import('./components/InsightDetails'))
-const ContactUsPage = lazy(()=>import('./components/ContactUsPage'))
-const InsightHubPage = lazy(()=>import('./components/InsightHubPage'))
-const PartnerAgents = lazy(()=>import('./components/PartnerAgents/PartnerAgents'))
+
 const ProjectDetails = lazy(()=>import('./components/ProjectsDetails/ProjectsDetails'))
-const AboutPage = lazy(()=>import('./components/AboutPage/AboutPage'))
-const Testimonials = lazy(()=>import('./shared/DownloadPortfolio/DownloadPortfolio'))
-const LandingPage = lazy(()=>import('./components/LandingPage'))
-const PrivacyPolicy = lazy(()=>import('./components/PrivacyPolicy'))
-const SendUsMessage = lazy(()=>import('./components/SendMessageComponents'))
+
 
 
 // Create a proper loading component
@@ -52,106 +42,7 @@ function App() {
         element={
           <Suspense fallback={<LoadingSpinner/>}>
             {' '}
-            <LandingPage />
-          </Suspense>
-        }
-      />
-       <Route
-        path={'/projectsHub'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <ProjectsHub />
-          </Suspense>
-        }
-      />
-          <Route
-        path={'/privacyPolicy'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <PrivacyPolicy />
-          </Suspense>
-        }
-      />
-        <Route
-        path={'/contactUs'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <ContactUsPage />
-          </Suspense>
-        }
-      />
-         <Route
-        path={'/insightDetails'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <InsightDetailsPage />
-          </Suspense>
-        }
-      />
-        <Route
-        path={'/messageUs'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <SendUsMessage />
-          </Suspense>
-        }
-      />
-         <Route
-        path={'/insightHub'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <InsightHubPage />
-          </Suspense>
-        }
-      />
-       <Route
-        path={'/about'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <AboutPage />
-          </Suspense>
-        }
-      />
-         <Route
-        path={'/partnerAgents'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <PartnerAgents />
-          </Suspense>
-        }
-      />
-        <Route
-        path={'/projectDetails'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
             <ProjectDetails />
-          </Suspense>
-        }
-      />
-   <Route
-        path={'/investors'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <InvestorsPage />
-          </Suspense>
-        }
-      />
-       <Route
-        path={'/test'}
-        element={
-          <Suspense fallback={<LoadingSpinner/>}>
-            {' '}
-            <Testimonials />
           </Suspense>
         }
       />
