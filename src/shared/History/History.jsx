@@ -21,7 +21,7 @@ return(
           controls
           style={{ maxWidth: '100%' }}
         >
-          <source src="/qluxe_video.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dignjeiv8/video/upload/v1771245590/9928529e-f169-46f7-bebf-11f0106a889e_zzq6vz.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 </div>
