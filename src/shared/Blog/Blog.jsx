@@ -1,22 +1,22 @@
-import { useNavigate,useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import styles from './Blog.module.scss'
 import { useState } from 'react'
 import { BlogData } from '../BlogData'
 
 const Blog = () => {
 
-     const navigate = useNavigate()
+     
      const location = useLocation()
      const [currentPage,setCurrentPage] = useState(0)
      const itemsPerPage = 3
 
     const handleInsight = () => {
-        navigate('/insightHub')
+        window.open('https://qluxehomes.com/insightHub', '_blank')
     }
 
     const handleBlogClick = (blogIndex) => {
         const actualIndex = currentPage * itemsPerPage + blogIndex
-        navigate('/insightDetails', { 
+        window.open('https://qluxehomes.com/insightDetails', { 
             state: { 
                 blog: blogs[actualIndex],
                 blogId: actualIndex 

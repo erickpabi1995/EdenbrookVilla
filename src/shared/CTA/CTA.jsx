@@ -1,12 +1,11 @@
-import { useNavigate } from 'react-router-dom'
 import styles from './CTA.module.scss'
 
 const CTA = () => {
 
-   const navigate = useNavigate()
+   
 
     const handleContact = () => {
-        navigate('/contactUs')
+        window.open('https://qluxehomes.com/contactUs', '_blank')
     }
 return(
     <div className={styles.cta}>

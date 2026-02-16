@@ -1,14 +1,13 @@
 import styles from './FAQ.module.scss'
 import { useState } from 'react';
 import React from "react";
-import { useNavigate } from 'react-router-dom';
 
 const FAQ = () => {
 
-  const navigate = useNavigate()
+  
 
   const handleContact = () =>{
-    navigate('/contactUs')
+    window.open('https://qluxehomes.com/contactUs')
   }
 
   // Track only one open index at a time

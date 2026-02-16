@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styles from './Footer.module.scss'
 
 const Footer = () => {
@@ -10,58 +9,58 @@ const Footer = () => {
  const Company = [
   {
     name:"Company",
-    link:"/",
+    link:"",
     children:[
       {
         name:"Our Projects",
-        link:"/projectsHub"
+        link:"https://qluxehomes.com/projectsHub"
       },
       {
         name:"Partner Agents",
-        link:"/partnerAgents"
+        link:"https://qluxehomes.com/partnerAgents"
       },
       {
         name:"Investors",
-        link:'/investors'
+        link:'https://qluxehomes.com/investors'
       },
       {
         name:'Insights',
-        link:'/insightHub'
+        link:'https://qluxehomes.com/insightHub'
       },
       {
         name:'Contact',
-        link:'/contactUs'
+        link:'https://qluxehomes.com/contactUs'
       }
  ]
   },
    {
     name:"Insights",
-    link:"/insightHub",
+    link:"https://qluxehomes.com/insightHub",
     children:[
       
       {
        name: 'All', 
-      link:'/insightHub#all',
+      link:'https://qluxehomes.com/insightHub#all',
     },
     {
       name:'Market Reports',
-      link:'/insightHub#marketReports'
+      link:'https://qluxehomes.com/insightHub#marketReports'
     },
     {
       name:'Press Releases',
-      link:'/insightHub#pressReleases'
+      link:'https://qluxehomes.com/insightHub#pressReleases'
     },
     {
       name:'Events & Exhibitions',
-      link:'/insightHub#eventsExhibitions'
+      link:'https://qluxehomes.com/insightHub#eventsExhibitions'
     },
     {
       name:"Social Highlights",
-      link:"/insightHub#socialHighlights"
+      link:"https://qluxehomes.com/insightHub#socialHighlights"
     },
     {
       name:"Real Estate Trends",
-      link:"/insightHub#realEstateTrends"
+      link:"https://qluxehomes.com/insightHub#realEstateTrends"
     }]
   },
    {
@@ -70,11 +69,11 @@ const Footer = () => {
 
     children:[{
       name:'Insights',
-      link:"/insightHub"
+      link:"https://qluxehomes.com/insightHub"
     },
       {
         name: 'Support',
-        link: '/contactUs'
+        link: 'https://qluxehomes.com/contactUs'
       }]
   },
     {
@@ -108,10 +107,10 @@ return(
     {Company.map((item,index)=>
 <div className={styles.titleText} key={index}>
 <div className={styles.titleDescription}>
-  <Link className={styles.button} to={item.link}> {item.name}</Link>
+  <a className={styles.button} href={item.link} target='_blank' rel='noopener noreferrer'> {item.name}</a>
   <div className={styles.insights}>
 {item.children.map((it,index)=>
-<Link className={styles.insightCard} to={it.link} key={index}>{it.name}</Link>
+<a className={styles.insightCard} href={it.link} key={index}  target='_blank' rel='noopener noreferrer'>{it.name}</a>
     )}
 
   </div>
@@ -131,11 +130,11 @@ return(
     <svg xmlns="http://www.w3.org/2000/svg" width="2" height="2" viewBox="0 0 2 2" fill="none">
   <circle cx="1" cy="1" r="1" fill="white"/>
 </svg>
-<Link className={styles.badge} to={'/privacyPolicy'}>Terms</Link>
+<a className={styles.badge} href={'https://qluxehomes.com/privacyPolicy'}>Terms</a>
 <svg xmlns="http://www.w3.org/2000/svg" width="2" height="2" viewBox="0 0 2 2" fill="none">
   <circle cx="1" cy="1" r="1" fill="white"/>
 </svg>
-<Link className={styles.badge} to={'/privacyPolicy'}>Privacy</Link>
+<a className={styles.badge} href={'https://qluxehomes.com/privacyPolicy'}>Privacy</a>
   </div>
   <div className={styles.social_icons}>
 <svg onClick={()=>window.open('https://www.facebook.com/share/199ZCULxun/?mibextid=wwXIfr', '_blank')} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
