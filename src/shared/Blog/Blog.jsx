@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom'
 import styles from './Blog.module.scss'
 import { useState } from 'react'
 import { BlogData } from '../BlogData'
@@ -6,7 +5,7 @@ import { BlogData } from '../BlogData'
 const Blog = () => {
 
      
-     const location = useLocation()
+     
      const [currentPage,setCurrentPage] = useState(0)
      const itemsPerPage = 3
 
@@ -14,19 +13,42 @@ const Blog = () => {
         window.open('https://qluxehomes.com/insightHub', '_blank')
     }
 
-    const handleBlogClick = (blogIndex) => {
-        const actualIndex = currentPage * itemsPerPage + blogIndex
-        window.open('https://qluxehomes.com/insightDetails', { 
-            state: { 
-                blog: blogs[actualIndex],
-                blogId: actualIndex 
-            } 
-        })
-         if (location.pathname === '/insightDetails') {
-            window.scrollTo({top:0,behavior:'smooth'})
-        }
-    }
-
+const handleBlogClick = (blogIndex) => {
+    const actualIndex = currentPage * itemsPerPage + blogIndex
+    const blog = blogs[actualIndex]
+    
+    // Encode the blog data as URL parameters
+    const params = new URLSearchParams({
+        blogId: actualIndex,
+        title: blog.title,
+        author: blog.author,
+        date: blog.date,
+        image:blog.image,
+        category:blog.category,
+        imageAuthor:blog.imageAuthor,
+        jobDescription:blog.jobDescription,
+        firstContentHeader:blog.firstContentHeader,
+        firstContent:blog.firstContent,
+        secondContentHeader:blog.secondContentHeader,
+        secondContent:blog.secondContent,
+        thirdContentHeader:blog.thirdContentHeader,
+        thirdContent:blog.thirdContent,
+fourthContentHeader:blog.fourthContentHeader,
+fourthContent:blog.fourthContent,
+fifthContentHeader:blog.fifthContentHeader,
+fifthContent:blog.fifthContent,
+sixthContentHeader:blog.sixthContentHeader,
+sixthContent:blog.sixthContent,
+seventhContentHeader:blog.seventhContentHeader,
+seventhContent:blog.seventhContent,
+eighthContentHeader:blog.eighthContentHeader,
+eighthContent:blog.eighthContent,
+description:blog.description
+        
+    })
+    
+    window.open(`https://qluxehomes.com/insightDetails?${params.toString()}`, '_blank')
+}
     const handlePrevious = () => {
         if (currentPage > 0) {
             setCurrentPage(currentPage - 1)
