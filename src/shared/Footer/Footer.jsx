@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Footer.module.scss'
 
 const Footer = () => {
@@ -9,58 +10,58 @@ const Footer = () => {
  const Company = [
   {
     name:"Company",
-    link:"",
+    link:"/",
     children:[
       {
         name:"Our Projects",
-        link:"https://qluxehomes.com/projectsHub"
+        link:"/projectsHub"
       },
       {
         name:"Partner Agents",
-        link:"https://qluxehomes.com/partnerAgents"
+        link:"/partnerAgents"
       },
       {
         name:"Investors",
-        link:'https://qluxehomes.com/investors'
+        link:'/investors'
       },
       {
         name:'Insights',
-        link:'https://qluxehomes.com/insightHub'
+        link:'/insightHub'
       },
       {
         name:'Contact',
-        link:'https://qluxehomes.com/contactUs'
+        link:'/contactUs'
       }
  ]
   },
    {
     name:"Insights",
-    link:"https://qluxehomes.com/insightHub",
+    link:"/insightHub",
     children:[
       
       {
        name: 'All', 
-      link:'https://qluxehomes.com/insightHub#all',
+      link:'/insightHub#all',
     },
     {
       name:'Market Reports',
-      link:'https://qluxehomes.com/insightHub#marketReports'
+      link:'/insightHub#marketReports'
     },
     {
       name:'Press Releases',
-      link:'https://qluxehomes.com/insightHub#pressReleases'
+      link:'/insightHub#pressReleases'
     },
     {
       name:'Events & Exhibitions',
-      link:'https://qluxehomes.com/insightHub#eventsExhibitions'
+      link:'/insightHub#eventsExhibitions'
     },
     {
       name:"Social Highlights",
-      link:"https://qluxehomes.com/insightHub#socialHighlights"
+      link:"/insightHub#socialHighlights"
     },
     {
       name:"Real Estate Trends",
-      link:"https://qluxehomes.com/insightHub#realEstateTrends"
+      link:"/insightHub#realEstateTrends"
     }]
   },
    {
@@ -69,11 +70,11 @@ const Footer = () => {
 
     children:[{
       name:'Insights',
-      link:"https://qluxehomes.com/insightHub"
+      link:"/insightHub"
     },
       {
         name: 'Support',
-        link: 'https://qluxehomes.com/contactUs'
+        link: '/contactUs'
       }]
   },
     {
@@ -89,11 +90,19 @@ const Footer = () => {
         link:''
       },
       {
+        name:'+1 (656) 202 5541',
+        link:''
+      } ,
+       {
         name:'+233 (257) 353 559',
         link:''
       } ,
+       {
+        name:'+1 (514) 819 3045',
+        link:''
+      } ,
       {
-        name:'hello@qluxehomes.com',
+        name:'sales@qluxehomes.com',
         link:''
       }]
   },
@@ -107,10 +116,10 @@ return(
     {Company.map((item,index)=>
 <div className={styles.titleText} key={index}>
 <div className={styles.titleDescription}>
-  <a className={styles.button} href={item.link} target='_blank' rel='noopener noreferrer'> {item.name}</a>
+  <Link className={styles.button} to={item.link}> {item.name}</Link>
   <div className={styles.insights}>
 {item.children.map((it,index)=>
-<a className={styles.insightCard} href={it.link} key={index}  target='_blank' rel='noopener noreferrer'>{it.name}</a>
+<Link className={styles.insightCard} to={it.link} key={index}>{it.name}</Link>
     )}
 
   </div>
@@ -130,11 +139,11 @@ return(
     <svg xmlns="http://www.w3.org/2000/svg" width="2" height="2" viewBox="0 0 2 2" fill="none">
   <circle cx="1" cy="1" r="1" fill="white"/>
 </svg>
-<a className={styles.badge} href={'https://qluxehomes.com/privacyPolicy'}>Terms</a>
+<Link className={styles.badge} to={'/privacyPolicy'}>Terms</Link>
 <svg xmlns="http://www.w3.org/2000/svg" width="2" height="2" viewBox="0 0 2 2" fill="none">
   <circle cx="1" cy="1" r="1" fill="white"/>
 </svg>
-<a className={styles.badge} href={'https://qluxehomes.com/privacyPolicy'}>Privacy</a>
+<Link className={styles.badge} to={'/privacyPolicy'}>Privacy</Link>
   </div>
   <div className={styles.social_icons}>
 <svg onClick={()=>window.open('https://www.facebook.com/share/199ZCULxun/?mibextid=wwXIfr', '_blank')} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">

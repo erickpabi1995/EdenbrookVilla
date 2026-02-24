@@ -257,6 +257,7 @@ justify-content: center;
 align-items: center;
 gap: var(--3xs, 4px);
 color: var(--White, #FFF);
+  white-space: pre-line;
 font-variant-numeric: slashed-zero;
 
 /* Desktop/Label/Small (SB) */
@@ -274,10 +275,10 @@ padding: var(--xs, 8px) var(--none, 0);
 justify-content: center;
 align-items: center;
 gap: var(--3xs, 4px);
+white-space: pre-line;
 color: var(--White, #FFF);
 font-variant-numeric: slashed-zero;
 flex: 1 0 0;
-align-self: stretch;
 
 /* Desktop/Label/Small (SB) */
 font-family: var(--Font-Family-Body, "Satoshi");

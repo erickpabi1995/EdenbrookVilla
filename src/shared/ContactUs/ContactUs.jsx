@@ -129,7 +129,7 @@ const ContactUs = () => {
       image:'../email.png',
       title:'Email',
       description:'Stay updated and get in touch directly.',
-      buttonText:'hey@qluxe.com'
+      buttonText:'sales@qluxehomes.com'
     },
        {
       image:'../chat.png',
@@ -141,13 +141,16 @@ const ContactUs = () => {
       image:'../map.png',
       title:'Office',
       description:'Visit or write to us at:',
-      buttonText:'1980 Mission Street, San Francisco, CA 94103, USA'
+      buttonText:`Aria Residence,Suite 200
+      Airport Residential, Accra-Ghana`
     },
-       {
+{
       image:'../Phone.png',
       title:'Phone',
       description:'Speak to our team for support.',
-      buttonText:'+1 (415) 555-0198'
+      buttonText:`+1 (656) 202 5541
++233 (257) 353 559
++1 (514) 819 3045`
     }
   ]
 
