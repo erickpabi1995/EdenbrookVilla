@@ -78,7 +78,7 @@ const ProjectDetailsHero = () => {
         </div>
           <div className={styles.carouselContainer}>
             <div className={styles.carousel}>
-              <p className={styles.carouselText}>3200 sft</p>
+              <p className={styles.carouselText}>3200 sqft</p>
               <div className={styles.previousContainer}>
                 <div className={styles.previousSlide}>
                   <div className={styles.divider}></div>
