@@ -10,58 +10,58 @@ const Footer = () => {
  const Company = [
   {
     name:"Company",
-    link:"/",
+    link:"https://qluxehomes.com",
     children:[
       {
         name:"Our Projects",
-        link:"/projectsHub"
+        link:"https://qluxehomes.com"
       },
       {
         name:"Partner Agents",
-        link:"/partnerAgents"
+        link:"https://qluxehomes.com"
       },
       {
         name:"Investors",
-        link:'/investors'
+        link:'https://qluxehomes.com'
       },
       {
         name:'Insights',
-        link:'/insightHub'
+        link:'https://qluxehomes.com'
       },
       {
         name:'Contact',
-        link:'/contactUs'
+        link:'https://qluxehomes.com'
       }
  ]
   },
    {
     name:"Insights",
-    link:"/insightHub",
+    link:"https://qluxehomes.com/insightHub",
     children:[
       
       {
        name: 'All', 
-      link:'/insightHub#all',
+      link:'https://qluxehomes.com/insightHub#all',
     },
     {
       name:'Market Reports',
-      link:'/insightHub#marketReports'
+      link:'https://qluxehomes.com/insightHub#marketReports'
     },
     {
       name:'Press Releases',
-      link:'/insightHub#pressReleases'
+      link:'https://qluxehomes.com/insightHub#pressReleases'
     },
     {
       name:'Events & Exhibitions',
-      link:'/insightHub#eventsExhibitions'
+      link:'https://qluxehomes.com/insightHub#eventsExhibitions'
     },
     {
       name:"Social Highlights",
-      link:"/insightHub#socialHighlights"
+      link:"https://qluxehomes.com/insightHub#socialHighlights"
     },
     {
       name:"Real Estate Trends",
-      link:"/insightHub#realEstateTrends"
+      link:"https://qluxehomes.com/insightHub#realEstateTrends"
     }]
   },
    {
@@ -70,11 +70,11 @@ const Footer = () => {
 
     children:[{
       name:'Insights',
-      link:"/insightHub"
+      link:"https://qluxehomes.com/insightHub"
     },
       {
         name: 'Support',
-        link: '/contactUs'
+        link: 'https://qluxehomes.com/contactUs'
       }]
   },
     {
@@ -116,10 +116,10 @@ return(
     {Company.map((item,index)=>
 <div className={styles.titleText} key={index}>
 <div className={styles.titleDescription}>
-  <Link className={styles.button} to={item.link}> {item.name}</Link>
+  <a className={styles.button} href={item.link} target='_blank' rel='noopener noreferrer'> {item.name}</a>
   <div className={styles.insights}>
 {item.children.map((it,index)=>
-<Link className={styles.insightCard} to={it.link} key={index}>{it.name}</Link>
+<a className={styles.insightCard} href={it.link} key={index} target='_blank' rel='noopener noreferrer'>{it.name}</a>
     )}
 
   </div>
@@ -161,7 +161,7 @@ return(
   <path d="M8 3.89062C5.73125 3.89062 3.89062 5.73125 3.89062 8C3.89062 10.2688 5.73125 12.1094 8 12.1094C10.2688 12.1094 12.1094 10.2688 12.1094 8C12.1094 5.73125 10.2688 3.89062 8 3.89062ZM8 10.6656C6.52813 10.6656 5.33437 9.47188 5.33437 8C5.33437 6.52813 6.52813 5.33437 8 5.33437C9.47188 5.33437 10.6656 6.52813 10.6656 8C10.6656 9.47188 9.47188 10.6656 8 10.6656Z" fill="white"/>
   <path d="M13.2312 3.72793C13.2312 4.25918 12.8 4.68731 12.2719 4.68731C11.7406 4.68731 11.3125 4.25606 11.3125 3.72793C11.3125 3.19668 11.7438 2.76855 12.2719 2.76855C12.8 2.76855 13.2312 3.19981 13.2312 3.72793Z" fill="white"/>
 </svg>
-<svg onClick={()=>window.open('http://www.linkedin.com/in/qluxe-homes-410a423a7', '_blank')} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<svg onClick={()=>window.open('https://www.linkedin.com/company/qluxe-homes-ghana', '_blank')} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M14.8156 0H1.18125C0.528125 0 0 0.515625 0 1.15313V14.8438C0 15.4813 0.528125 16 1.18125 16H14.8156C15.4688 16 16 15.4813 16 14.8469V1.15313C16 0.515625 15.4688 0 14.8156 0ZM4.74687 13.6344H2.37188V5.99687H4.74687V13.6344ZM3.55938 4.95625C2.79688 4.95625 2.18125 4.34062 2.18125 3.58125C2.18125 2.82188 2.79688 2.20625 3.55938 2.20625C4.31875 2.20625 4.93437 2.82188 4.93437 3.58125C4.93437 4.3375 4.31875 4.95625 3.55938 4.95625ZM13.6344 13.6344H11.2625V9.92188C11.2625 9.0375 11.2469 7.89687 10.0281 7.89687C8.79375 7.89687 8.60625 8.8625 8.60625 9.85938V13.6344H6.2375V5.99687H8.5125V7.04063H8.54375C8.85938 6.44063 9.63438 5.80625 10.7875 5.80625C13.1906 5.80625 13.6344 7.3875 13.6344 9.44375V13.6344Z" fill="white"/>
 </svg>
   </div>
