@@ -116,7 +116,7 @@ const DownloadBrochures = () => {
   return (
     <div className={styles.downloadBrochures}>
       <div className='relative'>
-        <img src="../edenBrookContainer.png" alt="Edenbrook Villa" className={styles.brochureImage} />
+        <img src="../edenBrookContainer.webp" alt="Edenbrook Villa" className={styles.brochureImage} />
         <div style={{ position: 'absolute', bottom: isMobile ? '0px' : '-5px', right: isMobile ? '20px' : '105px' }}>
           {isMobile ? 
             <img src='../unitGallerySmall.png' alt='HeaderImage'/>

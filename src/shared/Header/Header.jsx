@@ -16,7 +16,7 @@ return(
 <div className={styles.secondText}>
   {!isMobile ? (
   <div className='float-right relative'>
-  <img src='../architecture.png' alt='HeaderImage' style={{ width:"1120px",height:"746px"}}/>
+  <img src='../architecture.webp' alt='HeaderImage' style={{ width:"1120px",height:"746px"}}/>
      <div className='absolute' style={{top:'80px', left: '-160px'}}> 
       <img src='../headerImage2.png' alt='HeaderImage' style={{ width:"auto",height: "auto"}}/>
     </div>
@@ -24,7 +24,7 @@ return(
   </div>
   ):(
      <div style={{position:'relative', display: 'flex', justifyContent: 'center', width: '100%'}}>
-  <img src='../architecture.png' alt='HeaderImage' style={{ width:'285px',height:'190px'}}/>
+  <img src='../architecture.webp' alt='HeaderImage' style={{ width:'285px',height:'190px'}}/>
      <div className='absolute' style={{top:'20px', left:'5px'}}> 
       <img src='../headerImage2.png' alt='HeaderImage' style={{ width:'100%',height:'98px'}}/>
     </div>

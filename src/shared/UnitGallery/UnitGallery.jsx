@@ -6,22 +6,22 @@ const UnitGallery = () => {
   
   const galleryData = [
     {
-      image: '../architecture.png',
+      image: '../architecture.webp',
       title: 'The Bedroom',
       description: '"Your Private Sanctuary." Designed for rest and refined with elegance. Experience the ultimate retreat in a space that balances serene comfort with the signature sophistication of Qluxe Homes.' // Replace with actual description
     },
     {
-      image: '../edenBrookContainer.png',
+      image: '../edenBrookContainer.webp',
       title: 'The Building Facade',
       description: '"Architectural Excellence." A bold statement in Accra’s most prime locations. Qluxe Homes combines contemporary geometry with timeless materials to create landmarks you are proud to call home.'
     },
     {
-      image: '../gallery3.png',
+      image: '../gallery3.webp',
       title: 'The Living Room',
       description: '"The Art of Living." Expansive layouts and floor-to-ceiling luxury. Whether entertaining guests or relaxing in style, the Qluxe Homes living experience is unparalleled.'
     },
     {
-      image: '../gallery1.png',
+      image: '../gallery1.webp',
       title: 'The Kitchen',
       description: '"Culinary Perfection." Where function meets high-end design. Outfitted with premium finishes and state-of-the-art details, a Qluxe Homes kitchen is the heart of the modern luxury home.'
     },

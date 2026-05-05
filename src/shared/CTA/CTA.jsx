@@ -93,8 +93,8 @@ return(
 <div>
     <picture>
         <source media="(max-width: 768px)" srcSet="../house-mobile.png" />
-        <source media="(min-width: 769px)" srcSet="../house.png" />
-        <img src="../house.png" alt="House Image" style={{width: '100%'}} />
+        <source media="(min-width: 769px)" srcSet="../house.webp" />
+        <img src="../house.webp" alt="House Image" style={{width: '100%'}} />
     </picture>
 </div>
 </div>
